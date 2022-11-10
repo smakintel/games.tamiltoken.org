@@ -16,18 +16,18 @@ h1,h2,h3,h4 {
     -webkit-user-select: none;
     user-select: none;
 }
-
-#cardSlots {
+.cardSlots {
     margin: 50px auto 0 auto;
     background: #ddf;
 }
 
-#cardPile {
+.cardPile {
     margin: 0 auto;
     background: #ffd;
 }
 
-#cardSlots,#cardPile {
+.cardSlots,
+.cardPile {
     width: 600px;
     height: 120px;
     padding: 20px;
@@ -41,7 +41,8 @@ h1,h2,h3,h4 {
     
 }
 
-#cardSlots div,#cardPile div {
+.cardSlots div,
+.cardPile div {
     float: left;
     width: 80px;
     height: 78px;
@@ -57,32 +58,660 @@ h1,h2,h3,h4 {
 
 }
 
-#cardSlots div:first-child,
-#cardPile div:first-child {
+.cardSlots div:first-child,
+.cardPile div:first-child {
     margin-left: 0;
 }
 
-#cardSlots div.hovered {
+.cardSlots div.hovered {
     background: #aaa;
 }
 
-#cardSlots div {
+.cardSlots div {
     border-style: dashed;
 }
 
-#cardPile div {
+.cardPile div {
     background: #666;
     color: #fff;
     font-size: 50px;
     text-shadow: 0 0 3px #000;
+    padding: 3px;
 }
 
-#cardPile div.ui-draggable-dragging {
+.cardPile div.ui-draggable-dragging {
+    -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+    box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+}
+
+/* singam*/
+.cardSlots1 {
+    margin: 50px auto 0 auto;
+    background: #ddf;
+}
+
+.cardPile1 {
+    margin: 0 auto;
+    background: #ffd;
+}
+
+.cardSlots1,
+.cardPile1 {
+    width: 600px;
+    height: 120px;
+    padding: 20px;
+    border: 2px solid #333;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -moz-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+    box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+   
+}
+
+.cardSlots1 div,
+.cardPile1 div {
+    float: left;
+    width: 80px;
+    height: 78px;
+    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 0;
+    border: 2px solid #333;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    margin: 0 0 0 10px;
+    background: #fff;
+
+}
+
+.cardSlots1 div:first-child,
+.cardPile1 div:first-child {
+    margin-left: 0;
+}
+
+.cardSlots1 div.hovered {
+    background: #aaa;
+}
+
+.cardSlots1 div {
+    border-style: dashed;
+}
+
+.cardPile1 div {
+    background: #666;
+    color: #fff;
+    font-size: 50px;
+    text-shadow: 0 0 3px #000;
+    padding: 3px;
+}
+
+.cardPile1 div.li-draggable-dragging {
     -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
     -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
     box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
 }
 
 
+/* naay*/
+.cardSlots2 {
+    margin: 50px auto 0 auto;
+    background: #ddf;
+}
+
+.cardPile2 {
+    margin: 0 auto;
+    background: #ffd;
+}
+
+.cardSlots2,
+.cardPile2 {
+    width: 600px;
+    height: 120px;
+    padding: 20px;
+    border: 2px solid #333;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -moz-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+    box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+    
+}
+
+.cardSlots2 div,
+.cardPile2 div {
+    float: left;
+    width: 80px;
+    height: 78px;
+    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 0;
+    border: 2px solid #333;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    margin: 0 0 0 10px;
+    background: #fff;
+
+}
+
+.cardSlots2 div:first-child,
+.cardPile2 div:first-child {
+    margin-left: 0;
+}
+
+.cardSlots2 div.hovered {
+    background: #aaa;
+}
+
+.cardSlots2 div {
+    border-style: dashed;
+}
+
+.cardPile2 div {
+    background: #666;
+    color: #fff;
+    font-size: 50px;
+    text-shadow: 0 0 3px #000;
+    padding: 3px;
+}
+
+.cardPile2 div.li-draggable-dragging {
+    -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+    box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+}
+
+/*cow*/
+.cardSlots3 {
+    margin: 50px auto 0 auto;
+    background: #ddf;
+}
+
+.cardPile3 {
+    margin: 0 auto;
+    background: #ffd;
+}
+
+.cardSlots3,
+.cardPile3 {
+    width: 600px;
+    height: 120px;
+    padding: 20px;
+    border: 2px solid #333;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -moz-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+    box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+   
+}
+
+.cardSlots3 div,
+.cardPile3 div {
+    float: left;
+    width: 80px;
+    height: 78px;
+    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 0;
+    border: 2px solid #333;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    margin: 0 0 0 10px;
+    background: #fff;
+
+}
+
+.cardSlots3 div:first-child,
+.cardPile3 div:first-child {
+    margin-left: 0;
+}
+
+.cardSlots3 div.hovered {
+    background: #aaa;
+}
+
+.cardSlots3 div {
+    border-style: dashed;
+}
+
+.cardPile3 div {
+    background: #666;
+    color: #fff;
+    font-size: 50px;
+    text-shadow: 0 0 3px #000;
+    padding: 3px;
+}
+
+.cardPile3 div.li-draggable-dragging {
+    -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+    box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+}
+
+/*cat*/
+.cardSlots4 {
+    margin: 50px auto 0 auto;
+    background: #ddf;
+}
+
+.cardPile4 {
+    margin: 0 auto;
+    background: #ffd;
+}
+
+.cardSlots4,
+.cardPile4 {
+    width: 600px;
+    height: 120px;
+    padding: 20px;
+    border: 2px solid #333;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -moz-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+    box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+   
+}
+
+.cardSlots4 div,
+.cardPile4 div {
+    float: left;
+    width: 80px;
+    height: 78px;
+    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 0;
+    border: 2px solid #333;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    margin: 0 0 0 10px;
+    background: #fff;
+
+}
+
+.cardSlots4 div:first-child,
+.cardPile4 div:first-child {
+    margin-left: 0;
+}
+
+.cardSlots4 div.hovered {
+    background: #aaa;
+}
+
+.cardSlots4 div {
+    border-style: dashed;
+}
+
+.cardPile4 div {
+    background: #666;
+    color: #fff;
+    font-size: 50px;
+    text-shadow: 0 0 3px #000;
+    padding: 3px;
+}
+
+.cardPile4 div.li-draggable-dragging {
+    -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+    box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+}
+
+/*horse*/
+.cardSlots5 {
+    margin: 50px auto 0 auto;
+    background: #ddf;
+}
+
+.cardPile5 {
+    margin: 0 auto;
+    background: #ffd;
+}
+
+.cardSlots5,
+.cardPile5 {
+    width: 600px;
+    height: 120px;
+    padding: 20px;
+    border: 2px solid #333;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -moz-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+    box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+   
+}
+
+.cardSlots5 div,
+.cardPile5 div {
+    float: left;
+    width: 80px;
+    height: 78px;
+    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 0;
+    border: 2px solid #333;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    margin: 0 0 0 10px;
+    background: #fff;
+
+}
+
+.cardSlots5 div:first-child,
+.cardPile5 div:first-child {
+    margin-left: 0;
+}
+
+.cardSlots5 div.hovered {
+    background: #aaa;
+}
+
+.cardSlots5 div {
+    border-style: dashed;
+}
+
+.cardPile5 div {
+    background: #666;
+    color: #fff;
+    font-size: 50px;
+    text-shadow: 0 0 3px #000;
+    padding: 3px;
+}
+
+.cardPile5 div.li-draggable-dragging {
+    -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+    box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+}
+
+/*Bear*/
+.cardSlots6 {
+    margin: 50px auto 0 auto;
+    background: #ddf;
+}
+
+.cardPile6 {
+    margin: 0 auto;
+    background: #ffd;
+}
+
+.cardSlots6,
+.cardPile6 {
+    width: 600px;
+    height: 120px;
+    padding: 20px;
+    border: 2px solid #333;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -moz-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+    box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+    
+}
+
+.cardSlots6 div,
+.cardPile6 div {
+    float: left;
+    width: 80px;
+    height: 78px;
+    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 0;
+    border: 2px solid #333;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    margin: 0 0 0 10px;
+    background: #fff;
+
+}
+
+.cardSlots6 div:first-child,
+.cardPile6 div:first-child {
+    margin-left: 0;
+}
+
+.cardSlots6 div.hovered {
+    background: #aaa;
+}
+
+.cardSlots6 div {
+    border-style: dashed;
+}
+
+.cardPile6 div {
+    background: #666;
+    color: #fff;
+    font-size: 50px;
+    text-shadow: 0 0 3px #000;
+    padding: 3px;
+}
+
+.cardPile6 div.li-draggable-dragging {
+    -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+    box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+}
+
+/*Deer*/
+.cardSlots7 {
+    margin: 50px auto 0 auto;
+    background: #ddf;
+}
+
+.cardPile7 {
+    margin: 0 auto;
+    background: #ffd;
+}
+
+.cardSlots7,
+.cardPile7 {
+    width: 600px;
+    height: 120px;
+    padding: 20px;
+    border: 2px solid #333;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -moz-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+    box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+    
+}
+
+.cardSlots7 div,
+.cardPile7 div {
+    float: left;
+    width: 80px;
+    height: 78px;
+    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 0;
+    border: 2px solid #333;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    margin: 0 0 0 10px;
+    background: #fff;
+
+}
+
+.cardSlots7 div:first-child,
+.cardPile7 div:first-child {
+    margin-left: 0;
+}
+
+.cardSlots7 div.hovered {
+    background: #aaa;
+}
+
+.cardSlots7 div {
+    border-style: dashed;
+}
+
+.cardPile7 div {
+    background: #666;
+    color: #fff;
+    font-size: 50px;
+    text-shadow: 0 0 3px #000;
+    padding: 3px;
+}
+
+.cardPile7 div.li-draggable-dragging {
+    -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+    box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+}
+/*Rabbit*/
+.cardSlots8 {
+    margin: 50px auto 0 auto;
+    background: #ddf;
+}
+
+.cardPile8 {
+    margin: 0 auto;
+    background: #ffd;
+}
+
+.cardSlots8,
+.cardPile8 {
+    width: 600px;
+    height: 120px;
+    padding: 20px;
+    border: 2px solid #333;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -moz-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+    box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+    
+}
+
+.cardSlots8 div,
+.cardPile8 div {
+    float: left;
+    width: 80px;
+    height: 78px;
+    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 0;
+    border: 2px solid #333;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    margin: 0 0 0 10px;
+    background: #fff;
+
+}
+
+.cardSlots8 div:first-child,
+.cardPile8 div:first-child {
+    margin-left: 0;
+}
+
+.cardSlots8 div.hovered {
+    background: #aaa;
+}
+
+.cardSlots8 div {
+    border-style: dashed;
+}
+
+.cardPile8 div {
+    background: #666;
+    color: #fff;
+    font-size: 50px;
+    text-shadow: 0 0 3px #000;
+    padding: 3px;
+}
+
+.cardPile8 div.li-draggable-dragging {
+    -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+    box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+}
+/*Fox*/
+.cardSlots9 {
+    margin: 50px auto 0 auto;
+    background: #ddf;
+}
+
+.cardPile9 {
+    margin: 0 auto;
+    background: #ffd;
+}
+
+.cardSlots9,
+.cardPile9 {
+    width: 600px;
+    height: 120px;
+    padding: 20px;
+    border: 2px solid #333;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -moz-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+    box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+    
+}
+
+.cardSlots9 div,
+.cardPile9 div {
+    float: left;
+    width: 80px;
+    height: 78px;
+    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 0;
+    border: 2px solid #333;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    margin: 0 0 0 10px;
+    background: #fff;
+
+}
+
+.cardSlots9 div:first-child,
+.cardPile9 div:first-child {
+    margin-left: 0;
+}
+
+.cardSlots9 div.hovered {
+    background: #aaa;
+}
+
+.cardSlots9 div {
+    border-style: dashed;
+}
+
+.cardPile9 div {
+    background: #666;
+    color: #fff;
+    font-size: 50px;
+    text-shadow: 0 0 3px #000;
+    padding: 3px;
+}
+
+.cardPile9 div.li-draggable-dragging {
+    -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+    box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+}
 
 
