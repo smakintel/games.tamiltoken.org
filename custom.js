@@ -8,6 +8,7 @@ $(".btnNavigation").click(function () {
     cache: false,
     processData: false,
     contentType: false,
+    traditional: true,
     data: "Animal",
 
     success: function (data) {
