@@ -1,0 +1,486 @@
+<div id="content">
+  <!--mother-->
+  <div class="mother">
+    <div
+      class="card"
+      style="width: 18rem; margin-bottom: 15px; margin-left: 350px"
+    >
+      <img src="images/mother.webp" />
+    </div>
+
+    <div class="cardPile">
+      <div class="ui-content"></div>
+    </div>
+
+    <div class="cardSlots"></div>
+    <div class="successMessage">
+      <img src="images/animation.gif" />
+    </div>
+  </div>
+
+  <!--father-->
+  <div class="father">
+    <div
+      class="card"
+      style="width: 18rem; margin-bottom: 15px; margin-left: 350px"
+    >
+      <img src="images/father.png" />
+    </div>
+
+    <div class="cardPile1">
+      <div class="li-content"></div>
+    </div>
+    <div class="cardSlots1"></div>
+
+    <div class="success">
+      <img src="images/animation.gif" />
+    </div>
+  </div>
+
+  <!--son-->
+  <div class="son">
+    <div
+      class="card"
+      style="width: 18rem; margin-bottom: 15px; margin-left: 350px"
+    >
+      <img src="images/son.png" />
+    </div>
+
+    <div class="cardPile2">
+      <div class="li-content"></div>
+    </div>
+    <div class="cardSlots2"></div>
+
+    <div class="success2">
+      <img src="images/animation.gif" />
+    </div>
+  </div>
+
+  <!--daughter-->
+  <div class="daughter">
+    <div
+      class="card"
+      style="width: 18rem; margin-bottom: 15px; margin-left: 350px"
+    >
+      <img src="images/daughter.png" />
+    </div>
+
+    <div class="cardPile3">
+      <div class="li-content"></div>
+    </div>
+    <div class="cardSlots3"></div>
+
+    <div class="success3">
+      <img src="images/animation.gif" />
+    </div>
+  </div>
+
+  <!--Grandfather-->
+  <div class="Grandfather">
+    <div
+      class="card"
+      style="width: 18rem; margin-bottom: 15px; margin-left: 350px"
+    >
+      <img src="images/grandfather.gif" />
+    </div>
+
+    <div class="cardPile4">
+      <div class="li-content"></div>
+    </div>
+    <div class="cardSlots4"></div>
+
+    <div class="success4">
+      <img src="images/animation.gif" />
+    </div>
+  </div>
+<!--Grandfather end-->
+</div>
+
+<script>
+  var relation1 = 0;
+  $(mother);
+
+  function mother() {
+    $(".successMessage").hide();
+     relation1 = 0;
+    $(".cardPile").html("");
+    $(".cardSlots").html("");
+
+    var correctLettersArray = ["a.png", "m.png","ma.png"];
+    var lettersArray = [
+      "a.png",
+      "m.png",
+      "ma.png",
+      "n3.png",
+      "di.png",
+      "li.png",
+    ];
+
+    lettersArray.sort(function () {
+      return Math.random() - 0.5;
+    });
+
+    for (var i = 0; i < 6; i++) {
+      $("<div><img src='letters/" + lettersArray[i] + "'></div>")
+        .data("number", lettersArray[i])
+        .attr("id", "card" + lettersArray[i])
+        .appendTo(".cardPile")
+        .draggable({
+          containment: "#content",
+          stack: ".cardPile div",
+          cursor: "move",
+          revert: true,
+        });
+    }
+
+    // Create the card slots
+    let crCount = correctLettersArray.length;
+    for (var i = 0; i < crCount; i++) {
+      $("<div>text</div>")
+        .data("number", correctLettersArray[i])
+        .appendTo(".cardSlots")
+        .droppable({
+          accept: ".cardPile div",
+          hoverClass: "hovered",
+          drop: handleCardDrop,
+        });
+    }
+  }
+
+  function handleCardDrop(event, ui) {
+    //Grab the slot number and card number
+    var slotNumber = $(this).data("number");
+    var cardNumber = ui.draggable.data("number");
+
+    //on top of the slot and prevent it being dragged again
+    if (slotNumber === cardNumber) {
+      ui.draggable.addClass("correct");
+      ui.draggable.draggable("disable");
+      $(this).droppable("disable");
+      ui.draggable.position({
+        of: $(this),
+        my: "left top",
+        at: "left top",
+      });
+      ui.draggable.draggable("option", "revert", false);
+      relation1++;
+    }
+
+    if (relation1 === 3) {
+      $(".successMessage").fadeIn("fast").delay(3000).fadeOut("slow");
+      var audio = new Audio("./sounds/Tiger.mp3");
+      audio.play();
+    }
+  }
+
+  //father
+  var relation2 = 0;
+  $(father);
+
+  function father() {
+    $(".success").hide();
+
+    relation2 = 0;
+    $(".cardPile1").html("");
+    $(".cardSlots1").html("");
+
+    var correctLettersArray = ["a.png", "p.png","paa.png"];
+    var lettersArray = [
+      "a.png",
+      "p.png",
+      "paa.png",
+      "thu.png",
+      "ra.png",
+      "ma.png",
+    ];
+
+    lettersArray.sort(function () {
+      return Math.random() - 0.5;
+    });
+
+    for (var i = 0; i < 6; i++) {
+      $("<div><img src='letters/" + lettersArray[i] + "'></div>")
+        .data("number", lettersArray[i])
+        .attr("id", "card" + lettersArray[i])
+        .appendTo(".cardPile1")
+        .draggable({
+          containment: "#content",
+          stack: ".cardPile1 div",
+          cursor: "move",
+          revert: true,
+        });
+    }
+
+    // Create the card slots
+    let crCount = correctLettersArray.length;
+    for (var i = 0; i < crCount; i++) {
+      $("<div>text</div>")
+        .data("number", correctLettersArray[i])
+        .appendTo(".cardSlots1")
+        .droppable({
+          accept: ".cardPile1 div",
+          hoverClass: "hovered",
+          drop: handleCardDropsingam,
+        });
+    }
+  }
+
+  function handleCardDropsingam(event, li) {
+    //Grab the slot number and card number
+    var slotNumber = $(this).data("number");
+    var cardNumber = li.draggable.data("number");
+
+    //on top of the slot and prevent it being dragged again
+    if (slotNumber === cardNumber) {
+      li.draggable.addClass("correct");
+      li.draggable.draggable("disable");
+      $(this).droppable("disable");
+      li.draggable.position({
+        of: $(this),
+        my: "left top",
+        at: "left top",
+      });
+      li.draggable.draggable("option", "revert", false);
+      relation2++;
+    }
+
+    if (relation2 === 3) {
+      $(".success").fadeIn("fast").delay(3000).fadeOut("slow");
+      var audio = new Audio("./sounds/lion.wav");
+      audio.play();
+    }
+  }
+
+  //son
+  var relation3 = 0;
+  $(son);
+
+  function son() {
+    $(".success2").hide();
+
+    relation3 = 0;
+    $(".cardPile2").html("");
+    $(".cardSlots2").html("");
+
+    var correctLettersArray = ["maa.png", "ka.png","n.png"];
+    var lettersArray = [
+      "maa.png",
+      "ka.png",
+      "n.png",
+      "ra.png",
+      "tha.png",
+      "m.png",
+    ];
+
+    lettersArray.sort(function () {
+      return Math.random() - 0.5;
+    });
+
+    for (var i = 0; i < 6; i++) {
+      $("<div><img src='letters/" + lettersArray[i] + "'></div>")
+        .data("number", lettersArray[i])
+        .attr("id", "card" + lettersArray[i])
+        .appendTo(".cardPile2")
+        .draggable({
+          containment: "#content",
+          stack: ".cardPile2 div",
+          cursor: "move",
+          revert: true,
+        });
+    }
+
+    // Create the card slots
+    let crCount = correctLettersArray.length;
+    for (var i = 0; i < crCount; i++) {
+      $("<div>text</div>")
+        .data("number", correctLettersArray[i])
+        .appendTo(".cardSlots2")
+        .droppable({
+          accept: ".cardPile2 div",
+          hoverClass: "hovered",
+          drop: handleCardDropDog,
+        });
+    }
+  }
+
+  function handleCardDropDog(event, li) {
+    //Grab the slot number and card number
+    var slotNumber = $(this).data("number");
+    var cardNumber = li.draggable.data("number");
+
+    //on top of the slot and prevent it being dragged again
+    if (slotNumber === cardNumber) {
+      li.draggable.addClass("correct");
+      li.draggable.draggable("disable");
+      $(this).droppable("disable");
+      li.draggable.position({
+        of: $(this),
+        my: "left top",
+        at: "left top",
+      });
+      li.draggable.draggable("option", "revert", false);
+      relation3++;
+    }
+
+    if (relation3 === 3) {
+      $(".success2").fadeIn("fast").delay(3000).fadeOut("slow");
+      var audio = new Audio("./sounds/dog.wav");
+      audio.play();
+    }
+  }
+
+  //daughter
+  var relation4 = 0;
+  $(daughter);
+
+  function daughter() {
+    $(".success3").hide();
+
+    relation4 = 0;
+    $(".cardPile3").html("");
+    $(".cardSlots3").html("");
+
+    var correctLettersArray = ["maa.png", "ka.png","l2.png"];
+    var lettersArray = [
+      "maa.png",
+      "ka.png",
+      "l2.png",
+      "m.png",
+      "ra.png",
+      "ku.png",
+    ];
+
+    lettersArray.sort(function () {
+      return Math.random() - 0.5;
+    });
+
+    for (var i = 0; i < 6; i++) {
+      $("<div><img src='letters/" + lettersArray[i] + "'></div>")
+        .data("number", lettersArray[i])
+        .attr("id", "card" + lettersArray[i])
+        .appendTo(".cardPile3")
+        .draggable({
+          containment: "#content",
+          stack: ".cardPile3 div",
+          cursor: "move",
+          revert: true,
+        });
+    }
+
+    // Create the card slots
+    let crCount = correctLettersArray.length;
+    for (var i = 0; i < crCount; i++) {
+      $("<div>text</div>")
+        .data("number", correctLettersArray[i])
+        .appendTo(".cardSlots3")
+        .droppable({
+          accept: ".cardPile3 div",
+          hoverClass: "hovered",
+          drop: handleCardDropCow,
+        });
+    }
+  }
+
+  function handleCardDropCow(event, li) {
+    //Grab the slot number and card number
+    var slotNumber = $(this).data("number");
+    var cardNumber = li.draggable.data("number");
+
+    //on top of the slot and prevent it being dragged again
+    if (slotNumber === cardNumber) {
+      li.draggable.addClass("correct");
+      li.draggable.draggable("disable");
+      $(this).droppable("disable");
+      li.draggable.position({
+        of: $(this),
+        my: "left top",
+        at: "left top",
+      });
+      li.draggable.draggable("option", "revert", false);
+      relation4++;
+    }
+
+    if (relation4 === 3) {
+      $(".success3").fadeIn("fast").delay(3000).fadeOut("slow");
+      var audio = new Audio("./sounds/cow.wav");
+      audio.play();
+    }
+  }
+  
+  //grand
+  var relation5 = 0;
+  $(grand);
+
+  function grand() {
+    $(".success4").hide();
+
+    relation5 = 0;
+    $(".cardPile4").html("");
+    $(".cardSlots4").html("");
+
+    var correctLettersArray = ["thaa.png", "th.png","thaa.png"];
+    var lettersArray = [
+      "thaa.png",
+      "th.png",
+      "thaa.png",
+      "l.png",
+      "ra.png",
+      "ma.png",
+    ];
+
+    lettersArray.sort(function () {
+      return Math.random() - 0.5;
+    });
+
+    for (var i = 0; i < 6; i++) {
+      $("<div><img src='letters/" + lettersArray[i] + "'></div>")
+        .data("number", lettersArray[i])
+        .attr("id", "card" + lettersArray[i])
+        .appendTo(".cardPile4")
+        .draggable({
+          containment: "#content",
+          stack: ".cardPile4 div",
+          cursor: "move",
+          revert: true,
+        });
+    }
+
+    // Create the card slots
+    let crCount = correctLettersArray.length;
+    for (var i = 0; i < crCount; i++) {
+      $("<div>text</div>")
+        .data("number", correctLettersArray[i])
+        .appendTo(".cardSlots4")
+        .droppable({
+          accept: ".cardPile4 div",
+          hoverClass: "hovered",
+          drop: handleCardDropCat,
+        });
+    }
+  }
+
+  function handleCardDropCat(event, li) {
+    //Grab the slot number and card number
+    var slotNumber = $(this).data("number");
+    var cardNumber = li.draggable.data("number");
+
+    //on top of the slot and prevent it being dragged again
+    if (slotNumber === cardNumber) {
+      li.draggable.addClass("correct");
+      li.draggable.draggable("disable");
+      $(this).droppable("disable");
+      li.draggable.position({
+        of: $(this),
+        my: "left top",
+        at: "left top",
+      });
+      li.draggable.draggable("option", "revert", false);
+      relation5++;
+    }
+
+    if (relation5 === 3) {
+      $(".success4").fadeIn("fast").delay(3000).fadeOut("slow");
+      var audio = new Audio("./sounds/cat.wav");
+      audio.play();
+    }
+  }
