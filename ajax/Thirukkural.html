@@ -1,0 +1,206 @@
+<div id="content">
+  <!--kural1-->
+  <div class="kural1">
+    <div class="cardPile10">
+      <div class="ui-content"></div>
+    </div>
+
+    <div class="cardSlots10"></div>
+    <div class="successMessage">
+      <img src="images/animation.gif" />
+    </div>
+  </div>
+
+  <!--kural2-->
+  <div class="kural2">
+    <div class="cardPile1">
+      <div class="li-content"></div>
+    </div>
+    <div class="cardSlots1"></div>
+
+    <div class="success">
+      <img src="images/animation.gif" />
+    </div>
+  </div>
+
+  <!--kural3-->
+  <div class="kural3">
+    <div class="cardPile2">
+      <div class="li-content"></div>
+    </div>
+    <div class="cardSlots2"></div>
+
+    <div class="success2">
+      <img src="images/animation.gif" />
+    </div>
+  </div>
+
+  <!--kural4-->
+  <div class="kural4">
+    <div class="cardPile3">
+      <div class="li-content"></div>
+    </div>
+    <div class="cardSlots3"></div>
+
+    <div class="success3">
+      <img src="images/animation.gif" />
+    </div>
+  </div>
+
+  <!--kural5-->
+  <div class="kural5">
+    <div class="cardPile4">
+      <div class="li-content"></div>
+    </div>
+    <div class="cardSlots4"></div>
+
+    <div class="success4">
+      <img src="images/animation.gif" />
+    </div>
+  </div>
+
+  <!--kural6-->
+  <div class="kural6">
+    <div class="cardPile5">
+      <div class="li-content"></div>
+    </div>
+    <div class="cardSlots5"></div>
+
+    <div class="success5">
+      <img src="images/animation.gif" />
+    </div>
+  </div>
+
+  <!--kural7-->
+  <div class="kural7">
+    <div class="cardPile6">
+      <div class="li-content"></div>
+    </div>
+    <div class="cardSlots6"></div>
+
+    <div class="success6">
+      <img src="images/animation.gif" />
+    </div>
+  </div>
+
+  <!--kural8-->
+  <div class="kural8">
+    <div class="cardPile7">
+      <div class="li-content"></div>
+    </div>
+    <div class="cardSlots7"></div>
+
+    <div class="success7">
+      <img src="images/animation.gif" />
+    </div>
+  </div>
+
+  <!--kural9-->
+  <div class="kural9">
+    <div class="cardPile8">
+      <div class="li-content"></div>
+    </div>
+    <div class="cardSlots8"></div>
+
+    <div class="success8">
+      <img src="images/animation.gif" />
+    </div>
+  </div>
+
+  <!--kural10-->
+  <div class="kural10">
+    <div class="cardPile9">
+      <div class="li-content"></div>
+    </div>
+    <div class="cardSlots9"></div>
+
+    <div class="success9">
+      <img src="images/animation.gif" />
+    </div>
+  </div>
+</div>
+
+<script>
+  var kural1 = 0;
+  $(word1);
+
+  function word1() {
+    $(".successMessage").hide();
+    kural1 = 0;
+    $(".cardPile10").html("");
+    $(".cardSlots10").html("");
+
+    var correctLettersArray = [
+      "11.png",
+      "12.png",
+      "13.png",
+      "14.png",
+      "15.png",
+      "16.png",
+      "17.png",
+    ];
+    var lettersArray = [
+      "11.png",
+      "12.png",
+      "13.png",
+      "14.png",
+      "15.png",
+      "16.png",
+      "17.png",
+    ];
+
+    lettersArray.sort(function () {
+      return Math.random() - 0.5;
+    });
+
+    for (var i = 0; i < 7; i++) {
+      $("<div><img src='kurals/" + lettersArray[i] + "'></div>")
+        .data("number", lettersArray[i])
+        .attr("id", "card" + lettersArray[i])
+        .appendTo(".cardPile10")
+        .draggable({
+          containment: "#content",
+          stack: ".cardPile10 div",
+          cursor: "move",
+          revert: true,
+        });
+    }
+
+    // Create the card slots
+    let crCount = correctLettersArray.length;
+    for (var i = 0; i < crCount; i++) {
+      $("<div>text</div>")
+        .data("number", correctLettersArray[i])
+        .appendTo(".cardSlots10")
+        .droppable({
+          accept: ".cardPile10 div",
+          hoverClass: "hovered",
+          drop: handleCardDropkural,
+        });
+    }
+  }
+
+  function handleCardDropkural(event, ui) {
+    //Grab the slot number and card number
+    var slotNumber = $(this).data("number");
+    var cardNumber = ui.draggable.data("number");
+
+    //on top of the slot and prevent it being dragged again
+    if (slotNumber === cardNumber) {
+      ui.draggable.addClass("correct");
+      ui.draggable.draggable("disable");
+      $(this).droppable("disable");
+      ui.draggable.position({
+        of: $(this),
+        my: "left top",
+        at: "left top",
+      });
+      ui.draggable.draggable("option", "revert", false);
+      kural1++;
+    }
+
+    if (kural1 === 7) {
+      $(".successMessage").fadeIn("fast").delay(3000).fadeOut("slow");
+    }
+  }
+</script>

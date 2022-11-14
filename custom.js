@@ -3,7 +3,7 @@ $(".btnNavigation").click(function () {
   console.log(pageName);
 
   $.ajax({
-    url: pageName + ".html",
+    url: "ajax/" + pageName + ".html",
     type: "POST",
     cache: false,
     processData: false,
