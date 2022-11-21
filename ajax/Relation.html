@@ -1,10 +1,7 @@
 <div id="content">
   <!--mother-->
   <div class="mother">
-    <div
-      class="card"
-      style="width: 18rem; margin-bottom: 15px; margin-left: 350px"
-    >
+    <div class="card" style="width: 18rem; margin-bottom: 15px; margin-left: 350px">
       <img src="images/mother.webp" />
     </div>
 
@@ -20,10 +17,7 @@
 
   <!--father-->
   <div class="father">
-    <div
-      class="card"
-      style="width: 18rem; margin-bottom: 15px; margin-left: 350px"
-    >
+    <div class="card" style="width: 18rem; margin-bottom: 15px; margin-left: 350px">
       <img src="images/father.png" />
     </div>
 
@@ -39,10 +33,7 @@
 
   <!--son-->
   <div class="son">
-    <div
-      class="card"
-      style="width: 18rem; margin-bottom: 15px; margin-left: 350px"
-    >
+    <div class="card" style="width: 18rem; margin-bottom: 15px; margin-left: 350px">
       <img src="images/son.png" />
     </div>
 
@@ -58,10 +49,7 @@
 
   <!--daughter-->
   <div class="daughter">
-    <div
-      class="card"
-      style="width: 18rem; margin-bottom: 15px; margin-left: 350px"
-    >
+    <div class="card" style="width: 18rem; margin-bottom: 15px; margin-left: 350px">
       <img src="images/daughter.png" />
     </div>
 
@@ -77,10 +65,7 @@
 
   <!--Grandfather-->
   <div class="Grandfather">
-    <div
-      class="card"
-      style="width: 18rem; margin-bottom: 15px; margin-left: 350px"
-    >
+    <div class="card" style="width: 18rem; margin-bottom: 15px; margin-left: 350px">
       <img src="images/grandfather.gif" />
     </div>
 
@@ -93,7 +78,6 @@
       <img src="images/animation.gif" />
     </div>
   </div>
-  <!--Grandfather end-->
 </div>
 
 <script>
@@ -106,22 +90,15 @@
     $(".cardPile").html("");
     $(".cardSlots").html("");
 
-    var correctLettersArray = ["a.png", "m.png", "ma.png"];
-    var lettersArray = [
-      "a.png",
-      "m.png",
-      "ma.png",
-      "n3.png",
-      "di.png",
-      "li.png",
-    ];
+    var correctLettersArray = ["a.png", "m.png", "maa.png"];
+    var lettersArray = ["a.png","m.png","maa.png","th.png","di.png","li.png",];
 
     lettersArray.sort(function () {
       return Math.random() - 0.5;
     });
 
     for (var i = 0; i < 6; i++) {
-      $("<div><img src='letters/" + lettersArray[i] + "'></div>")
+      $("<div><img src='letters/vegetables/" + lettersArray[i] + "'></div>")
         .data("number", lettersArray[i])
         .attr("id", "card" + lettersArray[i])
         .appendTo(".cardPile")
@@ -168,8 +145,6 @@
 
     if (relation1 === 3) {
       $(".successMessage").fadeIn("fast").delay(3000).fadeOut("slow");
-      var audio = new Audio("./sounds/Tiger.mp3");
-      audio.play();
     }
   }
 
@@ -185,21 +160,14 @@
     $(".cardSlots1").html("");
 
     var correctLettersArray = ["a.png", "p.png", "paa.png"];
-    var lettersArray = [
-      "a.png",
-      "p.png",
-      "paa.png",
-      "thu.png",
-      "ra.png",
-      "ma.png",
-    ];
+    var lettersArray = ["a.png", "p.png","paa.png","thaa.png","ra.png","ma.png",];
 
     lettersArray.sort(function () {
       return Math.random() - 0.5;
     });
 
     for (var i = 0; i < 6; i++) {
-      $("<div><img src='letters/" + lettersArray[i] + "'></div>")
+      $("<div><img src='letters/vegetables/" + lettersArray[i] + "'></div>")
         .data("number", lettersArray[i])
         .attr("id", "card" + lettersArray[i])
         .appendTo(".cardPile1")
@@ -211,7 +179,6 @@
         });
     }
 
-    // Create the card slots
     let crCount = correctLettersArray.length;
     for (var i = 0; i < crCount; i++) {
       $("<div>text</div>")
@@ -220,17 +187,15 @@
         .droppable({
           accept: ".cardPile1 div",
           hoverClass: "hovered",
-          drop: handleCardDropsingam,
+          drop: handleCardDropFather,
         });
     }
   }
 
-  function handleCardDropsingam(event, li) {
-    //Grab the slot number and card number
+  function handleCardDropFather(event, li) {
     var slotNumber = $(this).data("number");
     var cardNumber = li.draggable.data("number");
 
-    //on top of the slot and prevent it being dragged again
     if (slotNumber === cardNumber) {
       li.draggable.addClass("correct");
       li.draggable.draggable("disable");
@@ -246,8 +211,6 @@
 
     if (relation2 === 3) {
       $(".success").fadeIn("fast").delay(3000).fadeOut("slow");
-      var audio = new Audio("./sounds/lion.wav");
-      audio.play();
     }
   }
 
@@ -262,22 +225,15 @@
     $(".cardPile2").html("");
     $(".cardSlots2").html("");
 
-    var correctLettersArray = ["maa.png", "ka.png", "n.png"];
-    var lettersArray = [
-      "maa.png",
-      "ka.png",
-      "n.png",
-      "ra.png",
-      "tha.png",
-      "m.png",
-    ];
+    var correctLettersArray = ["ma.png", "ka.png", "n.png"];
+    var lettersArray = ["ma.png","ka.png","n.png","ra.png","tha.png","m.png",];
 
     lettersArray.sort(function () {
       return Math.random() - 0.5;
     });
 
     for (var i = 0; i < 6; i++) {
-      $("<div><img src='letters/" + lettersArray[i] + "'></div>")
+      $("<div><img src='letters/vegetables/" + lettersArray[i] + "'></div>")
         .data("number", lettersArray[i])
         .attr("id", "card" + lettersArray[i])
         .appendTo(".cardPile2")
@@ -289,7 +245,6 @@
         });
     }
 
-    // Create the card slots
     let crCount = correctLettersArray.length;
     for (var i = 0; i < crCount; i++) {
       $("<div>text</div>")
@@ -298,17 +253,15 @@
         .droppable({
           accept: ".cardPile2 div",
           hoverClass: "hovered",
-          drop: handleCardDropDog,
+          drop: handleCardDropSon,
         });
     }
   }
 
-  function handleCardDropDog(event, li) {
-    //Grab the slot number and card number
+  function handleCardDropSon(event, li) {
     var slotNumber = $(this).data("number");
     var cardNumber = li.draggable.data("number");
 
-    //on top of the slot and prevent it being dragged again
     if (slotNumber === cardNumber) {
       li.draggable.addClass("correct");
       li.draggable.draggable("disable");
@@ -324,8 +277,6 @@
 
     if (relation3 === 3) {
       $(".success2").fadeIn("fast").delay(3000).fadeOut("slow");
-      var audio = new Audio("./sounds/dog.wav");
-      audio.play();
     }
   }
 
@@ -340,22 +291,15 @@
     $(".cardPile3").html("");
     $(".cardSlots3").html("");
 
-    var correctLettersArray = ["maa.png", "ka.png", "l2.png"];
-    var lettersArray = [
-      "maa.png",
-      "ka.png",
-      "l2.png",
-      "m.png",
-      "ra.png",
-      "ku.png",
-    ];
+    var correctLettersArray = ["ma.png", "ka.png", "l.png"];
+    var lettersArray = ["ma.png","ka.png","l.png","m.png","ra.png","ku.png",];
 
     lettersArray.sort(function () {
       return Math.random() - 0.5;
     });
 
     for (var i = 0; i < 6; i++) {
-      $("<div><img src='letters/" + lettersArray[i] + "'></div>")
+      $("<div><img src='letters/vegetables/" + lettersArray[i] + "'></div>")
         .data("number", lettersArray[i])
         .attr("id", "card" + lettersArray[i])
         .appendTo(".cardPile3")
@@ -367,7 +311,6 @@
         });
     }
 
-    // Create the card slots
     let crCount = correctLettersArray.length;
     for (var i = 0; i < crCount; i++) {
       $("<div>text</div>")
@@ -376,17 +319,15 @@
         .droppable({
           accept: ".cardPile3 div",
           hoverClass: "hovered",
-          drop: handleCardDropCow,
+          drop: handleCardDropDaug,
         });
     }
   }
 
-  function handleCardDropCow(event, li) {
-    //Grab the slot number and card number
+  function handleCardDropDaug(event, li) {
     var slotNumber = $(this).data("number");
     var cardNumber = li.draggable.data("number");
 
-    //on top of the slot and prevent it being dragged again
     if (slotNumber === cardNumber) {
       li.draggable.addClass("correct");
       li.draggable.draggable("disable");
@@ -402,8 +343,6 @@
 
     if (relation4 === 3) {
       $(".success3").fadeIn("fast").delay(3000).fadeOut("slow");
-      var audio = new Audio("./sounds/cow.wav");
-      audio.play();
     }
   }
 
@@ -419,21 +358,14 @@
     $(".cardSlots4").html("");
 
     var correctLettersArray = ["thaa.png", "th.png", "thaa.png"];
-    var lettersArray = [
-      "thaa.png",
-      "th.png",
-      "thaa.png",
-      "l.png",
-      "ra.png",
-      "ma.png",
-    ];
+    var lettersArray = ["thaa.png","th.png","thaa.png","l.png","ra.png","ma.png",];
 
     lettersArray.sort(function () {
       return Math.random() - 0.5;
     });
 
     for (var i = 0; i < 6; i++) {
-      $("<div><img src='letters/" + lettersArray[i] + "'></div>")
+      $("<div><img src='letters/vegetables/" + lettersArray[i] + "'></div>")
         .data("number", lettersArray[i])
         .attr("id", "card" + lettersArray[i])
         .appendTo(".cardPile4")
@@ -445,7 +377,6 @@
         });
     }
 
-    // Create the card slots
     let crCount = correctLettersArray.length;
     for (var i = 0; i < crCount; i++) {
       $("<div>text</div>")
@@ -454,17 +385,15 @@
         .droppable({
           accept: ".cardPile4 div",
           hoverClass: "hovered",
-          drop: handleCardDropCat,
+          drop: handleCardDropGrand,
         });
     }
   }
 
-  function handleCardDropCat(event, li) {
-    //Grab the slot number and card number
+  function handleCardDropGrand(event, li) {
     var slotNumber = $(this).data("number");
     var cardNumber = li.draggable.data("number");
 
-    //on top of the slot and prevent it being dragged again
     if (slotNumber === cardNumber) {
       li.draggable.addClass("correct");
       li.draggable.draggable("disable");
@@ -480,8 +409,6 @@
 
     if (relation5 === 3) {
       $(".success4").fadeIn("fast").delay(3000).fadeOut("slow");
-      var audio = new Audio("./sounds/cat.wav");
-      audio.play();
     }
   }
 </script>

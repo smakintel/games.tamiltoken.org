@@ -14,6 +14,7 @@ h1,h2,h3,h4 {
     -webkit-user-select: none;
     user-select: none;
 }
+/* item1*/
 .cardSlots {
     margin: 50px auto 0 auto;
     background: #ddf; 
@@ -62,7 +63,7 @@ h1,h2,h3,h4 {
     border-style: dashed;
 }
 .cardPile div {
-    background: #666;
+    background: white;
     color: #fff;
     font-size: 50px;
     text-shadow: 0 0 3px #000;
@@ -74,7 +75,7 @@ h1,h2,h3,h4 {
     box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
 }
 
-/* singam*/
+/* item2*/
 .cardSlots1 {
     margin: 50px auto 0 auto;
     background: #ddf;
@@ -84,7 +85,6 @@ h1,h2,h3,h4 {
     margin: 0 auto;
     background: #ffd;
 }
-
 .cardSlots1,
 .cardPile1 {
     width: 600px;
@@ -124,7 +124,7 @@ h1,h2,h3,h4 {
     border-style: dashed;
 }
 .cardPile1 div {
-    background: #666;
+    background: white;
     color: #fff;
     font-size: 50px;
     text-shadow: 0 0 3px #000;
@@ -136,7 +136,7 @@ h1,h2,h3,h4 {
     box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
 }
 
-/* naay*/
+/* item3*/
 .cardSlots2 {
     margin: 50px auto 0 auto;
     background: #ddf;
@@ -184,7 +184,7 @@ h1,h2,h3,h4 {
     border-style: dashed;
 }
 .cardPile2 div {
-    background: #666;
+    background: white;
     color: #fff;
     font-size: 50px;
     text-shadow: 0 0 3px #000;
@@ -196,7 +196,7 @@ h1,h2,h3,h4 {
     box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
 }
 
-/*cow*/
+/*item4*/
 .cardSlots3 {
     margin: 50px auto 0 auto;
     background: #ddf;
@@ -244,7 +244,7 @@ h1,h2,h3,h4 {
     border-style: dashed;
 }
 .cardPile3 div {
-    background: #666;
+    background: white;
     color: #fff;
     font-size: 50px;
     text-shadow: 0 0 3px #000;
@@ -256,7 +256,7 @@ h1,h2,h3,h4 {
     box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
 }
 
-/*cat*/
+/*item5*/
 .cardSlots4 {
     margin: 50px auto 0 auto;
     background: #ddf;
@@ -304,7 +304,7 @@ h1,h2,h3,h4 {
     border-style: dashed;
 }
 .cardPile4 div {
-    background: #666;
+    background: white;
     color: #fff;
     font-size: 50px;
     text-shadow: 0 0 3px #000;
@@ -316,7 +316,7 @@ h1,h2,h3,h4 {
     box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
 }
 
-/*horse*/
+/*item6*/
 .cardSlots5 {
     margin: 50px auto 0 auto;
     background: #ddf;
@@ -364,7 +364,7 @@ h1,h2,h3,h4 {
     border-style: dashed;
 }
 .cardPile5 div {
-    background: #666;
+    background: white;
     color: #fff;
     font-size: 50px;
     text-shadow: 0 0 3px #000;
@@ -376,7 +376,7 @@ h1,h2,h3,h4 {
     box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
 }
 
-/*Bear*/
+/*item7*/
 .cardSlots6 {
     margin: 50px auto 0 auto;
     background: #ddf;
@@ -415,7 +415,6 @@ h1,h2,h3,h4 {
     border-radius: 10px;
     margin: 0 0 0 10px;
     background: #fff;
-
 }
 
 .cardSlots6 div:first-child,
@@ -430,22 +429,20 @@ h1,h2,h3,h4 {
 .cardSlots6 div {
     border-style: dashed;
 }
-
 .cardPile6 div {
-    background: #666;
+    background: white;
     color: #fff;
     font-size: 50px;
     text-shadow: 0 0 3px #000;
     padding: 3px;
 }
-
 .cardPile6 div.li-draggable-dragging {
     -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
     -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
     box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
 }
 
-/*Deer*/
+/*item8*/
 .cardSlots7 {
     margin: 50px auto 0 auto;
     background: #ddf;
@@ -455,7 +452,6 @@ h1,h2,h3,h4 {
     margin: 0 auto;
     background: #ffd;
 }
-
 .cardSlots7,
 .cardPile7 {
     width: 600px;
@@ -468,9 +464,7 @@ h1,h2,h3,h4 {
     -moz-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
     -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
     box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
-    
 }
-
 .cardSlots7 div,
 .cardPile7 div {
     float: left;
@@ -487,7 +481,6 @@ h1,h2,h3,h4 {
     background: #fff;
 
 }
-
 .cardSlots7 div:first-child,
 .cardPile7 div:first-child {
     margin-left: 0;
@@ -500,9 +493,8 @@ h1,h2,h3,h4 {
 .cardSlots7 div {
     border-style: dashed;
 }
-
 .cardPile7 div {
-    background: #666;
+    background: white;
     color: #fff;
     font-size: 50px;
     text-shadow: 0 0 3px #000;
@@ -514,17 +506,15 @@ h1,h2,h3,h4 {
     -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
     box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
 }
-/*Rabbit*/
+/*item9*/
 .cardSlots8 {
     margin: 50px auto 0 auto;
     background: #ddf;
 }
-
 .cardPile8 {
     margin: 0 auto;
     background: #ffd;
 }
-
 .cardSlots8,
 .cardPile8 {
     width: 600px;
@@ -537,7 +527,6 @@ h1,h2,h3,h4 {
     -moz-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
     -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
     box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
-    
 }
 
 .cardSlots8 div,
@@ -554,9 +543,7 @@ h1,h2,h3,h4 {
     border-radius: 10px;
     margin: 0 0 0 10px;
     background: #fff;
-
 }
-
 .cardSlots8 div:first-child,
 .cardPile8 div:first-child {
     margin-left: 0;
@@ -565,35 +552,31 @@ h1,h2,h3,h4 {
 .cardSlots8 div.hovered {
     background: #aaa;
 }
-
 .cardSlots8 div {
     border-style: dashed;
 }
 
 .cardPile8 div {
-    background: #666;
+    background: white;
     color: #fff;
     font-size: 50px;
     text-shadow: 0 0 3px #000;
     padding: 3px;
 }
-
 .cardPile8 div.li-draggable-dragging {
     -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
     -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
     box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
 }
-/*Fox*/
+/*item10*/
 .cardSlots9 {
     margin: 50px auto 0 auto;
     background: #ddf;
 }
-
 .cardPile9 {
     margin: 0 auto;
     background: #ffd;
 }
-
 .cardSlots9,
 .cardPile9 {
     width: 600px;
@@ -606,9 +589,7 @@ h1,h2,h3,h4 {
     -moz-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
     -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
     box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
-    
 }
-
 .cardSlots9 div,
 .cardPile9 div {
     float: left;
@@ -623,14 +604,11 @@ h1,h2,h3,h4 {
     border-radius: 10px;
     margin: 0 0 0 10px;
     background: #fff;
-
 }
-
 .cardSlots9 div:first-child,
 .cardPile9 div:first-child {
     margin-left: 0;
 }
-
 .cardSlots9 div.hovered {
     background: #aaa;
 }
@@ -638,15 +616,13 @@ h1,h2,h3,h4 {
 .cardSlots9 div {
     border-style: dashed;
 }
-
 .cardPile9 div {
-    background: #666;
+    background: white;
     color: #fff;
     font-size: 50px;
     text-shadow: 0 0 3px #000;
     padding: 3px;
 }
-
 .cardPile9 div.li-draggable-dragging {
     -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
     -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
@@ -658,12 +634,10 @@ h1,h2,h3,h4 {
     margin: 50px auto 0 auto;
     background: #ddf;
 }
-
 .cardPile10 {
     margin: 0 auto;
     background: #ffd;
 }
-
 .cardSlots10,
 .cardPile10 {
     width: 1000px;
@@ -677,7 +651,6 @@ h1,h2,h3,h4 {
     -moz-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
     -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
     box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
-
 }
 
 .cardSlots10 div,
@@ -694,7 +667,6 @@ h1,h2,h3,h4 {
     border-radius: 10px;
     margin: 0 0 0 10px;
     background: #fff;
-
 }
 
 .cardSlots10 div:first-child,
@@ -711,7 +683,7 @@ h1,h2,h3,h4 {
 }
 
 .cardPile10 div {
-    background: #666;
+    background: white;
     color: #fff;
     font-size: 50px;
     text-shadow: 0 0 3px #000;
@@ -780,7 +752,7 @@ h1,h2,h3,h4 {
 }
 
 .cardPile11 div {
-    background: #666;
+    background: white;
     color: #fff;
     font-size: 50px;
     text-shadow: 0 0 3px #000;
@@ -849,13 +821,12 @@ h1,h2,h3,h4 {
 }
 
 .cardPile12 div {
-    background: #666;
+    background: white;
     color: #fff;
     font-size: 50px;
     text-shadow: 0 0 3px #000;
     padding: 3px;
 }
-
 .cardPile12 div.li-draggable-dragging {
     -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
     -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
@@ -902,7 +873,6 @@ h1,h2,h3,h4 {
     margin: 0 0 0 10px;
     background: #fff;
 }
-
 .cardSlots13 div:first-child,
 .cardPile13 div:first-child {
     margin-left: 0;
@@ -915,9 +885,8 @@ h1,h2,h3,h4 {
 .cardSlots13 div {
     border-style: dashed;
 }
-
 .cardPile13 div {
-    background: #666;
+    background: white;
     color: #fff;
     font-size: 50px;
     text-shadow: 0 0 3px #000;
@@ -929,6 +898,7 @@ h1,h2,h3,h4 {
     -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
     box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
 }
+
 /*kural5*/
 .cardSlots14 {
     margin: 50px auto 0 auto;
@@ -985,7 +955,7 @@ h1,h2,h3,h4 {
 }
 
 .cardPile14 div {
-    background: #666;
+    background: white;
     color: #fff;
     font-size: 50px;
     text-shadow: 0 0 3px #000;
@@ -997,6 +967,7 @@ h1,h2,h3,h4 {
     -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
     box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
 }
+
 /*kural6*/
 .cardSlots15 {
     margin: 50px auto 0 auto;
@@ -1007,7 +978,6 @@ h1,h2,h3,h4 {
     margin: 0 auto;
     background: #ffd;
 }
-
 .cardSlots15,
 .cardPile15 {
     width: 1000px;
@@ -1051,9 +1021,8 @@ h1,h2,h3,h4 {
 .cardSlots15 div {
     border-style: dashed;
 }
-
 .cardPile15 div {
-    background: #666;
+    background: white;
     color: #fff;
     font-size: 50px;
     text-shadow: 0 0 3px #000;
@@ -1065,6 +1034,7 @@ h1,h2,h3,h4 {
     -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
     box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
 }
+
 /*kural7*/
 .cardSlots16 {
     margin: 50px auto 0 auto;
@@ -1090,7 +1060,6 @@ h1,h2,h3,h4 {
     -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
     box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
 }
-
 .cardSlots16 div,
 .cardPile16 div {
     float: left;
@@ -1121,7 +1090,7 @@ h1,h2,h3,h4 {
 }
 
 .cardPile16 div {
-    background: #666;
+    background: white;
     color: #fff;
     font-size: 50px;
     text-shadow: 0 0 3px #000;
@@ -1133,6 +1102,7 @@ h1,h2,h3,h4 {
     -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
     box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
 }
+
 /*kural8*/
 .cardSlots17 {
     margin: 50px auto 0 auto;
@@ -1189,7 +1159,7 @@ h1,h2,h3,h4 {
 }
 
 .cardPile17 div {
-    background: #666;
+    background: white;
     color: #fff;
     font-size: 50px;
     text-shadow: 0 0 3px #000;
@@ -1201,6 +1171,7 @@ h1,h2,h3,h4 {
     -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
     box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
 }
+
 /*kural9*/
 .cardSlots18 {
     margin: 50px auto 0 auto;
@@ -1257,7 +1228,7 @@ h1,h2,h3,h4 {
 }
 
 .cardPile18 div {
-    background: #666;
+    background: white;
     color: #fff;
     font-size: 50px;
     text-shadow: 0 0 3px #000;
@@ -1269,6 +1240,7 @@ h1,h2,h3,h4 {
     -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
     box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
 }
+
 /*kural10*/
 .cardSlots19 {
     margin: 50px auto 0 auto;
@@ -1294,7 +1266,6 @@ h1,h2,h3,h4 {
     -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
     box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
 }
-
 .cardSlots19 div,
 .cardPile19 div {
     float: left;
@@ -1325,7 +1296,7 @@ h1,h2,h3,h4 {
 }
 
 .cardPile19 div {
-    background: #666;
+    background: white;
     color: #fff;
     font-size: 50px;
     text-shadow: 0 0 3px #000;

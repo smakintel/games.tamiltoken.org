@@ -130,25 +130,9 @@
     $(".cardPile10").html("");
     $(".cardSlots10").html("");
 
-    var correctLettersArray = [
-      "11.png",
-      "12.png",
-      "13.png",
-      "14.png",
-      "15.png",
-      "16.png",
-      "17.png",
-    ];
-    var lettersArray = [
-      "11.png",
-      "12.png",
-      "13.png",
-      "14.png",
-      "15.png",
-      "16.png",
-      "17.png",
-    ];
-
+    var correctLettersArray = ["11.png","12.png","13.png","14.png","15.png","16.png","17.png",];
+    var lettersArray = ["11.png","12.png","13.png","14.png","15.png","16.png","17.png",];
+     
     lettersArray.sort(function () {
       return Math.random() - 0.5;
     });
@@ -205,35 +189,19 @@
   }
 
   /*kural2*/
-  var animal1 = 0;
-  $(singam);
+  var kural2 = 0;
+  $(two);
 
-  function singam() {
+  function two() {
     $(".success").hide();
 
-    animal1 = 0;
+    kural2 = 0;
     $(".cardPile11").html("");
     $(".cardSlots11").html("");
 
-    var correctLettersArray = [
-      "21.png",
-      "22.png",
-      "23.png",
-      "24.png",
-      "25.png",
-      "26.png",
-      "27.png",
-    ];
-    var lettersArray = [
-      "21.png",
-      "22.png",
-      "23.png",
-      "24.png",
-      "25.png",
-      "26.png",
-      "27.png",
-    ];
-
+    var correctLettersArray = ["21.png","22.png","23.png","24.png","25.png","26.png","27.png",];
+    var lettersArray = ["21.png","22.png","23.png","24.png","25.png","26.png","27.png",];
+      
     lettersArray.sort(function () {
       return Math.random() - 0.5;
     });
@@ -251,7 +219,6 @@
         });
     }
 
-    // Create the card slots
     let crCount = correctLettersArray.length;
     for (var i = 0; i < crCount; i++) {
       $("<div>text</div>")
@@ -260,17 +227,15 @@
         .droppable({
           accept: ".cardPile11 div",
           hoverClass: "hovered",
-          drop: handleCardDropsingam,
+          drop: handleCardDropTwo,
         });
     }
   }
 
-  function handleCardDropsingam(event, li) {
-    //Grab the slot number and card number
+  function handleCardDropTwo(event, li) {
     var slotNumber = $(this).data("number");
     var cardNumber = li.draggable.data("number");
 
-    //on top of the slot and prevent it being dragged again
     if (slotNumber === cardNumber) {
       li.draggable.addClass("correct");
       li.draggable.draggable("disable");
@@ -281,36 +246,28 @@
         at: "left top",
       });
       li.draggable.draggable("option", "revert", false);
-      animal1++;
+      kural2++;
     }
 
-    if (animal1 === 7) {
+    if (kural2 === 7) {
       $(".success").fadeIn("fast").delay(3000).fadeOut("slow");
     }
   }
 
   /*kural3*/
-  var animal2 = 0;
-  $(dog);
+  var kural3 = 0;
+  $(three);
 
-  function dog() {
+  function three() {
     $(".success2").hide();
 
-    animal2 = 0;
+    kural3 = 0;
     $(".cardPile12").html("");
     $(".cardSlots12").html("");
 
     var correctLettersArray = ["31.png", "32.png","33.png","34.png","35.png","36.png","37.png"];
-    var lettersArray = [
-      "31.png",
-      "32.png",
-      "33.png",
-      "34.png",
-      "35.png",
-      "36.png",
-      "37.png",
-    ];
-
+    var lettersArray = ["31.png", "32.png","33.png","34.png","35.png","36.png","37.png"];
+     
     lettersArray.sort(function () {
       return Math.random() - 0.5;
     });
@@ -328,7 +285,6 @@
         });
     }
 
-    // Create the card slots
     let crCount = correctLettersArray.length;
     for (var i = 0; i < crCount; i++) {
       $("<div>text</div>")
@@ -337,17 +293,15 @@
         .droppable({
           accept: ".cardPile12 div",
           hoverClass: "hovered",
-          drop: handleCardDropDog,
+          drop: handleCardDropThree,
         });
     }
   }
 
-  function handleCardDropDog(event, li) {
-    //Grab the slot number and card number
+  function handleCardDropThree(event, li) {
     var slotNumber = $(this).data("number");
     var cardNumber = li.draggable.data("number");
 
-    //on top of the slot and prevent it being dragged again
     if (slotNumber === cardNumber) {
       li.draggable.addClass("correct");
       li.draggable.draggable("disable");
@@ -358,38 +312,28 @@
         at: "left top",
       });
       li.draggable.draggable("option", "revert", false);
-      animal2++;
+      kural3++;
     }
 
-    if (animal2 === 7) {
+    if (kural3 === 7) {
       $(".success2").fadeIn("fast").delay(3000).fadeOut("slow");
-      var audio = new Audio("./sounds/dog.wav");
-      audio.play();
     }
   }
 
   //kural4
-  var animal3 = 0;
-  $(cow);
+  var kural4 = 0;
+  $(four);
 
-  function cow() {
+  function four() {
     $(".success3").hide();
 
-    animal1 = 0;
+    kural4 = 0;
     $(".cardPile13").html("");
     $(".cardSlots13").html("");
 
     var correctLettersArray = ["41.png", "42.png","43.png","44.png","45.png","46.png","47.png"];
-    var lettersArray = [
-      "41.png",
-      "42.png",
-      "43.png",
-      "44.png",
-      "45.png",
-      "46.png",
-      "47.png",
-    ];
-
+    var lettersArray = ["41.png", "42.png","43.png","44.png","45.png","46.png","47.png"];
+    
     lettersArray.sort(function () {
       return Math.random() - 0.5;
     });
@@ -407,7 +351,6 @@
         });
     }
 
-    // Create the card slots
     let crCount = correctLettersArray.length;
     for (var i = 0; i < crCount; i++) {
       $("<div>text</div>")
@@ -416,17 +359,15 @@
         .droppable({
           accept: ".cardPile13 div",
           hoverClass: "hovered",
-          drop: handleCardDropCow,
+          drop: handleCardDropFour,
         });
     }
   }
 
-  function handleCardDropCow(event, li) {
-    //Grab the slot number and card number
+  function handleCardDropFour(event, li) {
     var slotNumber = $(this).data("number");
     var cardNumber = li.draggable.data("number");
 
-    //on top of the slot and prevent it being dragged again
     if (slotNumber === cardNumber) {
       li.draggable.addClass("correct");
       li.draggable.draggable("disable");
@@ -437,39 +378,28 @@
         at: "left top",
       });
       li.draggable.draggable("option", "revert", false);
-      animal3++;
+      kural4++;
     }
 
-    if (animal3 === 7) {
+    if (kural4 === 7) {
       $(".success3").fadeIn("fast").delay(3000).fadeOut("slow");
-      var audio = new Audio("./sounds/cow.wav");
-      audio.play();
     }
   }
-  //
-
+  
   //kural5
-  var animal4 = 0;
-  $(cat);
+  var kural5 = 0;
+  $(five);
 
-  function cat() {
+  function five() {
     $(".success4").hide();
 
-    animal4 = 0;
+    kural5 = 0;
     $(".cardPile14").html("");
     $(".cardSlots14").html("");
 
     var correctLettersArray = ["51.png", "52.png","53.png","54.png","55.png","36.png","37.png"];
-    var lettersArray = [
-      "51.png",
-      "52.png",
-      "53.png",
-      "54.png",
-      "55.png",
-      "36.png",
-      "37.png",
-    ];
-
+    var lettersArray = ["51.png", "52.png","53.png","54.png","55.png","36.png","37.png"];
+     
     lettersArray.sort(function () {
       return Math.random() - 0.5;
     });
@@ -487,7 +417,6 @@
         });
     }
 
-    // Create the card slots
     let crCount = correctLettersArray.length;
     for (var i = 0; i < crCount; i++) {
       $("<div>text</div>")
@@ -496,17 +425,15 @@
         .droppable({
           accept: ".cardPile14 div",
           hoverClass: "hovered",
-          drop: handleCardDropCat,
+          drop: handleCardDropFive,
         });
     }
   }
 
-  function handleCardDropCat(event, li) {
-    //Grab the slot number and card number
+  function handleCardDropFive(event, li) {
     var slotNumber = $(this).data("number");
     var cardNumber = li.draggable.data("number");
 
-    //on top of the slot and prevent it being dragged again
     if (slotNumber === cardNumber) {
       li.draggable.addClass("correct");
       li.draggable.draggable("disable");
@@ -517,39 +444,28 @@
         at: "left top",
       });
       li.draggable.draggable("option", "revert", false);
-      animal4++;
+      kural5++;
     }
 
-    if (animal4 === 7) {
+    if (kural5 === 7) {
       $(".success4").fadeIn("fast").delay(3000).fadeOut("slow");
-      var audio = new Audio("./sounds/cat.wav");
-      audio.play();
     }
   }
-  //
-
+  
   //kural6
-  var animal5 = 0;
-  $(horse);
+  var kural6 = 0;
+  $(six);
 
-  function horse() {
+  function six() {
     $(".success5").hide();
 
-    animal5 = 0;
+    kural6 = 0;
     $(".cardPile15").html("");
     $(".cardSlots15").html("");
 
-    var correctLettersArray = ["61.png", "62.png", "63.png","64.png","65.png","66.png","67.png"];
-    var lettersArray = [
-      "61.png",
-      "62.png",
-      "63.png",
-      "64.png",
-      "65.png",
-      "66.png",
-      "67.png",
-    ];
-
+    var correctLettersArray = ["61.png", "62.png", "63.png","64.png","65.png","62.png","67.png"];
+    var lettersArray = ["61.png", "62.png", "63.png","64.png","65.png","62.png","67.png"];
+      
     lettersArray.sort(function () {
       return Math.random() - 0.5;
     });
@@ -567,7 +483,6 @@
         });
     }
 
-    // Create the card slots
     let crCount = correctLettersArray.length;
     for (var i = 0; i < crCount; i++) {
       $("<div>text</div>")
@@ -576,17 +491,15 @@
         .droppable({
           accept: ".cardPile15 div",
           hoverClass: "hovered",
-          drop: handleCardDropHorse,
+          drop: handleCardDropSix,
         });
     }
   }
 
-  function handleCardDropHorse(event, li) {
-    //Grab the slot number and card number
+  function handleCardDropSix(event, li) {
     var slotNumber = $(this).data("number");
     var cardNumber = li.draggable.data("number");
 
-    //on top of the slot and prevent it being dragged again
     if (slotNumber === cardNumber) {
       li.draggable.addClass("correct");
       li.draggable.draggable("disable");
@@ -597,24 +510,22 @@
         at: "left top",
       });
       li.draggable.draggable("option", "revert", false);
-      animal5++;
+      kural6 ++;
     }
 
-    if (animal5 === 7) {
+    if (kural6  === 7) {
       $(".success5").fadeIn("fast").delay(3000).fadeOut("slow");
-      var audio = new Audio("./sounds/horse.wav");
-      audio.play();
     }
   }
 
   //kural7
-  var animal6 = 0;
-  $(Bear);
+  var kural7 = 0;
+  $(seven);
 
-  function Bear() {
+  function seven() {
     $(".success6").hide();
 
-    animal6 = 0;
+    kural7 = 0;
     $(".cardPile16").html("");
     $(".cardSlots16").html("");
 
@@ -638,7 +549,6 @@
         });
     }
 
-    // Create the card slots
     let crCount = correctLettersArray.length;
     for (var i = 0; i < crCount; i++) {
       $("<div>text</div>")
@@ -647,17 +557,15 @@
         .droppable({
           accept: ".cardPile16 div",
           hoverClass: "hovered",
-          drop: handleCardDropBear,
+          drop: handleCardDropSeven,
         });
     }
   }
 
-  function handleCardDropBear(event, li) {
-    //Grab the slot number and card number
+  function handleCardDropSeven(event, li) {
     var slotNumber = $(this).data("number");
     var cardNumber = li.draggable.data("number");
 
-    //on top of the slot and prevent it being dragged again
     if (slotNumber === cardNumber) {
       li.draggable.addClass("correct");
       li.draggable.draggable("disable");
@@ -668,24 +576,22 @@
         at: "left top",
       });
       li.draggable.draggable("option", "revert", false);
-      animal6++;
+      kural7++;
     }
 
-    if (animal6 === 7) {
+    if (kural7 === 7) {
       $(".success6").fadeIn("fast").delay(3000).fadeOut("slow");
-      var audio = new Audio("./sounds/Bear.mp3");
-      audio.play();
     }
   }
 
   //kural8
-  var animal7 = 0;
-  $(Deer);
+  var kural8 = 0;
+  $(eight);
 
-  function Deer() {
+  function eight() {
     $(".success7").hide();
 
-    animal7 = 0;
+    kural8 = 0;
     $(".cardPile17").html("");
     $(".cardSlots17").html("");
 
@@ -709,7 +615,6 @@
         });
     }
 
-    // Create the card slots
     let crCount = correctLettersArray.length;
     for (var i = 0; i < crCount; i++) {
       $("<div>text</div>")
@@ -718,17 +623,15 @@
         .droppable({
           accept: ".cardPile17 div",
           hoverClass: "hovered",
-          drop: handleCardDropDeer,
+          drop: handleCardDropEight,
         });
     }
   }
 
-  function handleCardDropDeer(event, li) {
-    //Grab the slot number and card number
+  function handleCardDropEight(event, li) {
     var slotNumber = $(this).data("number");
     var cardNumber = li.draggable.data("number");
 
-    //on top of the slot and prevent it being dragged again
     if (slotNumber === cardNumber) {
       li.draggable.addClass("correct");
       li.draggable.draggable("disable");
@@ -739,24 +642,22 @@
         at: "left top",
       });
       li.draggable.draggable("option", "revert", false);
-      animal7++;
+      kural8++;
     }
 
-    if (animal7 === 7) {
+    if (kural8 === 7) {
       $(".success7").fadeIn("fast").delay(3000).fadeOut("slow");
-      var audio = new Audio("./sounds/Deer.mp3");
-      audio.play();
     }
   }
 
   //kural9
-  var animal8 = 0;
-  $(Rabbit);
+  var kural9 = 0;
+  $(nine);
 
-  function Rabbit() {
+  function nine() {
     $(".success8").hide();
 
-    animal8 = 0;
+    kural9 = 0;
     $(".cardPile18").html("");
     $(".cardSlots18").html("");
 
@@ -780,7 +681,6 @@
         });
     }
 
-    // Create the card slots
     let crCount = correctLettersArray.length;
     for (var i = 0; i < crCount; i++) {
       $("<div>text</div>")
@@ -789,17 +689,15 @@
         .droppable({
           accept: ".cardPile18 div",
           hoverClass: "hovered",
-          drop: handleCardDropRabbit,
+          drop: handleCardDropNine,
         });
     }
   }
 
-  function handleCardDropRabbit(event, li) {
-    //Grab the slot number and card number
+  function handleCardDropNine(event, li) {
     var slotNumber = $(this).data("number");
     var cardNumber = li.draggable.data("number");
 
-    //on top of the slot and prevent it being dragged again
     if (slotNumber === cardNumber) {
       li.draggable.addClass("correct");
       li.draggable.draggable("disable");
@@ -810,24 +708,22 @@
         at: "left top",
       });
       li.draggable.draggable("option", "revert", false);
-      animal8++;
+      kural9++;
     }
 
-    if (animal8 === 7) {
+    if (kural9 === 7) {
       $(".success8").fadeIn("fast").delay(3000).fadeOut("slow");
-      var audio = new Audio("./sounds/Rabbit.mp3");
-      audio.play();
     }
   }
 
   //kural10
-  var animal9 = 0;
-  $(Fox);
+  var kural10 = 0;
+  $(ten);
 
-  function Fox() {
+  function ten() {
     $(".success9").hide();
 
-    animal7 = 0;
+    kural10 = 0;
     $(".cardPile19").html("");
     $(".cardSlots19").html("");
 
@@ -851,7 +747,6 @@
         });
     }
 
-    // Create the card slots
     let crCount = correctLettersArray.length;
     for (var i = 0; i < crCount; i++) {
       $("<div>text</div>")
@@ -860,17 +755,15 @@
         .droppable({
           accept: ".cardPile19 div",
           hoverClass: "hovered",
-          drop: handleCardDropFox,
+          drop: handleCardDropTen,
         });
     }
   }
 
-  function handleCardDropFox(event, li) {
-    //Grab the slot number and card number
+  function handleCardDropTen(event, li) {
     var slotNumber = $(this).data("number");
     var cardNumber = li.draggable.data("number");
 
-    //on top of the slot and prevent it being dragged again
     if (slotNumber === cardNumber) {
       li.draggable.addClass("correct");
       li.draggable.draggable("disable");
@@ -881,13 +774,11 @@
         at: "left top",
       });
       li.draggable.draggable("option", "revert", false);
-      animal9++;
+      kural10++;
     }
 
-    if (animal9 === 7) {
+    if (kural10 === 7) {
       $(".success9").fadeIn("fast").delay(3000).fadeOut("slow");
-      var audio = new Audio("./sounds/Fox.mp3");
-      audio.play();
     }
   }
 </script>

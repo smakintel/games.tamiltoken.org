@@ -264,7 +264,6 @@
         });
     }
 
-    // Create the card slots
     let crCount = correctLettersArray.length;
     for (var i = 0; i < crCount; i++) {
       $("<div>text</div>")
@@ -279,11 +278,9 @@
   }
 
   function handleCardDropsingam(event, li) {
-    //Grab the slot number and card number
     var slotNumber = $(this).data("number");
     var cardNumber = li.draggable.data("number");
 
-    //on top of the slot and prevent it being dragged again
     if (slotNumber === cardNumber) {
       li.draggable.addClass("correct");
       li.draggable.draggable("disable");
@@ -316,14 +313,7 @@
     $(".cardSlots2").html("");
 
     var correctLettersArray = ["naa.png", "y.png"];
-    var lettersArray = [
-      "naa.png",
-      "y.png",
-      "ka.png",
-      "m.png",
-      "ra.png",
-      "ma.png",
-    ];
+    var lettersArray = ["naa.png","y.png","ka.png","m.png","ra.png", "ma.png"];
 
     lettersArray.sort(function () {
       return Math.random() - 0.5;
@@ -342,7 +332,6 @@
         });
     }
 
-    // Create the card slots
     let crCount = correctLettersArray.length;
     for (var i = 0; i < crCount; i++) {
       $("<div>text</div>")
@@ -357,11 +346,9 @@
   }
 
   function handleCardDropDog(event, li) {
-    //Grab the slot number and card number
     var slotNumber = $(this).data("number");
     var cardNumber = li.draggable.data("number");
 
-    //on top of the slot and prevent it being dragged again
     if (slotNumber === cardNumber) {
       li.draggable.addClass("correct");
       li.draggable.draggable("disable");
@@ -394,14 +381,7 @@
     $(".cardSlots3").html("");
 
     var correctLettersArray = ["ma.png", "du.png"];
-    var lettersArray = [
-      "ma.png",
-      "du.png",
-      "ka.png",
-      "m.png",
-      "ra.png",
-      "ku.png",
-    ];
+    var lettersArray = ["ma.png","du.png","ka.png","m.png","ra.png","ku.png"];
 
     lettersArray.sort(function () {
       return Math.random() - 0.5;
@@ -420,7 +400,6 @@
         });
     }
 
-    // Create the card slots
     let crCount = correctLettersArray.length;
     for (var i = 0; i < crCount; i++) {
       $("<div>text</div>")
@@ -435,11 +414,9 @@
   }
 
   function handleCardDropCow(event, li) {
-    //Grab the slot number and card number
     var slotNumber = $(this).data("number");
     var cardNumber = li.draggable.data("number");
 
-    //on top of the slot and prevent it being dragged again
     if (slotNumber === cardNumber) {
       li.draggable.addClass("correct");
       li.draggable.draggable("disable");
@@ -459,8 +436,7 @@
       audio.play();
     }
   }
-  //
-
+  
   //cat
   var animal4 = 0;
   $(cat);
@@ -473,14 +449,7 @@
     $(".cardSlots4").html("");
 
     var correctLettersArray = ["poo.png", "nai.png"];
-    var lettersArray = [
-      "poo.png",
-      "nai.png",
-      "ka.png",
-      "m.png",
-      "ra.png",
-      "ma.png",
-    ];
+    var lettersArray = ["poo.png","nai.png","ka.png","m.png","ra.png","ma.png",];
 
     lettersArray.sort(function () {
       return Math.random() - 0.5;
@@ -499,7 +468,6 @@
         });
     }
 
-    // Create the card slots
     let crCount = correctLettersArray.length;
     for (var i = 0; i < crCount; i++) {
       $("<div>text</div>")
@@ -514,11 +482,9 @@
   }
 
   function handleCardDropCat(event, li) {
-    //Grab the slot number and card number
     var slotNumber = $(this).data("number");
     var cardNumber = li.draggable.data("number");
 
-    //on top of the slot and prevent it being dragged again
     if (slotNumber === cardNumber) {
       li.draggable.addClass("correct");
       li.draggable.draggable("disable");
@@ -552,14 +518,7 @@
     $(".cardSlots5").html("");
 
     var correctLettersArray = ["ku.png", "thi.png", "rai.png"];
-    var lettersArray = [
-      "ku.png",
-      "thi.png",
-      "rai.png",
-      "m.png",
-      "ra.png",
-      "ma.png",
-    ];
+    var lettersArray = ["ku.png","thi.png", "rai.png","m.png","ra.png","ma.png",];
 
     lettersArray.sort(function () {
       return Math.random() - 0.5;
@@ -578,7 +537,6 @@
         });
     }
 
-    // Create the card slots
     let crCount = correctLettersArray.length;
     for (var i = 0; i < crCount; i++) {
       $("<div>text</div>")
@@ -593,11 +551,9 @@
   }
 
   function handleCardDropHorse(event, li) {
-    //Grab the slot number and card number
     var slotNumber = $(this).data("number");
     var cardNumber = li.draggable.data("number");
 
-    //on top of the slot and prevent it being dragged again
     if (slotNumber === cardNumber) {
       li.draggable.addClass("correct");
       li.draggable.draggable("disable");
@@ -630,14 +586,7 @@
     $(".cardSlots6").html("");
 
     var correctLettersArray = ["ka.png", "ra.png", "di.png"];
-    var lettersArray = [
-      "ka.png",
-      "ra.png",
-      "di.png",
-      "m.png",
-      "g.png",
-      "ma.png",
-    ];
+    var lettersArray = ["ka.png", "ra.png","di.png","m.png","g.png","ma.png", ];
 
     lettersArray.sort(function () {
       return Math.random() - 0.5;
@@ -656,7 +605,6 @@
         });
     }
 
-    // Create the card slots
     let crCount = correctLettersArray.length;
     for (var i = 0; i < crCount; i++) {
       $("<div>text</div>")
@@ -671,11 +619,9 @@
   }
 
   function handleCardDropBear(event, li) {
-    //Grab the slot number and card number
     var slotNumber = $(this).data("number");
     var cardNumber = li.draggable.data("number");
 
-    //on top of the slot and prevent it being dragged again
     if (slotNumber === cardNumber) {
       li.draggable.addClass("correct");
       li.draggable.draggable("disable");
@@ -708,14 +654,7 @@
     $(".cardSlots7").html("");
 
     var correctLettersArray = ["ma.png", "n.png"];
-    var lettersArray = [
-      "ma.png",
-      "n.png",
-      "rai.png",
-      "m.png",
-      "ra.png",
-      "ya.png",
-    ];
+    var lettersArray = ["ma.png","n.png", "rai.png","m.png","ra.png", "ya.png",];
 
     lettersArray.sort(function () {
       return Math.random() - 0.5;
@@ -734,7 +673,6 @@
         });
     }
 
-    // Create the card slots
     let crCount = correctLettersArray.length;
     for (var i = 0; i < crCount; i++) {
       $("<div>text</div>")
@@ -749,11 +687,9 @@
   }
 
   function handleCardDropDeer(event, li) {
-    //Grab the slot number and card number
     var slotNumber = $(this).data("number");
     var cardNumber = li.draggable.data("number");
 
-    //on top of the slot and prevent it being dragged again
     if (slotNumber === cardNumber) {
       li.draggable.addClass("correct");
       li.draggable.draggable("disable");
@@ -786,14 +722,7 @@
     $(".cardSlots8").html("");
 
     var correctLettersArray = ["mu.png", "ya.png", "l.png"];
-    var lettersArray = [
-      "mu.png",
-      "y.png",
-      "l.png",
-      "m.png",
-      "ra.png",
-      "ya.png",
-    ];
+    var lettersArray = ["mu.png","y.png","l.png","m.png","ra.png", "ya.png",];
 
     lettersArray.sort(function () {
       return Math.random() - 0.5;
@@ -812,7 +741,6 @@
         });
     }
 
-    // Create the card slots
     let crCount = correctLettersArray.length;
     for (var i = 0; i < crCount; i++) {
       $("<div>text</div>")
@@ -827,11 +755,9 @@
   }
 
   function handleCardDropRabbit(event, li) {
-    //Grab the slot number and card number
     var slotNumber = $(this).data("number");
     var cardNumber = li.draggable.data("number");
 
-    //on top of the slot and prevent it being dragged again
     if (slotNumber === cardNumber) {
       li.draggable.addClass("correct");
       li.draggable.draggable("disable");
@@ -864,14 +790,7 @@
     $(".cardSlots9").html("");
 
     var correctLettersArray = ["na.png", "ri.png"];
-    var lettersArray = [
-      "na.png",
-      "ri.png",
-      "rai.png",
-      "m.png",
-      "ra.png",
-      "ya.png",
-    ];
+    var lettersArray = ["na.png","ri.png","rai.png","m.png","ra.png","ya.png",];
 
     lettersArray.sort(function () {
       return Math.random() - 0.5;
@@ -890,7 +809,6 @@
         });
     }
 
-    // Create the card slots
     let crCount = correctLettersArray.length;
     for (var i = 0; i < crCount; i++) {
       $("<div>text</div>")
@@ -905,11 +823,9 @@
   }
 
   function handleCardDropFox(event, li) {
-    //Grab the slot number and card number
     var slotNumber = $(this).data("number");
     var cardNumber = li.draggable.data("number");
 
-    //on top of the slot and prevent it being dragged again
     if (slotNumber === cardNumber) {
       li.draggable.addClass("correct");
       li.draggable.draggable("disable");
