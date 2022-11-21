@@ -1,0 +1,94 @@
+<div id="content">
+  <div id="cardPile20"></div>
+  <div id="cardSlots20"></div>
+  <div id="successMessage20"></div>
+</div>
+
+<script>
+  var correctCards = 0;
+  $(init);
+  function init() {
+    $("#successMessage20").hide();
+    $("#successMessage20").css({
+      left: "580px",
+      top: "250px",
+      width: 0,
+      height: 0,
+    });
+
+    correctCards = 0;
+    $("#cardPile20").html("");
+    $("#cardSlots20").html("");
+
+    var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    numbers.sort(function () {
+      return Math.random() - 0.5;
+    });
+
+    for (var i = 0; i < 10; i++) {
+      $("<div>" + numbers[i] + "</div>")
+        .data("number", numbers[i])
+        .attr("id", "card" + numbers[i])
+        .appendTo("#cardPile20")
+        .draggable({
+          containment: "#content",
+          stack: "#cardPile20 div",
+          cursor: "move",
+          revert: true,
+        });
+    }
+
+    var words = [
+      "ஒன்று",
+      "இரண்டு",
+      "மூன்று",
+      "நான்கு",
+      "ஐந்து",
+      "ஆறு",
+      "ஏழு",
+      "எட்டு",
+      "ஒன்பது",
+      "பத்து",
+    ];
+    for (var i = 1; i <= 10; i++) {
+      $("<div>" + words[i - 1] + "</div>")
+        .data("number", i)
+        .appendTo("#cardSlots20")
+        .droppable({
+          accept: "#cardPile20 div",
+          hoverClass: "hovered",
+          drop: handleCardDrop,
+        });
+    }
+  }
+
+  function handleCardDrop(event, ui) {
+    var slotNumber = $(this).data("number");
+    var cardNumber = ui.draggable.data("number");
+
+    if (slotNumber === cardNumber) {
+      ui.draggable.addClass("correct");
+      ui.draggable.draggable("disable");
+      $(this).droppable("disable");
+      ui.draggable.position({
+        of: $(this),
+        my: "left top",
+        at: "left top",
+      });
+
+      ui.draggable.draggable("option", "revert", false);
+      correctCards++;
+    }
+
+    if (correctCards === 10) {
+      $("#successMessage20").show();
+      $("#successMessage20").animate({
+        left: "380px",
+        top: "200px",
+        width: "400px",
+        height: "100px",
+        opacity: 1,
+      });
+    }
+  }
+</script>

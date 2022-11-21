@@ -13,10 +13,10 @@
 
   <!--kural2-->
   <div class="kural2">
-    <div class="cardPile1">
+    <div class="cardPile11">
       <div class="li-content"></div>
     </div>
-    <div class="cardSlots1"></div>
+    <div class="cardSlots11"></div>
 
     <div class="success">
       <img src="images/animation.gif" />
@@ -25,10 +25,10 @@
 
   <!--kural3-->
   <div class="kural3">
-    <div class="cardPile2">
+    <div class="cardPile12">
       <div class="li-content"></div>
     </div>
-    <div class="cardSlots2"></div>
+    <div class="cardSlots12"></div>
 
     <div class="success2">
       <img src="images/animation.gif" />
@@ -37,10 +37,10 @@
 
   <!--kural4-->
   <div class="kural4">
-    <div class="cardPile3">
+    <div class="cardPile13">
       <div class="li-content"></div>
     </div>
-    <div class="cardSlots3"></div>
+    <div class="cardSlots13"></div>
 
     <div class="success3">
       <img src="images/animation.gif" />
@@ -49,10 +49,10 @@
 
   <!--kural5-->
   <div class="kural5">
-    <div class="cardPile4">
+    <div class="cardPile14">
       <div class="li-content"></div>
     </div>
-    <div class="cardSlots4"></div>
+    <div class="cardSlots14"></div>
 
     <div class="success4">
       <img src="images/animation.gif" />
@@ -61,10 +61,10 @@
 
   <!--kural6-->
   <div class="kural6">
-    <div class="cardPile5">
+    <div class="cardPile15">
       <div class="li-content"></div>
     </div>
-    <div class="cardSlots5"></div>
+    <div class="cardSlots15"></div>
 
     <div class="success5">
       <img src="images/animation.gif" />
@@ -73,10 +73,10 @@
 
   <!--kural7-->
   <div class="kural7">
-    <div class="cardPile6">
+    <div class="cardPile16">
       <div class="li-content"></div>
     </div>
-    <div class="cardSlots6"></div>
+    <div class="cardSlots16"></div>
 
     <div class="success6">
       <img src="images/animation.gif" />
@@ -85,10 +85,10 @@
 
   <!--kural8-->
   <div class="kural8">
-    <div class="cardPile7">
+    <div class="cardPile17">
       <div class="li-content"></div>
     </div>
-    <div class="cardSlots7"></div>
+    <div class="cardSlots17"></div>
 
     <div class="success7">
       <img src="images/animation.gif" />
@@ -97,10 +97,10 @@
 
   <!--kural9-->
   <div class="kural9">
-    <div class="cardPile8">
+    <div class="cardPile18">
       <div class="li-content"></div>
     </div>
-    <div class="cardSlots8"></div>
+    <div class="cardSlots18"></div>
 
     <div class="success8">
       <img src="images/animation.gif" />
@@ -109,10 +109,10 @@
 
   <!--kural10-->
   <div class="kural10">
-    <div class="cardPile9">
+    <div class="cardPile19">
       <div class="li-content"></div>
     </div>
-    <div class="cardSlots9"></div>
+    <div class="cardSlots19"></div>
 
     <div class="success9">
       <img src="images/animation.gif" />
@@ -122,9 +122,9 @@
 
 <script>
   var kural1 = 0;
-  $(word1);
+  $(one);
 
-  function word1() {
+  function one() {
     $(".successMessage").hide();
     kural1 = 0;
     $(".cardPile10").html("");
@@ -201,6 +201,693 @@
 
     if (kural1 === 7) {
       $(".successMessage").fadeIn("fast").delay(3000).fadeOut("slow");
+    }
+  }
+
+  /*kural2*/
+  var animal1 = 0;
+  $(singam);
+
+  function singam() {
+    $(".success").hide();
+
+    animal1 = 0;
+    $(".cardPile11").html("");
+    $(".cardSlots11").html("");
+
+    var correctLettersArray = [
+      "21.png",
+      "22.png",
+      "23.png",
+      "24.png",
+      "25.png",
+      "26.png",
+      "27.png",
+    ];
+    var lettersArray = [
+      "21.png",
+      "22.png",
+      "23.png",
+      "24.png",
+      "25.png",
+      "26.png",
+      "27.png",
+    ];
+
+    lettersArray.sort(function () {
+      return Math.random() - 0.5;
+    });
+
+    for (var i = 0; i < 7; i++) {
+      $("<div><img src='kurals/" + lettersArray[i] + "'></div>")
+        .data("number", lettersArray[i])
+        .attr("id", "card" + lettersArray[i])
+        .appendTo(".cardPile11")
+        .draggable({
+          containment: "#content",
+          stack: ".cardPile11 div",
+          cursor: "move",
+          revert: true,
+        });
+    }
+
+    // Create the card slots
+    let crCount = correctLettersArray.length;
+    for (var i = 0; i < crCount; i++) {
+      $("<div>text</div>")
+        .data("number", correctLettersArray[i])
+        .appendTo(".cardSlots11")
+        .droppable({
+          accept: ".cardPile11 div",
+          hoverClass: "hovered",
+          drop: handleCardDropsingam,
+        });
+    }
+  }
+
+  function handleCardDropsingam(event, li) {
+    //Grab the slot number and card number
+    var slotNumber = $(this).data("number");
+    var cardNumber = li.draggable.data("number");
+
+    //on top of the slot and prevent it being dragged again
+    if (slotNumber === cardNumber) {
+      li.draggable.addClass("correct");
+      li.draggable.draggable("disable");
+      $(this).droppable("disable");
+      li.draggable.position({
+        of: $(this),
+        my: "left top",
+        at: "left top",
+      });
+      li.draggable.draggable("option", "revert", false);
+      animal1++;
+    }
+
+    if (animal1 === 7) {
+      $(".success").fadeIn("fast").delay(3000).fadeOut("slow");
+    }
+  }
+
+  /*kural3*/
+  var animal2 = 0;
+  $(dog);
+
+  function dog() {
+    $(".success2").hide();
+
+    animal2 = 0;
+    $(".cardPile12").html("");
+    $(".cardSlots12").html("");
+
+    var correctLettersArray = ["31.png", "32.png","33.png","34.png","35.png","36.png","37.png"];
+    var lettersArray = [
+      "31.png",
+      "32.png",
+      "33.png",
+      "34.png",
+      "35.png",
+      "36.png",
+      "37.png",
+    ];
+
+    lettersArray.sort(function () {
+      return Math.random() - 0.5;
+    });
+
+    for (var i = 0; i < 7; i++) {
+      $("<div><img src='kurals/" + lettersArray[i] + "'></div>")
+        .data("number", lettersArray[i])
+        .attr("id", "card" + lettersArray[i])
+        .appendTo(".cardPile12")
+        .draggable({
+          containment: "#content",
+          stack: ".cardPile12 div",
+          cursor: "move",
+          revert: true,
+        });
+    }
+
+    // Create the card slots
+    let crCount = correctLettersArray.length;
+    for (var i = 0; i < crCount; i++) {
+      $("<div>text</div>")
+        .data("number", correctLettersArray[i])
+        .appendTo(".cardSlots12")
+        .droppable({
+          accept: ".cardPile12 div",
+          hoverClass: "hovered",
+          drop: handleCardDropDog,
+        });
+    }
+  }
+
+  function handleCardDropDog(event, li) {
+    //Grab the slot number and card number
+    var slotNumber = $(this).data("number");
+    var cardNumber = li.draggable.data("number");
+
+    //on top of the slot and prevent it being dragged again
+    if (slotNumber === cardNumber) {
+      li.draggable.addClass("correct");
+      li.draggable.draggable("disable");
+      $(this).droppable("disable");
+      li.draggable.position({
+        of: $(this),
+        my: "left top",
+        at: "left top",
+      });
+      li.draggable.draggable("option", "revert", false);
+      animal2++;
+    }
+
+    if (animal2 === 7) {
+      $(".success2").fadeIn("fast").delay(3000).fadeOut("slow");
+      var audio = new Audio("./sounds/dog.wav");
+      audio.play();
+    }
+  }
+
+  //kural4
+  var animal3 = 0;
+  $(cow);
+
+  function cow() {
+    $(".success3").hide();
+
+    animal1 = 0;
+    $(".cardPile13").html("");
+    $(".cardSlots13").html("");
+
+    var correctLettersArray = ["41.png", "42.png","43.png","44.png","45.png","46.png","47.png"];
+    var lettersArray = [
+      "41.png",
+      "42.png",
+      "43.png",
+      "44.png",
+      "45.png",
+      "46.png",
+      "47.png",
+    ];
+
+    lettersArray.sort(function () {
+      return Math.random() - 0.5;
+    });
+
+    for (var i = 0; i < 7; i++) {
+      $("<div><img src='kurals/" + lettersArray[i] + "'></div>")
+        .data("number", lettersArray[i])
+        .attr("id", "card" + lettersArray[i])
+        .appendTo(".cardPile13")
+        .draggable({
+          containment: "#content",
+          stack: ".cardPile13 div",
+          cursor: "move",
+          revert: true,
+        });
+    }
+
+    // Create the card slots
+    let crCount = correctLettersArray.length;
+    for (var i = 0; i < crCount; i++) {
+      $("<div>text</div>")
+        .data("number", correctLettersArray[i])
+        .appendTo(".cardSlots13")
+        .droppable({
+          accept: ".cardPile13 div",
+          hoverClass: "hovered",
+          drop: handleCardDropCow,
+        });
+    }
+  }
+
+  function handleCardDropCow(event, li) {
+    //Grab the slot number and card number
+    var slotNumber = $(this).data("number");
+    var cardNumber = li.draggable.data("number");
+
+    //on top of the slot and prevent it being dragged again
+    if (slotNumber === cardNumber) {
+      li.draggable.addClass("correct");
+      li.draggable.draggable("disable");
+      $(this).droppable("disable");
+      li.draggable.position({
+        of: $(this),
+        my: "left top",
+        at: "left top",
+      });
+      li.draggable.draggable("option", "revert", false);
+      animal3++;
+    }
+
+    if (animal3 === 7) {
+      $(".success3").fadeIn("fast").delay(3000).fadeOut("slow");
+      var audio = new Audio("./sounds/cow.wav");
+      audio.play();
+    }
+  }
+  //
+
+  //kural5
+  var animal4 = 0;
+  $(cat);
+
+  function cat() {
+    $(".success4").hide();
+
+    animal4 = 0;
+    $(".cardPile14").html("");
+    $(".cardSlots14").html("");
+
+    var correctLettersArray = ["51.png", "52.png","53.png","54.png","55.png","36.png","37.png"];
+    var lettersArray = [
+      "51.png",
+      "52.png",
+      "53.png",
+      "54.png",
+      "55.png",
+      "36.png",
+      "37.png",
+    ];
+
+    lettersArray.sort(function () {
+      return Math.random() - 0.5;
+    });
+
+    for (var i = 0; i < 7; i++) {
+      $("<div><img src='kurals/" + lettersArray[i] + "'></div>")
+        .data("number", lettersArray[i])
+        .attr("id", "card" + lettersArray[i])
+        .appendTo(".cardPile14")
+        .draggable({
+          containment: "#content",
+          stack: ".cardPile14 div",
+          cursor: "move",
+          revert: true,
+        });
+    }
+
+    // Create the card slots
+    let crCount = correctLettersArray.length;
+    for (var i = 0; i < crCount; i++) {
+      $("<div>text</div>")
+        .data("number", correctLettersArray[i])
+        .appendTo(".cardSlots14")
+        .droppable({
+          accept: ".cardPile14 div",
+          hoverClass: "hovered",
+          drop: handleCardDropCat,
+        });
+    }
+  }
+
+  function handleCardDropCat(event, li) {
+    //Grab the slot number and card number
+    var slotNumber = $(this).data("number");
+    var cardNumber = li.draggable.data("number");
+
+    //on top of the slot and prevent it being dragged again
+    if (slotNumber === cardNumber) {
+      li.draggable.addClass("correct");
+      li.draggable.draggable("disable");
+      $(this).droppable("disable");
+      li.draggable.position({
+        of: $(this),
+        my: "left top",
+        at: "left top",
+      });
+      li.draggable.draggable("option", "revert", false);
+      animal4++;
+    }
+
+    if (animal4 === 7) {
+      $(".success4").fadeIn("fast").delay(3000).fadeOut("slow");
+      var audio = new Audio("./sounds/cat.wav");
+      audio.play();
+    }
+  }
+  //
+
+  //kural6
+  var animal5 = 0;
+  $(horse);
+
+  function horse() {
+    $(".success5").hide();
+
+    animal5 = 0;
+    $(".cardPile15").html("");
+    $(".cardSlots15").html("");
+
+    var correctLettersArray = ["61.png", "62.png", "63.png","64.png","65.png","66.png","67.png"];
+    var lettersArray = [
+      "61.png",
+      "62.png",
+      "63.png",
+      "64.png",
+      "65.png",
+      "66.png",
+      "67.png",
+    ];
+
+    lettersArray.sort(function () {
+      return Math.random() - 0.5;
+    });
+
+    for (var i = 0; i < 7; i++) {
+      $("<div><img src='kurals/" + lettersArray[i] + "'></div>")
+        .data("number", lettersArray[i])
+        .attr("id", "card" + lettersArray[i])
+        .appendTo(".cardPile15")
+        .draggable({
+          containment: "#content",
+          stack: ".cardPile15 div",
+          cursor: "move",
+          revert: true,
+        });
+    }
+
+    // Create the card slots
+    let crCount = correctLettersArray.length;
+    for (var i = 0; i < crCount; i++) {
+      $("<div>text</div>")
+        .data("number", correctLettersArray[i])
+        .appendTo(".cardSlots15")
+        .droppable({
+          accept: ".cardPile15 div",
+          hoverClass: "hovered",
+          drop: handleCardDropHorse,
+        });
+    }
+  }
+
+  function handleCardDropHorse(event, li) {
+    //Grab the slot number and card number
+    var slotNumber = $(this).data("number");
+    var cardNumber = li.draggable.data("number");
+
+    //on top of the slot and prevent it being dragged again
+    if (slotNumber === cardNumber) {
+      li.draggable.addClass("correct");
+      li.draggable.draggable("disable");
+      $(this).droppable("disable");
+      li.draggable.position({
+        of: $(this),
+        my: "left top",
+        at: "left top",
+      });
+      li.draggable.draggable("option", "revert", false);
+      animal5++;
+    }
+
+    if (animal5 === 7) {
+      $(".success5").fadeIn("fast").delay(3000).fadeOut("slow");
+      var audio = new Audio("./sounds/horse.wav");
+      audio.play();
+    }
+  }
+
+  //kural7
+  var animal6 = 0;
+  $(Bear);
+
+  function Bear() {
+    $(".success6").hide();
+
+    animal6 = 0;
+    $(".cardPile16").html("");
+    $(".cardSlots16").html("");
+
+    var correctLettersArray = ["71.png", "72.png", "73.png","74.png","75.png","36.png","77.png"];
+    var lettersArray = ["71.png", "72.png", "73.png","74.png","75.png","36.png","77.png"];
+   
+    lettersArray.sort(function () {
+      return Math.random() - 0.5;
+    });
+
+    for (var i = 0; i < 7; i++) {
+      $("<div><img src='kurals//" + lettersArray[i] + "'></div>")
+        .data("number", lettersArray[i])
+        .attr("id", "card" + lettersArray[i])
+        .appendTo(".cardPile16")
+        .draggable({
+          containment: "#content",
+          stack: ".cardPile16 div",
+          cursor: "move",
+          revert: true,
+        });
+    }
+
+    // Create the card slots
+    let crCount = correctLettersArray.length;
+    for (var i = 0; i < crCount; i++) {
+      $("<div>text</div>")
+        .data("number", correctLettersArray[i])
+        .appendTo(".cardSlots16")
+        .droppable({
+          accept: ".cardPile16 div",
+          hoverClass: "hovered",
+          drop: handleCardDropBear,
+        });
+    }
+  }
+
+  function handleCardDropBear(event, li) {
+    //Grab the slot number and card number
+    var slotNumber = $(this).data("number");
+    var cardNumber = li.draggable.data("number");
+
+    //on top of the slot and prevent it being dragged again
+    if (slotNumber === cardNumber) {
+      li.draggable.addClass("correct");
+      li.draggable.draggable("disable");
+      $(this).droppable("disable");
+      li.draggable.position({
+        of: $(this),
+        my: "left top",
+        at: "left top",
+      });
+      li.draggable.draggable("option", "revert", false);
+      animal6++;
+    }
+
+    if (animal6 === 7) {
+      $(".success6").fadeIn("fast").delay(3000).fadeOut("slow");
+      var audio = new Audio("./sounds/Bear.mp3");
+      audio.play();
+    }
+  }
+
+  //kural8
+  var animal7 = 0;
+  $(Deer);
+
+  function Deer() {
+    $(".success7").hide();
+
+    animal7 = 0;
+    $(".cardPile17").html("");
+    $(".cardSlots17").html("");
+
+    var correctLettersArray = ["81.png", "82.png","83.png","84.png","85.png","86.png","87.png"];
+    var lettersArray = ["81.png", "82.png","83.png","84.png","85.png","86.png","87.png"];
+    
+    lettersArray.sort(function () {
+      return Math.random() - 0.5;
+    });
+
+    for (var i = 0; i < 7; i++) {
+      $("<div><img src='kurals/" + lettersArray[i] + "'></div>")
+        .data("number", lettersArray[i])
+        .attr("id", "card" + lettersArray[i])
+        .appendTo(".cardPile17")
+        .draggable({
+          containment: "#content",
+          stack: ".cardPile17 div",
+          cursor: "move",
+          revert: true,
+        });
+    }
+
+    // Create the card slots
+    let crCount = correctLettersArray.length;
+    for (var i = 0; i < crCount; i++) {
+      $("<div>text</div>")
+        .data("number", correctLettersArray[i])
+        .appendTo(".cardSlots17")
+        .droppable({
+          accept: ".cardPile17 div",
+          hoverClass: "hovered",
+          drop: handleCardDropDeer,
+        });
+    }
+  }
+
+  function handleCardDropDeer(event, li) {
+    //Grab the slot number and card number
+    var slotNumber = $(this).data("number");
+    var cardNumber = li.draggable.data("number");
+
+    //on top of the slot and prevent it being dragged again
+    if (slotNumber === cardNumber) {
+      li.draggable.addClass("correct");
+      li.draggable.draggable("disable");
+      $(this).droppable("disable");
+      li.draggable.position({
+        of: $(this),
+        my: "left top",
+        at: "left top",
+      });
+      li.draggable.draggable("option", "revert", false);
+      animal7++;
+    }
+
+    if (animal7 === 7) {
+      $(".success7").fadeIn("fast").delay(3000).fadeOut("slow");
+      var audio = new Audio("./sounds/Deer.mp3");
+      audio.play();
+    }
+  }
+
+  //kural9
+  var animal8 = 0;
+  $(Rabbit);
+
+  function Rabbit() {
+    $(".success8").hide();
+
+    animal8 = 0;
+    $(".cardPile18").html("");
+    $(".cardSlots18").html("");
+
+    var correctLettersArray = ["91.png", "92.png", "93.png","94.png","95.png","96.png","97.png"];
+    var lettersArray = ["91.png", "92.png", "93.png","94.png","95.png","96.png","97.png"];
+   
+    lettersArray.sort(function () {
+      return Math.random() - 0.5;
+    });
+
+    for (var i = 0; i < 7; i++) {
+      $("<div><img src='kurals/" + lettersArray[i] + "'></div>")
+        .data("number", lettersArray[i])
+        .attr("id", "card" + lettersArray[i])
+        .appendTo(".cardPile18")
+        .draggable({
+          containment: "#content",
+          stack: ".cardPile18 div",
+          cursor: "move",
+          revert: true,
+        });
+    }
+
+    // Create the card slots
+    let crCount = correctLettersArray.length;
+    for (var i = 0; i < crCount; i++) {
+      $("<div>text</div>")
+        .data("number", correctLettersArray[i])
+        .appendTo(".cardSlots18")
+        .droppable({
+          accept: ".cardPile18 div",
+          hoverClass: "hovered",
+          drop: handleCardDropRabbit,
+        });
+    }
+  }
+
+  function handleCardDropRabbit(event, li) {
+    //Grab the slot number and card number
+    var slotNumber = $(this).data("number");
+    var cardNumber = li.draggable.data("number");
+
+    //on top of the slot and prevent it being dragged again
+    if (slotNumber === cardNumber) {
+      li.draggable.addClass("correct");
+      li.draggable.draggable("disable");
+      $(this).droppable("disable");
+      li.draggable.position({
+        of: $(this),
+        my: "left top",
+        at: "left top",
+      });
+      li.draggable.draggable("option", "revert", false);
+      animal8++;
+    }
+
+    if (animal8 === 7) {
+      $(".success8").fadeIn("fast").delay(3000).fadeOut("slow");
+      var audio = new Audio("./sounds/Rabbit.mp3");
+      audio.play();
+    }
+  }
+
+  //kural10
+  var animal9 = 0;
+  $(Fox);
+
+  function Fox() {
+    $(".success9").hide();
+
+    animal7 = 0;
+    $(".cardPile19").html("");
+    $(".cardSlots19").html("");
+
+    var correctLettersArray = ["101.png", "102.png","83.png","104.png","105.png","106.png","107.png"];
+    var lettersArray = ["101.png", "102.png","83.png","104.png","105.png","106.png","107.png"];
+    
+    lettersArray.sort(function () {
+      return Math.random() - 0.5;
+    });
+
+    for (var i = 0; i < 7; i++) {
+      $("<div><img src='kurals/" + lettersArray[i] + "'></div>")
+        .data("number", lettersArray[i])
+        .attr("id", "card" + lettersArray[i])
+        .appendTo(".cardPile19")
+        .draggable({
+          containment: "#content",
+          stack: ".cardPile19 div",
+          cursor: "move",
+          revert: true,
+        });
+    }
+
+    // Create the card slots
+    let crCount = correctLettersArray.length;
+    for (var i = 0; i < crCount; i++) {
+      $("<div>text</div>")
+        .data("number", correctLettersArray[i])
+        .appendTo(".cardSlots19")
+        .droppable({
+          accept: ".cardPile19 div",
+          hoverClass: "hovered",
+          drop: handleCardDropFox,
+        });
+    }
+  }
+
+  function handleCardDropFox(event, li) {
+    //Grab the slot number and card number
+    var slotNumber = $(this).data("number");
+    var cardNumber = li.draggable.data("number");
+
+    //on top of the slot and prevent it being dragged again
+    if (slotNumber === cardNumber) {
+      li.draggable.addClass("correct");
+      li.draggable.draggable("disable");
+      $(this).droppable("disable");
+      li.draggable.position({
+        of: $(this),
+        my: "left top",
+        at: "left top",
+      });
+      li.draggable.draggable("option", "revert", false);
+      animal9++;
+    }
+
+    if (animal9 === 7) {
+      $(".success9").fadeIn("fast").delay(3000).fadeOut("slow");
+      var audio = new Audio("./sounds/Fox.mp3");
+      audio.play();
     }
   }
 </script>

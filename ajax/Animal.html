@@ -1,10 +1,7 @@
 <div id="content">
   <!--puli-->
   <div class="puli">
-    <div
-      class="card"
-      style="width: 18rem; margin-bottom: 15px; margin-left: 350px"
-    >
+    <div class="card" style="width: 18rem; margin-bottom: 15px; margin-left: 350px">
       <img src="images/puli.webp" />
     </div>
 
@@ -12,7 +9,7 @@
       <div class="ui-content"></div>
     </div>
 
-    <div class="cardSlots"></div>
+ <div class="cardSlots"></div>
     <div class="successMessage">
       <img src="images/animation.gif" />
     </div>
@@ -20,10 +17,7 @@
 
   <!--singam-->
   <div class="singam">
-    <div
-      class="card"
-      style="width: 18rem; margin-bottom: 15px; margin-left: 350px"
-    >
+    <div class="card" style="width: 18rem; margin-bottom: 15px; margin-left: 350px">
       <img src="images/singam.jpg" />
     </div>
 
@@ -36,14 +30,10 @@
       <img src="images/animation.gif" />
     </div>
   </div>
-  <!--singam end-->
-
-  <!--naay-->
+ 
+  <!--dog-->
   <div class="naay">
-    <div
-      class="card"
-      style="width: 18rem; margin-bottom: 15px; margin-left: 350px"
-    >
+    <div class="card" style="width: 18rem; margin-bottom: 15px; margin-left: 350px">
       <img src="images/naay.webp" />
     </div>
 
@@ -57,14 +47,9 @@
     </div>
   </div>
 
-  <!--naay end-->
-
   <!--cow-->
   <div class="maadu">
-    <div
-      class="card"
-      style="width: 18rem; margin-bottom: 15px; margin-left: 350px"
-    >
+    <div class="card" style="width: 18rem; margin-bottom: 15px; margin-left: 350px">
       <img src="images/maadu.webp" />
     </div>
 
@@ -78,14 +63,9 @@
     </div>
   </div>
 
-  <!--cow end-->
-
   <!--cat-->
   <div class="cat">
-    <div
-      class="card"
-      style="width: 18rem; margin-bottom: 15px; margin-left: 350px"
-    >
+    <div class="card" style="width: 18rem; margin-bottom: 15px; margin-left: 350px">
       <img src="images/poonai.webp" />
     </div>
 
@@ -99,14 +79,9 @@
     </div>
   </div>
 
-  <!--cat end-->
-
   <!--horse-->
   <div class="horse">
-    <div
-      class="card"
-      style="width: 18rem; margin-bottom: 15px; margin-left: 350px"
-    >
+    <div class="card" style="width: 18rem; margin-bottom: 15px; margin-left: 350px">
       <img src="images/kuthirai.jpg" />
     </div>
 
@@ -120,14 +95,9 @@
     </div>
   </div>
 
-  <!--horse end-->
-
   <!--Bear-->
   <div class="Bear">
-    <div
-      class="card"
-      style="width: 18rem; margin-bottom: 15px; margin-left: 350px"
-    >
+    <div class="card" style="width: 18rem; margin-bottom: 15px; margin-left: 350px">
       <img src="images/karadi.jpg" />
     </div>
 
@@ -140,14 +110,10 @@
       <img src="images/animation.gif" />
     </div>
   </div>
-  <!--Bear end-->
-
+  
   <!--Deer-->
   <div class="Deer">
-    <div
-      class="card"
-      style="width: 18rem; margin-bottom: 15px; margin-left: 350px"
-    >
+    <div class="card" style="width: 18rem; margin-bottom: 15px; margin-left: 350px">
       <img src="images/maan.webp" />
     </div>
 
@@ -160,14 +126,10 @@
       <img src="images/animation.gif" />
     </div>
   </div>
-  <!--Deer end-->
-
+  
   <!--Rabbit-->
   <div class="Rabbit">
-    <div
-      class="card"
-      style="width: 18rem; margin-bottom: 15px; margin-left: 350px"
-    >
+    <div class="card" style="width: 18rem; margin-bottom: 15px; margin-left: 350px">
       <img src="images/muyal.webp" />
     </div>
 
@@ -180,14 +142,10 @@
       <img src="images/animation.gif" />
     </div>
   </div>
-  <!--Rabbit end-->
-
+  
   <!--Fox-->
-  <div class="Rabbit">
-    <div
-      class="card"
-      style="width: 18rem; margin-bottom: 15px; margin-left: 350px"
-    >
+  <div class="fox">
+    <div class="card" style="width: 18rem; margin-bottom: 15px; margin-left: 350px">
       <img src="images/nari.jpg" />
     </div>
 
@@ -200,28 +158,23 @@
       <img src="images/animation.gif" />
     </div>
   </div>
-  <!--Fox end-->
+ 
 </div>
 
 <script>
-  var correctCards = 0;
-  $(init);
 
-  function init() {
+  //puli
+  var animal = 0;
+  $(puli);
+
+  function puli() {
     $(".successMessage").hide();
-    correctCards = 0;
+    animal = 0;
     $(".cardPile").html("");
     $(".cardSlots").html("");
 
     var correctLettersArray = ["pu.png", "li.png"];
-    var lettersArray = [
-      "pu.png",
-      "li.png",
-      "si.png",
-      "y.png",
-      "ra.png",
-      "g.png",
-    ];
+    var lettersArray = ["pu.png","li.png","si.png","y.png","ra.png","g.png",];
 
     lettersArray.sort(function () {
       return Math.random() - 0.5;
@@ -270,10 +223,10 @@
         at: "left top",
       });
       ui.draggable.draggable("option", "revert", false);
-      correctCards++;
+      animal++;
     }
 
-    if (correctCards === 2) {
+    if (animal === 2) {
       $(".successMessage").fadeIn("fast").delay(3000).fadeOut("slow");
       var audio = new Audio("./sounds/Tiger.mp3");
       audio.play();
@@ -292,14 +245,7 @@
     $(".cardSlots1").html("");
 
     var correctLettersArray = ["si.png", "g.png", "ka.png", "m.png"];
-    var lettersArray = [
-      "si.png",
-      "g.png",
-      "ka.png",
-      "m.png",
-      "ra.png",
-      "ma.png",
-    ];
+    var lettersArray = ["si.png","g.png","ka.png","m.png","ra.png","ma.png",];
 
     lettersArray.sort(function () {
       return Math.random() - 0.5;

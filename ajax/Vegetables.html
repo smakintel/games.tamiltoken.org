@@ -1,0 +1,822 @@
+<div id="content">
+  <!--mow-->
+  <div class="mow">
+    <div class="card" style="width: 18rem; margin-bottom: 15px; margin-left: 350px">
+      <img src="images/mow.jpg" />
+    </div>
+
+    <div class="cardPile">
+      <div class="ui-content"></div>
+    </div>
+
+    <div class="cardSlots"></div>
+    <div class="successMessage">
+      <img src="images/animation.gif" />
+    </div>
+  </div>
+
+   <!--tomoto-->
+  <div class="tomoto">
+    <div class="card" style="width: 18rem; margin-bottom: 15px; margin-left: 350px">
+      <img src="images/tomoto.png" />
+    </div>
+
+    <div class="cardPile1">
+      <div class="li-content"></div>
+    </div>
+    <div class="cardSlots1"></div>
+
+    <div class="success">
+      <img src="images/animation.gif" />
+    </div>
+  </div>
+
+ <!--carrot-->
+  <div class="carrot">
+    <div class="card" style="width: 18rem; margin-bottom: 15px; margin-left: 350px">
+      <img src="images/carrot.png" />
+    </div>
+
+    <div class="cardPile2">
+      <div class="li-content"></div>
+    </div>
+    <div class="cardSlots2"></div>
+
+    <div class="success2">
+      <img src="images/animation.gif" />
+    </div>
+  </div>
+
+  <!--pumpkin-->
+  <div class="pumpkin">
+    <div class="card" style="width: 18rem; margin-bottom: 15px; margin-left: 350px">
+      <img src="images/pumpkin.png" />
+    </div>
+
+    <div class="cardPile3">
+      <div class="li-content"></div>
+    </div>
+    <div class="cardSlots3"></div>
+
+    <div class="success3">
+      <img src="images/animation.gif" />
+    </div>
+  </div>
+
+  <!--lettuce-->
+  <div class="lettuce">
+    <div class="card" style="width: 18rem; margin-bottom: 15px; margin-left: 350px">
+      <img src="images/Lettuce.jpg" />
+    </div>
+
+    <div class="cardPile4">
+      <div class="li-content"></div>
+    </div>
+    <div class="cardSlots4"></div>
+
+    <div class="success4">
+      <img src="images/animation.gif" />
+    </div>
+  </div>
+
+<!--chili-->
+  <div class="chili">
+    <div class="card" style="width: 18rem; margin-bottom: 15px; margin-left: 350px">
+      <img src="images/chili.jpg" />
+    </div>
+
+    <div class="cardPile5">
+      <div class="li-content"></div>
+    </div>
+    <div class="cardSlots5"></div>
+
+    <div class="success5">
+      <img src="images/animation.gif" />
+    </div>
+  </div>
+
+  <!--capsicum-->
+  <div class="capsicum">
+    <div class="card" style="width: 18rem; margin-bottom: 15px; margin-left: 350px">
+      <img src="images/capsicum.png" />
+    </div>
+
+    <div class="cardPile6">
+      <div class="li-content"></div>
+    </div>
+    <div class="cardSlots6"></div>
+
+    <div class="success6">
+      <img src="images/animation.gif" />
+    </div>
+  </div>
+
+  <!--onion-->
+  <div class="onion">
+    <div class="card" style="width: 18rem; margin-bottom: 15px; margin-left: 350px">
+      <img src="images/onion.jpg" />
+    </div>
+
+    <div class="cardPile7">
+      <div class="li-content"></div>
+    </div>
+    <div class="cardSlots7"></div>
+
+    <div class="success7">
+      <img src="images/animation.gif" />
+    </div>
+  </div>
+
+  <!--mushroom-->
+  <div class="potato">
+    <div class="card" style="width: 18rem; margin-bottom: 15px; margin-left: 350px">
+      <img src="images/mushroom.jpg" />
+    </div>
+
+    <div class="cardPile8">
+      <div class="li-content"></div>
+    </div>
+    <div class="cardSlots8"></div>
+
+    <div class="success8">
+      <img src="images/animation.gif" />
+    </div>
+  </div>
+
+  <!--okra-->
+  <div class="okra">
+    <div class="card" style="width: 18rem; margin-bottom: 15px; margin-left: 350px">
+      <img src="images/okra.jpg" />
+    </div>
+
+    <div class="cardPile9">
+      <div class="li-content"></div>
+    </div>
+    <div class="cardSlots9"></div>
+
+    <div class="success9">
+      <img src="images/animation.gif" />
+    </div>
+  </div>
+</div>
+<script>
+
+  //mow
+  var veg = 0;
+  $(mow);
+
+  function mow() {
+    $(".successMessage").hide();
+    veg = 0;
+    $(".cardPile").html("");
+    $(".cardSlots").html("");
+
+    var correctLettersArray = ["ka.png", "th.png","tha.png","ri.png"];
+    var lettersArray = ["ka.png","th.png","tha.png","ri.png","y.png","ra.png",];
+
+    lettersArray.sort(function () {
+      return Math.random() - 0.5;
+    });
+
+    for (var i = 0; i < 6; i++) {
+      $("<div><img src='letters/vegetables/" + lettersArray[i] + "'></div>")
+        .data("number", lettersArray[i])
+        .attr("id", "card" + lettersArray[i])
+        .appendTo(".cardPile")
+        .draggable({
+          containment: "#content",
+          stack: ".cardPile div",
+          cursor: "move",
+          revert: true,
+        });
+    }
+
+    let crCount = correctLettersArray.length;
+    for (var i = 0; i < crCount; i++) {
+      $("<div>text</div>")
+        .data("number", correctLettersArray[i])
+        .appendTo(".cardSlots")
+        .droppable({
+          accept: ".cardPile div",
+          hoverClass: "hovered",
+          drop: handleCardDrop,
+        });
+    }
+  }
+
+  function handleCardDrop(event, ui) {
+    var slotNumber = $(this).data("number");
+    var cardNumber = ui.draggable.data("number");
+
+    if (slotNumber === cardNumber) {
+      ui.draggable.addClass("correct");
+      ui.draggable.draggable("disable");
+      $(this).droppable("disable");
+      ui.draggable.position({
+        of: $(this),
+        my: "left top",
+        at: "left top",
+      });
+      ui.draggable.draggable("option", "revert", false);
+      veg++;
+    }
+
+    if (veg === 4) {
+      $(".successMessage").fadeIn("fast").delay(3000).fadeOut("slow");
+    }
+  }
+
+//tomoto
+  var veg1 = 0;
+  $(tomoto);
+
+  function tomoto() {
+    $(".success").hide();
+
+    veg1 = 0;
+    $(".cardPile1").html("");
+    $(".cardSlots1").html("");
+
+    var correctLettersArray = ["tha.png", "k.png","kaa.png","li.png"];
+    var lettersArray = ["tha.png","k.png","kaa.png","li.png","d.png","m.png",];
+
+    lettersArray.sort(function () {
+      return Math.random() - 0.5;
+    });
+
+    for (var i = 0; i < 6; i++) {
+      $("<div><img src='letters/vegetables/" + lettersArray[i] + "'></div>")
+        .data("number", lettersArray[i])
+        .attr("id", "card" + lettersArray[i])
+        .appendTo(".cardPile1")
+        .draggable({
+          containment: "#content",
+          stack: ".cardPile1 div",
+          cursor: "move",
+          revert: true,
+        });
+    }
+
+    let crCount = correctLettersArray.length;
+    for (var i = 0; i < crCount; i++) {
+      $("<div>text</div>")
+        .data("number", correctLettersArray[i])
+        .appendTo(".cardSlots1")
+        .droppable({
+          accept: ".cardPile1 div",
+          hoverClass: "hovered",
+          drop: handleCardDropTomoto,
+        });
+    }
+  }
+
+  function handleCardDropTomoto(event, li) {
+    var slotNumber = $(this).data("number");
+    var cardNumber = li.draggable.data("number");
+
+    if (slotNumber === cardNumber) {
+      li.draggable.addClass("correct");
+      li.draggable.draggable("disable");
+      $(this).droppable("disable");
+      li.draggable.position({
+        of: $(this),
+        my: "left top",
+        at: "left top",
+      });
+      li.draggable.draggable("option", "revert", false);
+      veg1++;
+    }
+
+    if (veg1 === 4) {
+      $(".success").fadeIn("fast").delay(3000).fadeOut("slow");
+    }
+  }
+
+  //carrot
+  var veg2 = 0;
+  $(carrot);
+
+  function carrot() {
+    $(".success2").hide();
+
+    veg2 = 0;
+    $(".cardPile2").html("");
+    $(".cardSlots2").html("");
+
+    var correctLettersArray = ["ka.png", "ra.png","d.png"];
+    var lettersArray = ["ka.png", "ra.png","d.png","m.png","ku.png","ko.png",];
+
+    lettersArray.sort(function () {
+      return Math.random() - 0.5;
+    });
+
+    for (var i = 0; i < 6; i++) {
+      $("<div><img src='letters/vegetables/" + lettersArray[i] + "'></div>")
+        .data("number", lettersArray[i])
+        .attr("id", "card" + lettersArray[i])
+        .appendTo(".cardPile2")
+        .draggable({
+          containment: "#content",
+          stack: ".cardPile2 div",
+          cursor: "move",
+          revert: true,
+        });
+    }
+
+    let crCount = correctLettersArray.length;
+    for (var i = 0; i < crCount; i++) {
+      $("<div>text</div>")
+        .data("number", correctLettersArray[i])
+        .appendTo(".cardSlots2")
+        .droppable({
+          accept: ".cardPile2 div",
+          hoverClass: "hovered",
+          drop: handleCardDropCarrot,
+        });
+    }
+  }
+
+  function handleCardDropCarrot(event, li) {
+    var slotNumber = $(this).data("number");
+    var cardNumber = li.draggable.data("number");
+
+    if (slotNumber === cardNumber) {
+      li.draggable.addClass("correct");
+      li.draggable.draggable("disable");
+      $(this).droppable("disable");
+      li.draggable.position({
+        of: $(this),
+        my: "left top",
+        at: "left top",
+      });
+      li.draggable.draggable("option", "revert", false);
+      veg2++;
+    }
+
+    if (veg2 === 3) {
+      $(".success2").fadeIn("fast").delay(3000).fadeOut("slow");
+    }
+  }  
+
+  //pumpkin
+  var veg3 = 0;
+  $(pumpkin);
+
+  function pumpkin() {
+    $(".success3").hide();
+
+    veg3 = 0;
+    $(".cardPile3").html("");
+    $(".cardSlots3").html("");
+
+    var correctLettersArray = ["po.png", "sa.png","ni.png"];
+    var lettersArray = ["po.png","sa.png","ni.png","m.png","ra.png","ku.png",];
+
+    lettersArray.sort(function () {
+      return Math.random() - 0.5;
+    });
+
+    for (var i = 0; i < 6; i++) {
+      $("<div><img src='letters/vegetables/" + lettersArray[i] + "'></div>")
+        .data("number", lettersArray[i])
+        .attr("id", "card" + lettersArray[i])
+        .appendTo(".cardPile3")
+        .draggable({
+          containment: "#content",
+          stack: ".cardPile3 div",
+          cursor: "move",
+          revert: true,
+        });
+    }
+
+    let crCount = correctLettersArray.length;
+    for (var i = 0; i < crCount; i++) {
+      $("<div>text</div>")
+        .data("number", correctLettersArray[i])
+        .appendTo(".cardSlots3")
+        .droppable({
+          accept: ".cardPile3 div",
+          hoverClass: "hovered",
+          drop: handleCardDropPumpkin,
+        });
+    }
+  }
+
+  function handleCardDropPumpkin(event, li) {
+  var slotNumber = $(this).data("number");
+    var cardNumber = li.draggable.data("number");
+
+    if (slotNumber === cardNumber) {
+      li.draggable.addClass("correct");
+      li.draggable.draggable("disable");
+      $(this).droppable("disable");
+      li.draggable.position({
+        of: $(this),
+        my: "left top",
+        at: "left top",
+      });
+      li.draggable.draggable("option", "revert", false);
+      veg3++;
+    }
+
+    if (veg3 === 3) {
+      $(".success3").fadeIn("fast").delay(3000).fadeOut("slow");
+    }
+  }
+  
+  //lettuce
+  var veg4 = 0;
+  $(lettuce);
+
+  function lettuce() {
+    $(".success4").hide();
+
+    veg4 = 0;
+    $(".cardPile4").html("");
+    $(".cardSlots4").html("");
+
+    var correctLettersArray = ["ko.png", "vaa.png"];
+    var lettersArray = ["ko.png", "vaa.png","ka.png","m.png","ra.png","mi.png",];
+
+    lettersArray.sort(function () {
+      return Math.random() - 0.5;
+    });
+
+    for (var i = 0; i < 6; i++) {
+      $("<div><img src='letters/vegetables/" + lettersArray[i] + "'></div>")
+        .data("number", lettersArray[i])
+        .attr("id", "card" + lettersArray[i])
+        .appendTo(".cardPile4")
+        .draggable({
+          containment: "#content",
+          stack: ".cardPile4 div",
+          cursor: "move",
+          revert: true,
+        });
+    }
+
+    let crCount = correctLettersArray.length;
+    for (var i = 0; i < crCount; i++) {
+      $("<div>text</div>")
+        .data("number", correctLettersArray[i])
+        .appendTo(".cardSlots4")
+        .droppable({
+          accept: ".cardPile4 div",
+          hoverClass: "hovered",
+          drop: handleCardDropLettuce,
+        });
+    }
+  }
+
+  function handleCardDropLettuce(event, li) {
+   var slotNumber = $(this).data("number");
+    var cardNumber = li.draggable.data("number");
+
+    if (slotNumber === cardNumber) {
+      li.draggable.addClass("correct");
+      li.draggable.draggable("disable");
+      $(this).droppable("disable");
+      li.draggable.position({
+        of: $(this),
+        my: "left top",
+        at: "left top",
+      });
+      li.draggable.draggable("option", "revert", false);
+      veg4++;
+    }
+
+    if (veg4 === 2) {
+      $(".success4").fadeIn("fast").delay(3000).fadeOut("slow");
+    }
+  }
+  
+   //chilli
+  var veg5 = 0;
+  $(chilli);
+
+  function chilli() {
+    $(".success5").hide();
+
+    veg5 = 0;
+    $(".cardPile5").html("");
+    $(".cardSlots5").html("");
+
+    var correctLettersArray = ["mi.png", "la.png", "kaa.png","y.png"];
+    var lettersArray = ["mi.png","la.png","kaa.png","y.png","ra.png","li.png",];
+
+    lettersArray.sort(function () {
+      return Math.random() - 0.5;
+    });
+
+    for (var i = 0; i < 6; i++) {
+      $("<div><img src='letters/vegetables/" + lettersArray[i] + "'></div>")
+        .data("number", lettersArray[i])
+        .attr("id", "card" + lettersArray[i])
+        .appendTo(".cardPile5")
+        .draggable({
+          containment: "#content",
+          stack: ".cardPile5 div",
+          cursor: "move",
+          revert: true,
+        });
+    }
+
+    let crCount = correctLettersArray.length;
+    for (var i = 0; i < crCount; i++) {
+      $("<div>text</div>")
+        .data("number", correctLettersArray[i])
+        .appendTo(".cardSlots5")
+        .droppable({
+          accept: ".cardPile5 div",
+          hoverClass: "hovered",
+          drop: handleCardDropChilli,
+        });
+    }
+  }
+
+  function handleCardDropChilli(event, li) {
+    var slotNumber = $(this).data("number");
+    var cardNumber = li.draggable.data("number");
+
+    if (slotNumber === cardNumber) {
+      li.draggable.addClass("correct");
+      li.draggable.draggable("disable");
+      $(this).droppable("disable");
+      li.draggable.position({
+        of: $(this),
+        my: "left top",
+        at: "left top",
+      });
+      li.draggable.draggable("option", "revert", false);
+      veg5++;
+    }
+
+    if (veg5 === 4) {
+      $(".success5").fadeIn("fast").delay(3000).fadeOut("slow");
+    }
+  }
+
+  //capsicum
+  var veg6 = 0;
+  $(capsicum);
+
+  function capsicum() {
+    $(".success6").hide();
+
+    veg6 = 0;
+    $(".cardPile6").html("");
+    $(".cardSlots6").html("");
+
+    var correctLettersArray = ["ku.png", "dai.png", "mi.png","la.png","kaa.png","y.png"];
+    var lettersArray = [ "ku.png","dai.png","mi.png", "la.png","kaa.png","y.png",];
+
+    lettersArray.sort(function () {
+      return Math.random() - 0.5;
+    });
+
+    for (var i = 0; i < 6; i++) {
+      $("<div><img src='letters/vegetables/" + lettersArray[i] + "'></div>")
+        .data("number", lettersArray[i])
+        .attr("id", "card" + lettersArray[i])
+        .appendTo(".cardPile6")
+        .draggable({
+          containment: "#content",
+          stack: ".cardPile6 div",
+          cursor: "move",
+          revert: true,
+        });
+    }
+
+    let crCount = correctLettersArray.length;
+    for (var i = 0; i < crCount; i++) {
+      $("<div>text</div>")
+        .data("number", correctLettersArray[i])
+        .appendTo(".cardSlots6")
+        .droppable({
+          accept: ".cardPile6 div",
+          hoverClass: "hovered",
+          drop: handleCardDropCapsicum,
+        });
+    }
+  }
+
+  function handleCardDropCapsicum(event, li) {
+    var slotNumber = $(this).data("number");
+    var cardNumber = li.draggable.data("number");
+
+    if (slotNumber === cardNumber) {
+      li.draggable.addClass("correct");
+      li.draggable.draggable("disable");
+      $(this).droppable("disable");
+      li.draggable.position({
+        of: $(this),
+        my: "left top",
+        at: "left top",
+      });
+      li.draggable.draggable("option", "revert", false);
+      veg6++;
+    }
+
+    if (veg6 === 6) {
+      $(".success6").fadeIn("fast").delay(3000).fadeOut("slow");
+    }
+  }
+
+  //onion
+  var veg7 = 0;
+  $(onion);
+
+  function onion() {
+    $(".success7").hide();
+
+    veg7 = 0;
+    $(".cardPile7").html("");
+    $(".cardSlots7").html("");
+
+    var correctLettersArray = ["ve.png", "g.png","kaa.png","ya.png","m.png"];
+    var lettersArray = ["ve.png","g.png","kaa.png","ya.png","m.png","th.png",];
+
+    lettersArray.sort(function () {
+      return Math.random() - 0.5;
+    });
+
+    for (var i = 0; i < 6; i++) {
+      $("<div><img src='letters/vegetables/" + lettersArray[i] + "'></div>")
+        .data("number", lettersArray[i])
+        .attr("id", "card" + lettersArray[i])
+        .appendTo(".cardPile7")
+        .draggable({
+          containment: "#content",
+          stack: ".cardPile7 div",
+          cursor: "move",
+          revert: true,
+        });
+    }
+
+    let crCount = correctLettersArray.length;
+    for (var i = 0; i < crCount; i++) {
+      $("<div>text</div>")
+        .data("number", correctLettersArray[i])
+        .appendTo(".cardSlots7")
+        .droppable({
+          accept: ".cardPile7 div",
+          hoverClass: "hovered",
+          drop: handleCardDropOnion,
+        });
+    }
+  }
+
+  function handleCardDropOnion(event, li) {
+    var slotNumber = $(this).data("number");
+    var cardNumber = li.draggable.data("number");
+
+    if (slotNumber === cardNumber) {
+      li.draggable.addClass("correct");
+      li.draggable.draggable("disable");
+      $(this).droppable("disable");
+      li.draggable.position({
+        of: $(this),
+        my: "left top",
+        at: "left top",
+      });
+      li.draggable.draggable("option", "revert", false);
+      veg7++;
+    }
+
+    if (veg7 === 5) {
+      $(".success7").fadeIn("fast").delay(3000).fadeOut("slow");
+    }
+  }
+
+  //mushroom
+  var veg8 = 0;
+  $(mushroom);
+
+  function mushroom() {
+    $(".success8").hide();
+
+    veg8 = 0;
+    $(".cardPile8").html("");
+    $(".cardSlots8").html("");
+
+    var correctLettersArray = ["kaa.png", "laa.png", "n.png"];
+    var lettersArray = ["kaa.png","laa.png","n.png","k.png","li.png","ve.png"];
+
+    lettersArray.sort(function () {
+      return Math.random() - 0.5;
+    });
+
+    for (var i = 0; i < 6; i++) {
+      $("<div><img src='letters/vegetables/" + lettersArray[i] + "'></div>")
+        .data("number", lettersArray[i])
+        .attr("id", "card" + lettersArray[i])
+        .appendTo(".cardPile8")
+        .draggable({
+          containment: "#content",
+          stack: ".cardPile8 div",
+          cursor: "move",
+          revert: true,
+        });
+    }
+
+    let crCount = correctLettersArray.length;
+    for (var i = 0; i < crCount; i++) {
+      $("<div>text</div>")
+        .data("number", correctLettersArray[i])
+        .appendTo(".cardSlots8")
+        .droppable({
+          accept: ".cardPile8 div",
+          hoverClass: "hovered",
+          drop: handleCardDropMushroom,
+        });
+    }
+  }
+
+  function handleCardDropMushroom(event, li) {
+   var slotNumber = $(this).data("number");
+    var cardNumber = li.draggable.data("number");
+
+    if (slotNumber === cardNumber) {
+      li.draggable.addClass("correct");
+      li.draggable.draggable("disable");
+      $(this).droppable("disable");
+      li.draggable.position({
+        of: $(this),
+        my: "left top",
+        at: "left top",
+      });
+      li.draggable.draggable("option", "revert", false);
+      veg8++;
+    }
+
+    if (veg8 === 3) {
+      $(".success8").fadeIn("fast").delay(3000).fadeOut("slow");
+    }
+  }
+
+  //Pomegranate
+  var veg9 = 0;
+  $(pome);
+
+  function pome() {
+    $(".success9").hide();
+
+    veg9 = 0;
+    $(".cardPile9").html("");
+    $(".cardSlots9").html("");
+
+    var correctLettersArray = ["ve.png", "n2.png","di.png"];
+    var lettersArray = ["ve.png","n2.png","di.png","m.png","ra.png","ya.png",];
+
+    lettersArray.sort(function () {
+      return Math.random() - 0.5;
+    });
+
+    for (var i = 0; i < 6; i++) {
+      $("<div><img src='letters/vegetables/" + lettersArray[i] + "'></div>")
+        .data("number", lettersArray[i])
+        .attr("id", "card" + lettersArray[i])
+        .appendTo(".cardPile9")
+        .draggable({
+          containment: "#content",
+          stack: ".cardPile9 div",
+          cursor: "move",
+          revert: true,
+        });
+    }
+
+    let crCount = correctLettersArray.length;
+    for (var i = 0; i < crCount; i++) {
+      $("<div>text</div>")
+        .data("number", correctLettersArray[i])
+        .appendTo(".cardSlots9")
+        .droppable({
+          accept: ".cardPile9 div",
+          hoverClass: "hovered",
+          drop: handleCardDropPome,
+        });
+    }
+  }
+
+  function handleCardDropPome(event, li) {
+    var slotNumber = $(this).data("number");
+    var cardNumber = li.draggable.data("number");
+
+    if (slotNumber === cardNumber) {
+      li.draggable.addClass("correct");
+      li.draggable.draggable("disable");
+      $(this).droppable("disable");
+      li.draggable.position({
+        of: $(this),
+        my: "left top",
+        at: "left top",
+      });
+      li.draggable.draggable("option", "revert", false);
+      veg9++;
+    }
+
+    if (veg9 === 3) {
+      $(".success9").fadeIn("fast").delay(3000).fadeOut("slow");
+    }
+  }
+</script>

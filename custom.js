@@ -9,7 +9,7 @@ $(".btnNavigation").click(function () {
     processData: false,
     contentType: false,
     traditional: true,
-    data: "Animal",
+    data: "data",
 
     success: function (data) {
       console.log(data);
