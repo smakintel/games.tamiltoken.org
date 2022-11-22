@@ -161,24 +161,24 @@
 </div>
 
 <script>
-  var correctCards = 0;
-  $(init);
+  var fruits = 0;
+  $(apple);
 
-  function init() {
+  function apple() {
     $(".successMessage").hide();
-    correctCards = 0;
+    fruits = 0;
     $(".cardPile").html("");
     $(".cardSlots").html("");
 
-    var correctLettersArray = ["aaa.png", "pp.png","pi.png","l3.png"];
-    var lettersArray = ["aaa.png","pp.png","pi.png","l3.png","y.png","ra.png",];
+    var correctLettersArray = ["a.png", "p.png","pi.png","l.png"];
+    var lettersArray = ["a.png","p.png","pi.png","l.png","y.png","ra.png",];
 
     lettersArray.sort(function () {
       return Math.random() - 0.5;
     });
 
     for (var i = 0; i < 6; i++) {
-      $("<div><img src='letters/" + lettersArray[i] + "'></div>")
+      $("<div><img src='letters/vegetables/" + lettersArray[i] + "'></div>")
         .data("number", lettersArray[i])
         .attr("id", "card" + lettersArray[i])
         .appendTo(".cardPile")
@@ -217,34 +217,34 @@
         at: "left top",
       });
       ui.draggable.draggable("option", "revert", false);
-      correctCards++;
+      fruits++;
     }
 
-    if (correctCards === 4) {
+    if (fruits === 4) {
       $(".successMessage").fadeIn("fast").delay(3000).fadeOut("slow");
     }
   }
 
   //banana
-  var animal1 = 0;
-  $(singam);
+  var fruits1 = 0;
+  $(banana);
 
-  function singam() {
+  function banana() {
     $(".success").hide();
 
-    animal1 = 0;
+    fruits1 = 0;
     $(".cardPile1").html("");
     $(".cardSlots1").html("");
 
-    var correctLettersArray = ["vaaa.png", "lai.png"];
-    var lettersArray = ["vaaa.png","lai.png","pp.png","di.png","du.png","m.png",];
+    var correctLettersArray = ["vaa.png", "lai.png"];
+    var lettersArray = ["vaa.png","lai.png","p.png","di.png","du.png","m.png",];
 
     lettersArray.sort(function () {
       return Math.random() - 0.5;
     });
 
     for (var i = 0; i < 6; i++) {
-      $("<div><img src='letters/" + lettersArray[i] + "'></div>")
+      $("<div><img src='letters/vegetables/" + lettersArray[i] + "'></div>")
         .data("number", lettersArray[i])
         .attr("id", "card" + lettersArray[i])
         .appendTo(".cardPile1")
@@ -264,12 +264,12 @@
         .droppable({
           accept: ".cardPile1 div",
           hoverClass: "hovered",
-          drop: handleCardDropsingam,
+          drop: handleCardDropBanana,
         });
     }
   }
 
-  function handleCardDropsingam(event, li) {
+  function handleCardDropBanana(event, li) {
     var slotNumber = $(this).data("number");
     var cardNumber = li.draggable.data("number");
 
@@ -283,34 +283,34 @@
         at: "left top",
       });
       li.draggable.draggable("option", "revert", false);
-      animal1++;
+      fruits1++;
     }
 
-    if (animal1 === 2) {
+    if (fruits1 === 2) {
       $(".success").fadeIn("fast").delay(3000).fadeOut("slow");
     }
   }
 
   //Guava
-  var animal2 = 0;
-  $(dog);
+  var fruits2 = 0;
+  $(guava);
 
-  function dog() {
+  function guava() {
     $(".success2").hide();
 
-    animal2 = 0;
+    fruits2 = 0;
     $(".cardPile2").html("");
     $(".cardSlots2").html("");
 
-    var correctLettersArray = ["naa.png", "y.png","ya.png"];
-    var lettersArray = ["ko.png", "y.png","ka.png","m.png","ra.png","ma.png",];
+    var correctLettersArray = ["co.png", "y.png","yaa.png"];
+    var lettersArray = ["co.png", "y.png","yaa.png","m.png","ra.png","ma.png",];
 
     lettersArray.sort(function () {
       return Math.random() - 0.5;
     });
 
     for (var i = 0; i < 6; i++) {
-      $("<div><img src='letters/" + lettersArray[i] + "'></div>")
+      $("<div><img src='letters/vegetables/" + lettersArray[i] + "'></div>")
         .data("number", lettersArray[i])
         .attr("id", "card" + lettersArray[i])
         .appendTo(".cardPile2")
@@ -330,12 +330,12 @@
         .droppable({
           accept: ".cardPile2 div",
           hoverClass: "hovered",
-          drop: handleCardDropDog,
+          drop: handleCardDropGuava,
         });
     }
   }
 
-  function handleCardDropDog(event, li) {
+  function handleCardDropGuava(event, li) {
     var slotNumber = $(this).data("number");
     var cardNumber = li.draggable.data("number");
 
@@ -349,34 +349,34 @@
         at: "left top",
       });
       li.draggable.draggable("option", "revert", false);
-      animal2++;
+      fruits2++;
     }
 
-    if (animal2 === 2) {
+    if (fruits2 === 3) {
       $(".success2").fadeIn("fast").delay(3000).fadeOut("slow");
     }
   }
 
   //pineapple
-  var animal3 = 0;
-  $(cow);
+  var fruits3 = 0;
+  $(pine);
 
-  function cow() {
+  function pine() {
     $(".success3").hide();
 
-    animal1 = 0;
+    fruits3 = 0;
     $(".cardPile3").html("");
     $(".cardSlots3").html("");
 
-    var correctLettersArray = ["ma.png", "du.png"];
-    var lettersArray = ["ma.png","du.png","ka.png","m.png","ra.png","ku.png",];
+    var correctLettersArray = ["a.png", "n.png","naa2.png","si.png"];
+    var lettersArray = ["a.png","n.png","naa2.png","si.png","ra.png","ku.png",];
 
     lettersArray.sort(function () {
       return Math.random() - 0.5;
     });
 
     for (var i = 0; i < 6; i++) {
-      $("<div><img src='letters/" + lettersArray[i] + "'></div>")
+      $("<div><img src='letters/vegetables/" + lettersArray[i] + "'></div>")
         .data("number", lettersArray[i])
         .attr("id", "card" + lettersArray[i])
         .appendTo(".cardPile3")
@@ -396,12 +396,12 @@
         .droppable({
           accept: ".cardPile3 div",
           hoverClass: "hovered",
-          drop: handleCardDropCow,
+          drop: handleCardDropPine,
         });
     }
   }
 
-  function handleCardDropCow(event, li) {
+  function handleCardDropPine(event, li) {
   var slotNumber = $(this).data("number");
     var cardNumber = li.draggable.data("number");
 
@@ -415,34 +415,34 @@
         at: "left top",
       });
       li.draggable.draggable("option", "revert", false);
-      animal3++;
+      fruits3++;
     }
 
-    if (animal3 === 3) {
+    if (fruits3 === 4) {
       $(".success3").fadeIn("fast").delay(3000).fadeOut("slow");
     }
   }
   
   //grape
-  var animal4 = 0;
-  $(cat);
+  var fruits4 = 0;
+  $(grape);
 
-  function cat() {
+  function grape() {
     $(".success4").hide();
 
-    animal4 = 0;
+    fruits4 = 0;
     $(".cardPile4").html("");
     $(".cardSlots4").html("");
 
-    var correctLettersArray = ["poo.png", "nai.png"];
-    var lettersArray = ["poo.png", "nai.png","ka.png","m.png","ra.png","ma.png",];
+    var correctLettersArray = ["thi.png", "raa.png","d.png","sai.png"];
+    var lettersArray = ["thi.png", "raa.png","d.png","sai.png","ra.png","ma.png",];
 
     lettersArray.sort(function () {
       return Math.random() - 0.5;
     });
 
     for (var i = 0; i < 6; i++) {
-      $("<div><img src='letters/" + lettersArray[i] + "'></div>")
+      $("<div><img src='letters/vegetables/" + lettersArray[i] + "'></div>")
         .data("number", lettersArray[i])
         .attr("id", "card" + lettersArray[i])
         .appendTo(".cardPile4")
@@ -462,12 +462,12 @@
         .droppable({
           accept: ".cardPile4 div",
           hoverClass: "hovered",
-          drop: handleCardDropCat,
+          drop: handleCardDropGrape,
         });
     }
   }
 
-  function handleCardDropCat(event, li) {
+  function handleCardDropGrape(event, li) {
    var slotNumber = $(this).data("number");
     var cardNumber = li.draggable.data("number");
 
@@ -481,34 +481,34 @@
         at: "left top",
       });
       li.draggable.draggable("option", "revert", false);
-      animal4++;
+      fruits4++;
     }
 
-    if (animal4 === 4) {
+    if (fruits4 === 4) {
       $(".success4").fadeIn("fast").delay(3000).fadeOut("slow");
     }
   }
   
   //lemon
-  var animal5 = 0;
-  $(horse);
+  var fruits5 = 0;
+  $(lemon);
 
-  function horse() {
+  function lemon() {
     $(".success5").hide();
 
-    animal5 = 0;
+    fruits5 = 0;
     $(".cardPile5").html("");
     $(".cardSlots5").html("");
 
-    var correctLettersArray = ["ku.png", "thi.png", "rai.png"];
-    var lettersArray = ["ku.png","thi.png","rai.png","m.png","ra.png","ma.png",];
+    var correctLettersArray = ["e.png", "lu.png", "mi.png","s.png","sai.png"];
+    var lettersArray = ["e.png","lu.png","mi.png","s.png","sai.png","ma.png",];
 
     lettersArray.sort(function () {
       return Math.random() - 0.5;
     });
 
     for (var i = 0; i < 6; i++) {
-      $("<div><img src='letters/" + lettersArray[i] + "'></div>")
+      $("<div><img src='letters/vegetables/" + lettersArray[i] + "'></div>")
         .data("number", lettersArray[i])
         .attr("id", "card" + lettersArray[i])
         .appendTo(".cardPile5")
@@ -528,12 +528,12 @@
         .droppable({
           accept: ".cardPile5 div",
           hoverClass: "hovered",
-          drop: handleCardDropHorse,
+          drop: handleCardDropLemon,
         });
     }
   }
 
-  function handleCardDropHorse(event, li) {
+  function handleCardDropLemon(event, li) {
     var slotNumber = $(this).data("number");
     var cardNumber = li.draggable.data("number");
 
@@ -547,34 +547,34 @@
         at: "left top",
       });
       li.draggable.draggable("option", "revert", false);
-      animal5++;
+      fruits5++;
     }
 
-    if (animal5 === 3) {
+    if (fruits5 === 5) {
       $(".success5").fadeIn("fast").delay(3000).fadeOut("slow");
     }
   }
 
   //jack
-  var animal6 = 0;
-  $(Bear);
+  var fruits6 = 0;
+  $(jack);
 
-  function Bear() {
+  function jack() {
     $(".success6").hide();
 
-    animal6 = 0;
+    fruits6 = 0;
     $(".cardPile6").html("");
     $(".cardSlots6").html("");
 
-    var correctLettersArray = ["ka.png", "ra.png", "di.png"];
-    var lettersArray = [ "ka.png","ra.png","di.png", "m.png","g.png","ma.png",];
+    var correctLettersArray = ["pa.png", "laa2.png",];
+    var lettersArray = [ "pa.png","laa2.png","di.png", "m.png","g.png","ma.png",];
 
     lettersArray.sort(function () {
       return Math.random() - 0.5;
     });
 
     for (var i = 0; i < 6; i++) {
-      $("<div><img src='letters/" + lettersArray[i] + "'></div>")
+      $("<div><img src='letters/vegetables/" + lettersArray[i] + "'></div>")
         .data("number", lettersArray[i])
         .attr("id", "card" + lettersArray[i])
         .appendTo(".cardPile6")
@@ -594,12 +594,12 @@
         .droppable({
           accept: ".cardPile6 div",
           hoverClass: "hovered",
-          drop: handleCardDropBear,
+          drop: handleCardDropJack,
         });
     }
   }
 
-  function handleCardDropBear(event, li) {
+  function handleCardDropJack(event, li) {
     var slotNumber = $(this).data("number");
     var cardNumber = li.draggable.data("number");
 
@@ -613,34 +613,34 @@
         at: "left top",
       });
       li.draggable.draggable("option", "revert", false);
-      animal6++;
+      fruits6++;
     }
 
-    if (animal6 === 3) {
+    if (fruits6 === 2) {
       $(".success6").fadeIn("fast").delay(3000).fadeOut("slow");
     }
   }
 
   //watermelon
-  var animal7 = 0;
-  $(Deer);
+  var fruits7 = 0;
+  $(water);
 
-  function Deer() {
+  function water() {
     $(".success7").hide();
 
-    animal7 = 0;
+    fruits7 = 0;
     $(".cardPile7").html("");
     $(".cardSlots7").html("");
 
-    var correctLettersArray = ["ma.png", "n.png"];
-    var lettersArray = ["ma.png","n.png","rai.png","m.png","ra.png","ya.png",];
+    var correctLettersArray = ["tha.png", "r.png","po.png","sa.png","ni.png"];
+    var lettersArray = ["tha.png","r.png","po.png","sa.png","ni.png","ya.png",];
 
     lettersArray.sort(function () {
       return Math.random() - 0.5;
     });
 
     for (var i = 0; i < 6; i++) {
-      $("<div><img src='letters/" + lettersArray[i] + "'></div>")
+      $("<div><img src='letters/vegetables/" + lettersArray[i] + "'></div>")
         .data("number", lettersArray[i])
         .attr("id", "card" + lettersArray[i])
         .appendTo(".cardPile7")
@@ -660,12 +660,12 @@
         .droppable({
           accept: ".cardPile7 div",
           hoverClass: "hovered",
-          drop: handleCardDropDeer,
+          drop: handleCardDropWater,
         });
     }
   }
 
-  function handleCardDropDeer(event, li) {
+  function handleCardDropWater(event, li) {
     var slotNumber = $(this).data("number");
     var cardNumber = li.draggable.data("number");
 
@@ -679,34 +679,34 @@
         at: "left top",
       });
       li.draggable.draggable("option", "revert", false);
-      animal7++;
+      fruits7++;
     }
 
-    if (animal7 === 2) {
+    if (fruits7 === 5) {
       $(".success7").fadeIn("fast").delay(3000).fadeOut("slow");
     }
   }
 
   //mango
-  var animal8 = 0;
-  $(Rabbit);
+  var fruits8 = 0;
+  $(mango);
 
-  function Rabbit() {
+  function mango() {
     $(".success8").hide();
 
-    animal8 = 0;
+    fruits8 = 0;
     $(".cardPile8").html("");
     $(".cardSlots8").html("");
 
-    var correctLettersArray = ["mu.png", "ya.png", "l.png"];
-    var lettersArray = ["mu.png","y.png","l.png","m.png","ra.png","ya.png",];
+    var correctLettersArray = ["maa.png", "m.png", "pa.png","la3.png","m.png"];
+    var lettersArray = ["maa.png","m.png","pa.png","la3.png","m.png","ya.png",];
 
     lettersArray.sort(function () {
       return Math.random() - 0.5;
     });
 
     for (var i = 0; i < 6; i++) {
-      $("<div><img src='letters/" + lettersArray[i] + "'></div>")
+      $("<div><img src='letters/vegetables/" + lettersArray[i] + "'></div>")
         .data("number", lettersArray[i])
         .attr("id", "card" + lettersArray[i])
         .appendTo(".cardPile8")
@@ -726,12 +726,12 @@
         .droppable({
           accept: ".cardPile8 div",
           hoverClass: "hovered",
-          drop: handleCardDropRabbit,
+          drop: handleCardDropMango,
         });
     }
   }
 
-  function handleCardDropRabbit(event, li) {
+  function handleCardDropMango(event, li) {
    var slotNumber = $(this).data("number");
     var cardNumber = li.draggable.data("number");
 
@@ -745,34 +745,34 @@
         at: "left top",
       });
       li.draggable.draggable("option", "revert", false);
-      animal8++;
+      fruits8++;
     }
 
-    if (animal8 === 3) {
+    if (fruits8 === 5) {
       $(".success8").fadeIn("fast").delay(3000).fadeOut("slow");
     }
   }
 
   //Pomegranate
-  var animal9 = 0;
-  $(Fox);
+  var fruits9 = 0;
+  $(Pome);
 
-  function Fox() {
+  function Pome() {
     $(".success9").hide();
 
-    animal7 = 0;
+    fruits9 = 0;
     $(".cardPile9").html("");
     $(".cardSlots9").html("");
 
-    var correctLettersArray = ["na.png", "ri.png"];
-    var lettersArray = ["na.png","ri.png","rai.png","m.png","ra.png","ya.png",];
+    var correctLettersArray = ["maa.png", "thu.png","lai2.png"];
+    var lettersArray = ["maa.png","thu.png","lai2.png","m.png","ra.png","ya.png",];
 
     lettersArray.sort(function () {
       return Math.random() - 0.5;
     });
 
     for (var i = 0; i < 6; i++) {
-      $("<div><img src='letters/" + lettersArray[i] + "'></div>")
+      $("<div><img src='letters/vegetables/" + lettersArray[i] + "'></div>")
         .data("number", lettersArray[i])
         .attr("id", "card" + lettersArray[i])
         .appendTo(".cardPile9")
@@ -792,12 +792,12 @@
         .droppable({
           accept: ".cardPile9 div",
           hoverClass: "hovered",
-          drop: handleCardDropFox,
+          drop: handleCardDropPome,
         });
     }
   }
 
-  function handleCardDropFox(event, li) {
+  function handleCardDropPome(event, li) {
     var slotNumber = $(this).data("number");
     var cardNumber = li.draggable.data("number");
 
@@ -811,10 +811,10 @@
         at: "left top",
       });
       li.draggable.draggable("option", "revert", false);
-      animal9++;
+      fruits9++;
     }
 
-    if (animal9 === 2) {
+    if (fruits9 === 3) {
       $(".success9").fadeIn("fast").delay(3000).fadeOut("slow");
     }
   }

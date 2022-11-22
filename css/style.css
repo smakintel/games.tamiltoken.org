@@ -1373,8 +1373,8 @@ h1,h2,h3,h4 {
 }
 
 #cardPile20 div {
-    background: #666;
-    color: #fff;
+    background: white;
+    color: rgb(61, 61, 65);
     font-size: 50px;
     text-shadow: 0 0 3px #000;
 }
