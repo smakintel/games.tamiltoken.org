@@ -4,7 +4,7 @@ $(".btnNavigation").click(function () {
 
   $.ajax({
     url: "ajax/" + pageName + ".html",
-    type: "GET",
+    type: "POST",
     cache: false,
     processData: false,
     contentType: false,
