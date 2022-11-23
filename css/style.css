@@ -633,6 +633,7 @@ h1,h2,h3,h4 {
 .cardSlots10 {
     margin: 50px auto 0 auto;
     background: #ddf;
+  
 }
 .cardPile10 {
     margin: 0 auto;
@@ -645,7 +646,7 @@ h1,h2,h3,h4 {
     padding: 20px;
     border: 2px solid #333;
     margin-left: -50px;
-    -moz-border-radius: 10px;
+   -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     border-radius: 10px;
     -moz-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
