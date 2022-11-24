@@ -1,9 +1,9 @@
 <div id="content">
-    <div class="image" style="float: right;margin-top: -65px;">
+  <!--<div class="image" style="float: right;margin-top: -65px;">
       <button type="button" class="btn btn-primary btn-lg">Support Us
       <img src="images/logo.png" style="height: 40px;">
       </button>
-      </div>
+      </div>-->
   <!--mow-->
   <div class="mow">
     <div class="card" style="width: 18rem; margin-bottom: 15px; margin-left: 350px">
@@ -20,7 +20,7 @@
     </div>
   </div>
 
-   <!--tomoto-->
+  <!--tomoto-->
   <div class="tomoto">
     <div class="card" style="width: 18rem; margin-bottom: 15px; margin-left: 350px">
       <img src="images/tomoto.png" />
@@ -36,7 +36,7 @@
     </div>
   </div>
 
- <!--carrot-->
+  <!--carrot-->
   <div class="carrot">
     <div class="card" style="width: 18rem; margin-bottom: 15px; margin-left: 350px">
       <img src="images/carrot.png" />
@@ -84,7 +84,7 @@
     </div>
   </div>
 
-<!--chili-->
+  <!--chili-->
   <div class="chili">
     <div class="card" style="width: 18rem; margin-bottom: 15px; margin-left: 350px">
       <img src="images/chili.jpg" />
@@ -176,8 +176,8 @@
     $(".cardPile").html("");
     $(".cardSlots").html("");
 
-    var correctLettersArray = ["ka.png", "th.png","tha.png","ri.png"];
-    var lettersArray = ["ka.png","th.png","tha.png","ri.png","y.png","ra.png",];
+    var correctLettersArray = ["ka.png", "th.png", "tha.png", "ri.png"];
+    var lettersArray = ["ka.png", "th.png", "tha.png", "ri.png", "y.png", "ra.png",];
 
     lettersArray.sort(function () {
       return Math.random() - 0.5;
@@ -231,7 +231,7 @@
     }
   }
 
-//tomoto
+  //tomoto
   var veg1 = 0;
   $(tomoto);
 
@@ -242,8 +242,8 @@
     $(".cardPile1").html("");
     $(".cardSlots1").html("");
 
-    var correctLettersArray = ["tha.png", "k.png","kaa.png","li.png"];
-    var lettersArray = ["tha.png","k.png","kaa.png","li.png","d.png","m.png",];
+    var correctLettersArray = ["tha.png", "k.png", "kaa.png", "li.png"];
+    var lettersArray = ["tha.png", "k.png", "kaa.png", "li.png", "d.png", "m.png",];
 
     lettersArray.sort(function () {
       return Math.random() - 0.5;
@@ -308,8 +308,8 @@
     $(".cardPile2").html("");
     $(".cardSlots2").html("");
 
-    var correctLettersArray = ["ka.png", "ra.png","d.png"];
-    var lettersArray = ["ka.png", "ra.png","d.png","m.png","ku.png","ko.png",];
+    var correctLettersArray = ["ka.png", "ra.png", "d.png"];
+    var lettersArray = ["ka.png", "ra.png", "d.png", "m.png", "ku.png", "ko.png",];
 
     lettersArray.sort(function () {
       return Math.random() - 0.5;
@@ -361,7 +361,7 @@
     if (veg2 === 3) {
       $(".success2").fadeIn("fast").delay(3000).fadeOut("slow");
     }
-  }  
+  }
 
   //pumpkin
   var veg3 = 0;
@@ -374,8 +374,8 @@
     $(".cardPile3").html("");
     $(".cardSlots3").html("");
 
-    var correctLettersArray = ["po.png", "sa.png","ni.png"];
-    var lettersArray = ["po.png","sa.png","ni.png","m.png","ra.png","ku.png",];
+    var correctLettersArray = ["po.png", "sa.png", "ni.png"];
+    var lettersArray = ["po.png", "sa.png", "ni.png", "m.png", "ra.png", "ku.png",];
 
     lettersArray.sort(function () {
       return Math.random() - 0.5;
@@ -408,7 +408,7 @@
   }
 
   function handleCardDropPumpkin(event, li) {
-  var slotNumber = $(this).data("number");
+    var slotNumber = $(this).data("number");
     var cardNumber = li.draggable.data("number");
 
     if (slotNumber === cardNumber) {
@@ -428,7 +428,7 @@
       $(".success3").fadeIn("fast").delay(3000).fadeOut("slow");
     }
   }
-  
+
   //lettuce
   var veg4 = 0;
   $(lettuce);
@@ -441,7 +441,7 @@
     $(".cardSlots4").html("");
 
     var correctLettersArray = ["ko.png", "vaa.png"];
-    var lettersArray = ["ko.png", "vaa.png","ka.png","m.png","ra.png","mi.png",];
+    var lettersArray = ["ko.png", "vaa.png", "ka.png", "m.png", "ra.png", "mi.png",];
 
     lettersArray.sort(function () {
       return Math.random() - 0.5;
@@ -474,7 +474,7 @@
   }
 
   function handleCardDropLettuce(event, li) {
-   var slotNumber = $(this).data("number");
+    var slotNumber = $(this).data("number");
     var cardNumber = li.draggable.data("number");
 
     if (slotNumber === cardNumber) {
@@ -494,8 +494,8 @@
       $(".success4").fadeIn("fast").delay(3000).fadeOut("slow");
     }
   }
-  
-   //chilli
+
+  //chilli
   var veg5 = 0;
   $(chilli);
 
@@ -506,8 +506,8 @@
     $(".cardPile5").html("");
     $(".cardSlots5").html("");
 
-    var correctLettersArray = ["mi.png", "la.png", "kaa.png","y.png"];
-    var lettersArray = ["mi.png","la.png","kaa.png","y.png","ra.png","li.png",];
+    var correctLettersArray = ["mi.png", "la.png", "kaa.png", "y.png"];
+    var lettersArray = ["mi.png", "la.png", "kaa.png", "y.png", "ra.png", "li.png",];
 
     lettersArray.sort(function () {
       return Math.random() - 0.5;
@@ -572,8 +572,8 @@
     $(".cardPile6").html("");
     $(".cardSlots6").html("");
 
-    var correctLettersArray = ["ku.png", "dai.png", "mi.png","la.png","kaa.png","y.png"];
-    var lettersArray = [ "ku.png","dai.png","mi.png", "la.png","kaa.png","y.png",];
+    var correctLettersArray = ["ku.png", "dai.png", "mi.png", "la.png", "kaa.png", "y.png"];
+    var lettersArray = ["ku.png", "dai.png", "mi.png", "la.png", "kaa.png", "y.png",];
 
     lettersArray.sort(function () {
       return Math.random() - 0.5;
@@ -638,8 +638,8 @@
     $(".cardPile7").html("");
     $(".cardSlots7").html("");
 
-    var correctLettersArray = ["ve.png", "g.png","kaa.png","ya.png","m.png"];
-    var lettersArray = ["ve.png","g.png","kaa.png","ya.png","m.png","th.png",];
+    var correctLettersArray = ["ve.png", "g.png", "kaa.png", "ya.png", "m.png"];
+    var lettersArray = ["ve.png", "g.png", "kaa.png", "ya.png", "m.png", "th.png",];
 
     lettersArray.sort(function () {
       return Math.random() - 0.5;
@@ -705,7 +705,7 @@
     $(".cardSlots8").html("");
 
     var correctLettersArray = ["kaa.png", "laa.png", "n.png"];
-    var lettersArray = ["kaa.png","laa.png","n.png","k.png","li.png","ve.png"];
+    var lettersArray = ["kaa.png", "laa.png", "n.png", "k.png", "li.png", "ve.png"];
 
     lettersArray.sort(function () {
       return Math.random() - 0.5;
@@ -738,7 +738,7 @@
   }
 
   function handleCardDropMushroom(event, li) {
-   var slotNumber = $(this).data("number");
+    var slotNumber = $(this).data("number");
     var cardNumber = li.draggable.data("number");
 
     if (slotNumber === cardNumber) {
@@ -770,8 +770,8 @@
     $(".cardPile9").html("");
     $(".cardSlots9").html("");
 
-    var correctLettersArray = ["ve.png", "n2.png","di.png"];
-    var lettersArray = ["ve.png","n2.png","di.png","m.png","ra.png","ya.png",];
+    var correctLettersArray = ["ve.png", "n2.png", "di.png"];
+    var lettersArray = ["ve.png", "n2.png", "di.png", "m.png", "ra.png", "ya.png",];
 
     lettersArray.sort(function () {
       return Math.random() - 0.5;

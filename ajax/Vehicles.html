@@ -1,9 +1,9 @@
 <div id="content">
-   <div class="image" style="float: right;margin-top: -65px;">
+  <!----<div class="image" style="float: right;margin-top: -65px;">
       <button type="button" class="btn btn-primary btn-lg">Support Us
       <img src="images/logo.png" style="height: 40px;">
       </button>
-      </div>
+      </div>-->
   <!--Bicycle-->
   <div class="Bicycle">
     <div class="card" style="width: 18rem; margin-bottom: 15px; margin-left: 350px">
@@ -35,7 +35,7 @@
       <img src="images/animation.gif" />
     </div>
   </div>
- 
+
   <!--Train-->
   <div class="Train">
     <div class="card" style="width: 18rem; margin-bottom: 15px; margin-left: 350px">
@@ -97,8 +97,8 @@
     $(".cardPile").html("");
     $(".cardSlots").html("");
 
-    var correctLettersArray = ["mi.png", "thi.png","va.png","n2.png","di.png"];
-    var lettersArray = ["mi.png","thi.png","va.png","n2.png","di.png","li.png",];
+    var correctLettersArray = ["mi.png", "thi.png", "va.png", "n2.png", "di.png"];
+    var lettersArray = ["mi.png", "thi.png", "va.png", "n2.png", "di.png", "li.png",];
 
     lettersArray.sort(function () {
       return Math.random() - 0.5;
@@ -166,8 +166,8 @@
     $(".cardPile1").html("");
     $(".cardSlots1").html("");
 
-    var correctLettersArray = ["pe.png", "ru.png","n3.png","thu.png"];
-    var lettersArray = ["pe.png","ru.png","n3.png","thu.png","ra.png","ma.png",];
+    var correctLettersArray = ["pe.png", "ru.png", "n3.png", "thu.png"];
+    var lettersArray = ["pe.png", "ru.png", "n3.png", "thu.png", "ra.png", "ma.png",];
 
     lettersArray.sort(function () {
       return Math.random() - 0.5;
@@ -200,7 +200,7 @@
   }
 
   function handleCardDropBus(event, li) {
-   var slotNumber = $(this).data("number");
+    var slotNumber = $(this).data("number");
     var cardNumber = li.draggable.data("number");
 
     if (slotNumber === cardNumber) {
@@ -232,8 +232,8 @@
     $(".cardPile2").html("");
     $(".cardSlots2").html("");
 
-    var correctLettersArray = ["pu.png", "kai.png","yi.png","ra.png","tha.png","m.png"];
-    var lettersArray = ["pu.png","kai.png","yi.png","ra.png","tha.png","m.png",];
+    var correctLettersArray = ["pu.png", "kai.png", "yi.png", "ra.png", "tha.png", "m.png"];
+    var lettersArray = ["pu.png", "kai.png", "yi.png", "ra.png", "tha.png", "m.png",];
 
     lettersArray.sort(function () {
       return Math.random() - 0.5;
@@ -298,8 +298,8 @@
     $(".cardPile3").html("");
     $(".cardSlots3").html("");
 
-    var correctLettersArray = ["vi.png", "maa.png","na.png","m.png"];
-    var lettersArray = ["vi.png","maa.png","na.png","m.png","ra.png","ku.png", ];
+    var correctLettersArray = ["vi.png", "maa.png", "na.png", "m.png"];
+    var lettersArray = ["vi.png", "maa.png", "na.png", "m.png", "ra.png", "ku.png",];
 
     lettersArray.sort(function () {
       return Math.random() - 0.5;
@@ -352,7 +352,7 @@
       $(".success3").fadeIn("fast").delay(3000).fadeOut("slow");
     }
   }
-  
+
   //ship
   var vehicle4 = 0;
   $(ship);
@@ -364,8 +364,8 @@
     $(".cardPile4").html("");
     $(".cardSlots4").html("");
 
-    var correctLettersArray = ["ka.png", "p.png","pa.png","l2.png"];
-    var lettersArray = ["ka.png","p.png","pa.png","l2.png","ra.png","ma.png",];
+    var correctLettersArray = ["ka.png", "p.png", "pa.png", "l2.png"];
+    var lettersArray = ["ka.png", "p.png", "pa.png", "l2.png", "ra.png", "ma.png",];
 
     lettersArray.sort(function () {
       return Math.random() - 0.5;
@@ -418,4 +418,3 @@
       $(".success4").fadeIn("fast").delay(3000).fadeOut("slow");
     }
   }
-  
