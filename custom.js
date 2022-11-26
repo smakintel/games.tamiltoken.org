@@ -1,13 +1,10 @@
 $(".btnNavigation").click(function () {
   var pageName = $(this).attr("data-pagename");
   console.log(pageName);
-});
 
-
-  
   $.ajax({
     url: "ajax/" + pageName + ".html",
-    type: "GET",
+    type: "POST",
     cache: false,
     processData: false,
     contentType: false,
@@ -19,4 +16,6 @@ $(".btnNavigation").click(function () {
       $("#divContent").html(data);
     },
   });
+});
+
 
