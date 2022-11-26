@@ -3,6 +3,7 @@ body {
     font-family: "Georgia", serif;
     line-height: 1.8em;
     color: #333;
+    
 }
 
 
@@ -1518,3 +1519,4 @@ h4 {
 #card10.correct {
     background: violet;
 }
+

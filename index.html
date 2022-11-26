@@ -5,6 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Game</title>
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -16,50 +17,189 @@
   <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+  <style>
+    body {
+      font-family: "Lato", sans-serif;
+    }
+
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: rgba(161, 84, 114, 0.95);
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+
+    #main {
+      transition: margin-left .5s;
+      padding: 16px;
+    }
+
+    @media screen and (max-height: 450px) {
+      .sidenav {
+        padding-top: 15px;
+      }
+
+      .sidenav a {
+        font-size: 18px;
+      }
+    }
+  </style>
+
 </head>
 
 <body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-right">
+        <button type="button" class="btn btn-small" style="background-color:rgba(161, 84, 114, 0.95)">Support Us<img
+            src="logo.png" width="50" height="50">
+        </button>
+      </div>
 
-  <div class="container-fluid">
-    <div class="text-right">
-      <button type="button" class="btn btn- btn-small" style="background-color:rgba(161, 84, 114, 0.95)">Support Us
-        <img src="logo.png" width="50" height="50">
-      </button>
+    </div>
+  </div>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#"></a><button type="button" class="btn text-dark btn-light btn-small btnNavigation"
+      data-pagename="Animal"><i class="fa fa-paw px-2"></i>மிருகங்கள்</button>
+    <a href="#"></a><button type="button" class="btn text-dark btn-light mt-4 md-4 btnNavigation"
+      data-pagename="Vehicles"><i class="fa fa-motorcycle px-2"></i>வாகனங்கள்</button>
+    <a href="#"></a><button type="button" class="btn text-dark btn-light mt-4 md-4 btnNavigation"
+      data-pagename="Relation"><i class="fa fa-users px-2"></i>உறவுகள்</button>
+    <a href="#"></a><button type="button" class="btn text-dark btn-light mt-4 md-4 btnNavigation"
+      data-pagename="Thirukkural"><i class="fa fa-book px-2"></i>திருக்குறள்</button>
+    <a href="#"></a><button type="button" class="btn text-dark btn-light mt-4 md-4 btnNavigation"
+      data-pagename="Numbers">
+      <i class="fa fa-sort-numeric-asc px-2"></i>
+      இலக்கங்கள்</button>
+    <a href="#"></a><button type="button" class="btn text-dark btn-light mt-4 md-4  btnNavigation"
+      data-pagename="Fruits"><i class="fa-solid fa-apple-whole px-2"></i>பழங்கள்</button>
+    <a href="#"></a><button type="button" class="btn text-dark btn-light mt-4 md-4  btnNavigation"
+      data-pagename="Vegetables"><i class="fa-solid fa-carrot px-2"></i>காய்கறிகள்</button>
 
-      <div class="row">
+  </div>
 
-        <div class="col-2" style="background-color:rgba(161, 84, 114, 0.95);height: 5500px; margin-top: -65px;">
+  <div id="main">
+
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+
+  </div>
+
+
+
+
+
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("main").style.marginLeft = "0";
+    }
+
+  </script>
+
+
+
+
+
+  <!---
+  <div class="row">
+
+    <div class="position-absolute top-50 end-0 translate-middle-y">
+
+
+
+      <img src="Tamil For KIds.png" class="float-end" width="45%" height="auto">
+    </div>
+
+  </div>-->
+
+
+
+  <!--<div class="container-fluid">
+    <div class="text-left">
+      <a class="btn btn-primary btn-small" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+        aria-controls="offcanvasExample">
+        Menu
+      </a>
+      <div class="text-right">
+        <button type="button" class="btn btn- btn-small" style="background-color:rgba(161, 84, 114, 0.95)">Support Us
+          <img src="logo.png" width="50" height="50">
+        </button>
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+          aria-labelledby="offcanvasExampleLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+           <div class="row">
+         
+          <div class="col-2" style="background-color:rgba(161, 84, 114, 0.95);height: 5500px; margin-top: -65px;">
+
           <ul type="none">
-            <li><button type="button" class="btn btn-light mt-4 md-4 btnNavigation" data-pagename="Animal"><i
+
+            <li><button type="button" class="btn btn-info mt-4 md-4 btnNavigation" data-pagename="Animal"><i
                   class="fa fa-paw px-2"></i>மிருகங்கள்</button>
             </li>
-            <li><button type="button" class="btn btn-light mt-4 md-4 btnNavigation" data-pagename="Vehicles"><i
+            <li><button type="button" class="btn btn-info mt-4 md-4 btnNavigation" data-pagename="Vehicles"><i
                   class="fa fa-motorcycle px-2"></i>வாகனங்கள்</button>
             </li>
-            <li><button type="button" class="btn btn-light mt-4 md-4 btnNavigation" data-pagename="Relation"><i
+            <li><button type="button" class="btn btn-info mt-4 md-4 btnNavigation" data-pagename="Relation"><i
                   class="fa fa-users px-2"></i>உறவுகள்</button>
             </li>
-            <li><button type="button" class="btn btn-light mt-4 md-4 btnNavigation" data-pagename="Thirukkural"><i
+            <li><button type="button" class="btn btn-info mt-4 md-4 btnNavigation" data-pagename="Thirukkural"><i
                   class="fa fa-book px-2"></i>திருக்குறள்</button></li>
-            <li><button type="button" class="btn btn-light mt-4 md-4 btnNavigation" data-pagename="Numbers">
+            <li><button type="button" class="btn btn-info mt-4 md-4 btnNavigation" data-pagename="Numbers">
                 <i class="fa fa-sort-numeric-asc px-2"></i>
                 இலக்கங்கள்</button>
             </li>
-            <li><button type="button" class="btn btn-light mt-4 md-4  btnNavigation" data-pagename="Fruits"><i
+            <li><button type="button" class="btn btn-info mt-4 md-4  btnNavigation" data-pagename="Fruits"><i
                   class="fa-solid fa-apple-whole px-2"></i>பழங்கள்</button>
             </li>
-            <li><button type="button" class="btn btn-light mt-4 md-4  btnNavigation" data-pagename="Vegetables"><i
+            <li><button type="button" class="btn btn-info mt-4 md-4  btnNavigation" data-pagename="Vegetables"><i
                   class="fa-solid fa-carrot px-2"></i>காய்கறிகள்</button>
             </li>
           </ul>
-        </div>
 
-        <div class="col-10" id="divContent">
 
+          <div class="col-10" id="divContent">
+
+          </div>
         </div>
       </div>
-    </div>
-  </div>
+    </div>-->
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
