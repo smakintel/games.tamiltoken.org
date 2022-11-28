@@ -23,9 +23,10 @@
       font-family: "Lato", sans-serif;
     }
 
+
     .sidenav {
       height: 100%;
-      width: 0;
+      width: 0px;
       position: fixed;
       z-index: 1;
       top: 0;
@@ -34,19 +35,22 @@
       overflow-x: hidden;
       transition: 0.5s;
       padding-top: 60px;
+      text-align: center;
     }
 
     .sidenav a {
-      padding: 8px 8px 8px 32px;
+      padding: 10px 10px 10px 32px;
       text-decoration: none;
       font-size: 25px;
       color: #818181;
       display: block;
       transition: 0.3s;
+      align-items: center;
     }
 
     .sidenav a:hover {
       color: #f1f1f1;
+
     }
 
     .sidenav .closebtn {
@@ -58,17 +62,29 @@
     }
 
     #main {
-      transition: margin-left .2s margin-top .75s;
-      padding: 5px;
+      transition: margin-left .25s margin-top .25s;
+      padding: 0px;
     }
 
     @media screen and (max-height: 450px) {
       .sidenav {
         padding-top: 15px;
+
       }
 
       .sidenav a {
         font-size: 18px;
+      }
+    }
+
+    body {
+      background-color: rgb(193, 160, 185);
+      ;
+    }
+
+    @media only screen and (max-width: 600px) {
+      body {
+        background-color: rgba(108, 157, 150, 0.53);
       }
     }
   </style>
@@ -83,47 +99,57 @@
             src="logo.png" width="50" height="50">
         </button>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-md-0 col-lg-0 col-sm-0 text-right">
+
+
+      <div class="col-md-0  col-lg-0 col-sm-0 text-right">
         <div id="mySidenav" class="sidenav">
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-          <a href="#"></a><button type="button" class="btn text-dark btn-light btn-small btnNavigation"
-            data-pagename="Animal"><i class="fa fa-paw px-2"></i>மிருகங்கள்</button>
-          <a href="#"></a><button type="button" class="btn text-dark btn-light mt-4 md-4 btnNavigation"
-            data-pagename="Vehicles"><i class="fa fa-motorcycle px-2"></i>வாகனங்கள்</button>
-          <a href="#"></a><button type="button" class="btn text-dark btn-light mt-4 md-4 btnNavigation"
-            data-pagename="Relation"><i class="fa fa-users px-2"></i>உறவுகள்</button>
-          <a href="#"></a><button type="button" class="btn text-dark btn-light mt-4 md-4 btnNavigation"
-            data-pagename="Thirukkural"><i class="fa fa-book px-2"></i>திருக்குறள்</button>
-          <a href="#"></a><button type="button" class="btn text-dark btn-light mt-4 md-4 btnNavigation"
-            data-pagename="Numbers">
+          <a href="javascript:void(0)"></a><button type="button"
+            class="btn text-dark btn-light mt-4 md-4 btn-small btnNavigation" data-pagename="Animal"><i
+              class="fa fa-paw px-2"></i>மிருகங்கள்</button>
+          <a href="javascript:void(0)"></a><button type="button"
+            class="btn text-dark btn-light mt-4 md-4 btn-small btnNavigation" data-pagename="Vehicles"><i
+              class="fa fa-motorcycle px-2"></i>வாகனங்கள்</button>
+          <a href="javascript:void(0)"></a><button type="button"
+            class="btn text-dark btn-light mt-4 md-4 btn-small btnNavigation" data-pagename="Relation"><i
+              class="fa fa-users px-2"></i>உறவுகள்</button>
+          <a href="javascript:void(0)"></a><button type="button"
+            class="btn text-dark btn-light mt-4 md-4 btn-small btnNavigation" data-pagename="Thirukkural"><i
+              class="fa fa-book px-2"></i>திருக்குறள்</button>
+          <a href="javascript:void(0)"></a><button type="button"
+            class="btn text-dark btn-light mt-4 md-4 btn-small btnNavigation" data-pagename="Numbers">
             <i class="fa fa-sort-numeric-asc px-2"></i>
             இலக்கங்கள்</button>
-          <a href="#"></a><button type="button" class="btn text-dark btn-light mt-4 md-4  btnNavigation"
-            data-pagename="Fruits"><i class="fa-solid fa-apple-whole px-2"></i>பழங்கள்</button>
-          <a href="#"></a><button type="button" class="btn text-dark btn-light mt-4 md-4  btnNavigation"
-            data-pagename="Vegetables"><i class="fa-solid fa-carrot px-2"></i>காய்கறிகள்</button>
+          <a href="javascript:void(0)"></a><button type="button"
+            class="btn text-dark btn-light mt-4 md-4  btn-small btnNavigation" data-pagename="Fruits"><i
+              class="fa-solid fa-apple-whole px-2"></i>பழங்கள்</button>
+          <a href="javascript:void(0)"></a><button type="button"
+            class="btn text-dark btn-light mt-4 md-4  btn-small btnNavigation" data-pagename="Vegetables"><i
+              class="fa-solid fa-carrot px-2"></i>காய்கறிகள்</button>
+
 
         </div>
       </div>
-    </div>
 
-    <div class="col-md-12 col-sm-12 col-lg-12 text-left">
+      <div class="col-md-12 col-sm-12 col-lg-12 text-left">
 
-      <div id="main">
-        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
-        <div class="col-8" id="divContent">
+        <div id="main">
+          <span style="font-size:15px;cursor:pointer;" onclick="openNav()">&#9776; Menu</span>
+          <div class="col-10" id="divContent">
+          </div>
         </div>
       </div>
+
     </div>
   </div>
 
 
+
+
   <script>
     function openNav() {
-      document.getElementById("mySidenav").style.width = "250px";
-      document.getElementById("main").style.marginLeft = "250px";
+      document.getElementById("mySidenav").style.width = "200px";
+      document.getElementById("main").style.marginLeft = "200px";
     }
 
     function closeNav() {
