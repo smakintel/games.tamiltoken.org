@@ -89,7 +89,8 @@
     }
 
     #header {
-
+      text-align: center;
+      font-size: 1.5em;
       top: 20px;
       left: 140px;
       border-width: 3px;
@@ -103,16 +104,15 @@
 
     img {
       clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    #des {
-      position: absolute;
-      top: 170px;
-      left: 60px;
-    }
+
 
     img {
-      clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+      clip-path: polygon(50% 0%, 100% 31%, 85% 100%, 15% 100%, 0% 30%);
     }
   </style>
 
@@ -122,8 +122,8 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12 col-sm-12 col-lg-12 text-right">
-        <button type="button" class="btn btn-small" style="background-color:rgba(161, 84, 114, 0.95)">Support Us<img
-            src="logo.png" width="50" height="50">
+        <button type="button" class="btn text-white btn-small" style="background-color:rgba(161, 84, 114, 0.95)">Support
+          Us<img src="logo.png" width="50" height="50">
         </button>
       </div>
 
@@ -161,15 +161,15 @@
       <div class="col-md-12 col-sm-12 col-lg-12 text-left">
 
         <div id="main">
-          <span style="font-size:15px;cursor:pointer;" onclick="openNav()">&#9776; Menu</span>
+          <span style="font-size:15px;cursor:pointer;" onclick="openNav()">; Menu</span>
 
           <div class="col-10" id="divContent">
-            <h2 id="header">
+            <h4 id="header">
               Learning the Tamil Language Through Interactive Games and vocabulary learning
-            </h2>
+            </h4>
 
-            <div class="profile"><img src="images/profile.png">
-              <p id="des" style="text-align: center; padding:15px" class="instructions">
+            <div class="profile"><img src="images/profile.png" style="width:25%;">
+              <p>
                 Learning Tamil online for diaspora kids
                 Through Tamil Crypto, we have produced a powerful approach to learning Tamil online for free using
                 simple learning
