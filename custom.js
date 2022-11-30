@@ -4,7 +4,7 @@ $(".btnNavigation").click(function () {
 
   $.ajax({
     url: "ajax/" + pageName + ".html",
-    type: "POST",
+    type: "GET",
     cache: false,
     processData: false,
     contentType: false,
@@ -17,5 +17,3 @@ $(".btnNavigation").click(function () {
     },
   });
 });
-
-
