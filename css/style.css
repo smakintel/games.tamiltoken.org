@@ -3,7 +3,7 @@ body {
     font-family: "Georgia", serif;
     line-height: 1.8em;
     color: #333;
-    
+
 }
 
 
@@ -54,7 +54,7 @@ h4 {
     float: left;
     width: 80px;
     height: 78px;
-    padding: 10px;
+    padding: 15px;
     padding-top: 20px;
     padding-bottom: 0;
     border: 2px solid #333;
@@ -63,6 +63,7 @@ h4 {
     border-radius: 10px;
     margin: 0 0 0 10px;
     background: #fff;
+    text-align: center;
 }
 
 .cardSlots div:first-child,
@@ -131,6 +132,7 @@ h4 {
     border-radius: 10px;
     margin: 0 0 0 10px;
     background: #fff;
+    text-align: center;
 }
 
 .cardSlots1 div:first-child,
@@ -199,6 +201,7 @@ h4 {
     border-radius: 10px;
     margin: 0 0 0 10px;
     background: #fff;
+    text-align: center;
 }
 
 .cardSlots2 div:first-child,
@@ -267,6 +270,7 @@ h4 {
     border-radius: 10px;
     margin: 0 0 0 10px;
     background: #fff;
+    text-align: center;
 }
 
 .cardSlots3 div:first-child,
@@ -335,6 +339,7 @@ h4 {
     border-radius: 10px;
     margin: 0 0 0 10px;
     background: #fff;
+    text-align: center;
 }
 
 .cardSlots4 div:first-child,
@@ -403,6 +408,7 @@ h4 {
     border-radius: 10px;
     margin: 0 0 0 10px;
     background: #fff;
+    text-align: center;
 }
 
 .cardSlots5 div:first-child,
@@ -455,6 +461,7 @@ h4 {
     -moz-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
     -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
     box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+    text-align: center;
 
 }
 
@@ -524,6 +531,7 @@ h4 {
     -moz-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
     -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
     box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+
 }
 
 .cardSlots7 div,
@@ -540,6 +548,7 @@ h4 {
     border-radius: 10px;
     margin: 0 0 0 10px;
     background: #fff;
+    text-align: center;
 
 }
 
@@ -609,6 +618,7 @@ h4 {
     border-radius: 10px;
     margin: 0 0 0 10px;
     background: #fff;
+    text-align: center;
 }
 
 .cardSlots8 div:first-child,
@@ -677,6 +687,7 @@ h4 {
     border-radius: 10px;
     margin: 0 0 0 10px;
     background: #fff;
+    text-align: center;
 }
 
 .cardSlots9 div:first-child,
@@ -747,6 +758,7 @@ h4 {
     border-radius: 10px;
     margin: 0 0 0 10px;
     background: #fff;
+    text-align: center;
 }
 
 .cardSlots10 div:first-child,
@@ -816,6 +828,7 @@ h4 {
     border-radius: 10px;
     margin: 0 0 0 10px;
     background: #fff;
+    text-align: center;
 }
 
 .cardSlots11 div:first-child,
@@ -885,6 +898,7 @@ h4 {
     border-radius: 10px;
     margin: 0 0 0 10px;
     background: #fff;
+    text-align: center;
 }
 
 .cardSlots12 div:first-child,
@@ -938,6 +952,7 @@ h4 {
     -moz-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
     -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
     box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+
 }
 
 .cardSlots13 div,
@@ -954,6 +969,7 @@ h4 {
     border-radius: 10px;
     margin: 0 0 0 10px;
     background: #fff;
+    text-align: center;
 }
 
 .cardSlots13 div:first-child,
@@ -1023,6 +1039,7 @@ h4 {
     border-radius: 10px;
     margin: 0 0 0 10px;
     background: #fff;
+    text-align: center;
 }
 
 .cardSlots14 div:first-child,
@@ -1092,6 +1109,7 @@ h4 {
     border-radius: 10px;
     margin: 0 0 0 10px;
     background: #fff;
+    text-align: center;
 }
 
 .cardSlots15 div:first-child,
@@ -1161,6 +1179,7 @@ h4 {
     border-radius: 10px;
     margin: 0 0 0 10px;
     background: #fff;
+    text-align: center;
 }
 
 .cardSlots16 div:first-child,
@@ -1230,6 +1249,7 @@ h4 {
     border-radius: 10px;
     margin: 0 0 0 10px;
     background: #fff;
+    text-align: center;
 }
 
 .cardSlots17 div:first-child,
@@ -1299,6 +1319,7 @@ h4 {
     border-radius: 10px;
     margin: 0 0 0 10px;
     background: #fff;
+    text-align: center;
 }
 
 .cardSlots18 div:first-child,
@@ -1368,6 +1389,7 @@ h4 {
     border-radius: 10px;
     margin: 0 0 0 10px;
     background: #fff;
+    text-align: center;
 }
 
 .cardSlots19 div:first-child,
@@ -1519,4 +1541,3 @@ h4 {
 #card10.correct {
     background: violet;
 }
-
