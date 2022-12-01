@@ -100,14 +100,9 @@
       padding: 10px 10px;
     }
 
-    img {
-      clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
-    }
 
-    #des {
-      position: absolute;
-      top: 170px;
-      left: 60px;
+     .image {
+      clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
     }
   </style>
 
@@ -156,15 +151,15 @@
       <div class="col-md-12 col-sm-12 col-lg-12 text-left">
 
         <div id="main">
-          <span style="font-size:15px;cursor:pointer;" onclick="openNav()">Menu</span>
+          <span style="font-size:15px;cursor:pointer;" onclick="openNav()">&#9776; Menu</span>
 
           <div class="col-10" id="divContent">
             <h2 id="header">
               Learning the Tamil Language Through Interactive Games and vocabulary learning
             </h2>
 
-            <div class="profile"><img src="images/profile.png">
-              <p id="des" style="text-align: center; padding:15px" class="instructions">
+            <div class="profile"><img  class="image" src="images/profile.png" style="width:25%;">
+              <p>
                 Learning Tamil online for diaspora kids
                 Through Tamil Crypto, we have produced a powerful approach to learning Tamil online for free using
                 simple learning
