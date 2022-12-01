@@ -17,6 +17,15 @@
   <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 
   <style>
     body {
@@ -47,8 +56,7 @@
       transition: 0.3s;
       align-items: center;
     }
-
-    .sidenav a:hover {
+.sidenav a {
       color: #f1f1f1;
 
     }
@@ -89,7 +97,8 @@
     }
 
     #header {
-
+      text-align: center;
+      font-size: 1.5em;
       top: 20px;
       left: 140px;
       border-width: 3px;
@@ -100,20 +109,42 @@
       padding: 10px 10px;
     }
 
+    .button {
 
-     .image {
+      margin-top: 10px;
+
+
+    }
+
+    p {
+      font-size: medium;
+      font-style: normal;
+      text-transform: capitalize;
+      text-align: center;
+      font-weight: bolder;
+      text-shadow: 4px 4px 5px gray;
+      margin-top: 20px;
+    }
+
+
+
+
+    .image {
       clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
   </style>
-
 </head>
 
 <body>
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12 col-sm-12 col-lg-12 text-right">
-        <button type="button" class="btn btn-small" style="background-color:rgba(161, 84, 114, 0.95)">Support Us<img
-            src="logo.png" width="50" height="50">
+        <button type="button" class="button text-white btn-small"
+          style="background-color:rgba(161, 84, 114, 0.95)">Support
+          Us<img src="logo.png" width="50" height="50">
         </button>
       </div>
 
@@ -143,9 +174,7 @@
           <a href="javascript:void(0)"></a><button type="button"
             class="btn text-dark btn-light mt-4 md-4  btn-small btnNavigation" data-pagename="Vegetables"><i
               class="fa-solid fa-carrot px-2"></i>காய்கறிகள்</button>
-
-
-        </div>
+</div>
       </div>
 
       <div class="col-md-12 col-sm-12 col-lg-12 text-left">
@@ -154,14 +183,14 @@
           <span style="font-size:15px;cursor:pointer;" onclick="openNav()">&#9776; Menu</span>
 
           <div class="col-10" id="divContent">
-            <h2 id="header">
+            <h4 id="header">
               Learning the Tamil Language Through Interactive Games and vocabulary learning
-            </h2>
+            </h4>
 
-            <div class="profile"><img  class="image" src="images/profile.png" style="width:25%;">
+            <div><img class="image" src="images/profile.png" style="width:25%;">
               <p>
                 Learning Tamil online for diaspora kids
-                Through Tamil Crypto, we have produced a powerful approach to learning Tamil online for free using
+                through Tamil Crypto, we have produced a powerful approach to learning Tamil online for free using
                 simple learning
                 techniques.
 
@@ -180,11 +209,7 @@
 
     </div>
   </div>
-
-
-
-
-  <script>
+<script>
     function openNav() {
       document.getElementById("mySidenav").style.width = "200px";
       document.getElementById("main").style.marginLeft = "200px";
