@@ -32,7 +32,6 @@
       font-family: "Lato", sans-serif;
     }
 
-
     .sidenav {
       height: 100%;
       width: 0px;
@@ -40,11 +39,12 @@
       z-index: 1;
       top: 0;
       left: 0;
-      background-color: rgba(161, 84, 114, 0.95);
+      background-color: #FFD4B2;
       overflow-x: hidden;
       transition: 0.5s;
       padding-top: 60px;
-      text-align: center;
+      text-align: left;
+
     }
 
     .sidenav a {
@@ -55,6 +55,7 @@
       display: block;
       transition: 0.3s;
       align-items: center;
+      color: #DBD0C0;
     }
 
     .sidenav a {
@@ -87,7 +88,11 @@
     }
 
     body {
-     background: linear-gradient(rgb(113, 113, 252), 10%, rgb(255, 235, 238));
+
+      background: linear-gradient(rgb(113, 113, 252), 10%, rgb(255, 235, 238));
+
+      background-color: white;
+
     }
 
     @media only screen and (max-width: 600px) {
@@ -107,14 +112,12 @@
       border-radius: 10px;
       background-color: #e8d4e3df;
       padding: 10px 10px;
+      margin-left: 150px;
     }
 
     .button {
-
       margin-top: 15px;
       margin-right: 15px;
-
-
     }
 
     p {
@@ -126,9 +129,6 @@
       text-shadow: 4px 4px 5px gray;
       margin-top: 20px;
     }
-
-
-
 
     .image {
       clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
@@ -149,66 +149,69 @@
         </button>
       </div>
 
-
       <div class="col-md-0  col-lg-0 col-sm-0 text-right">
         <div id="mySidenav" class="sidenav">
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-          <a href="javascript:void(0)"></a><button type="button"
-            class="btn text-dark btn-light mt-4 md-4 btn-small btnNavigation" data-pagename="Animal"><i
-              class="fa fa-paw px-2"></i>மிருகங்கள்</button>
-          <a href="javascript:void(0)"></a><button type="button"
-            class="btn text-dark btn-light mt-4 md-4 btn-small btnNavigation" data-pagename="Vehicles"><i
+          <a href="javascript:void(0)"></a><span style="margin-right: 25px;"></span><button type="button"
+            class="btn text-dark mt-4 md-4 btn-small btnNavigation " data-pagename="Animal"><i
+              class="fa fa-paw px-2"></i>மிருகங்கள்</button></span>
+          <a href="javascript:void(0)"></a><span style="margin-right: 25px;"></span><button type="button"
+            class="btn text-dark  mt-4 md-4 btn-small btnNavigation" data-pagename="Vehicles"><i
               class="fa fa-motorcycle px-2"></i>வாகனங்கள்</button>
-          <a href="javascript:void(0)"></a><button type="button"
-            class="btn text-dark btn-light mt-4 md-4 btn-small btnNavigation" data-pagename="Relation"><i
+          <a href="javascript:void(0)"></a><span style="margin-right: 25px;"></span><button type="button"
+            class="btn text-dark  mt-4 md-4 btn-small btnNavigation" data-pagename="Relation"><i
               class="fa fa-users px-2"></i>உறவுகள்</button>
-          <a href="javascript:void(0)"></a><button type="button"
-            class="btn text-dark btn-light mt-4 md-4 btn-small btnNavigation" data-pagename="Thirukkural"><i
+          <a href="javascript:void(0)"></a><span style="margin-right: 25px;"></span><button type="button"
+            class="btn text-dark  mt-4 md-4 btn-small btnNavigation" data-pagename="Thirukkural"><i
               class="fa fa-book px-2"></i>திருக்குறள்</button>
-          <a href="javascript:void(0)"></a><button type="button"
-            class="btn text-dark btn-light mt-4 md-4 btn-small btnNavigation" data-pagename="Numbers">
-            <i class="fa fa-sort-numeric-asc px-2"></i>
-            இலக்கங்கள்</button>
-          <a href="javascript:void(0)"></a><button type="button"
-            class="btn text-dark btn-light mt-4 md-4  btn-small btnNavigation" data-pagename="Fruits"><i
+          <a href="javascript:void(0)"></a><span style="margin-right: 25px;"></span><button type="button"
+            class="btn text-dark  mt-4 md-4  btn-small btnNavigation" data-pagename="Fruits"><i
               class="fa-solid fa-apple-whole px-2"></i>பழங்கள்</button>
-          <a href="javascript:void(0)"></a><button type="button"
-            class="btn text-dark btn-light mt-4 md-4  btn-small btnNavigation" data-pagename="Vegetables"><i
+          <a href="javascript:void(0)"></a><span style="margin-right: 25px;"></span><button type="button"
+            class="btn text-dark mt-4 md-4  btn-small btnNavigation" data-pagename="Vegetables"><i
               class="fa-solid fa-carrot px-2"></i>காய்கறிகள்</button>
+
         </div>
-      </div>
 
-      <div class="col-md-12 col-sm-12 col-lg-12 text-left">
-
-        <div id="main">
-          <span style="font-size:15px;cursor:pointer;" onclick="openNav()">&#9776; Menu</span>
-
-          <div class="col-10" id="divContent">
-            <h4 id="header">
-              Learning the Tamil Language Through Interactive Games and vocabulary learning
-            </h4>
-
-            <div><img class="image" src="images/profile.png" style="width:25%;">
-              <p>
-                Learning Tamil online for diaspora kids
-                through Tamil Crypto, we have produced a powerful approach to learning Tamil online for free using
-                simple learning
-                techniques.
-
-                In many countries, where Tamil is not the first language, schools, and parents can utilize Tamil games
-                online and
-                puzzles to help children learn the language.
-
-                It is a fun, creative, and new way of teaching and learning rather than the typical books and rote
-                memory method.
-              </p>
-
-            </div>
-          </div>
-        </div>
+        <a href="javascript:void(0)"></a><span style="margin-right: 25px;"></span><button type="button"
+          class="btn text-dark  mt-4 md-4 btn-small btnNavigation" data-pagename="Numbers">
+          <i class="fa fa-sort-numeric-asc px-2"></i>
+          இலக்கங்கள்</button>
       </div>
 
     </div>
+
+    <div class="col-md-12 col-sm-12 col-lg-12 text-left">
+
+      <div id="main">
+        <span style="font-size:15px;cursor:pointer;" onclick="openNav()">&#9776; Menu</span>
+
+        <div class="col-10" id="divContent">
+          <h4 id="header">
+            Learning the Tamil Language Through Interactive Games and vocabulary learning
+          </h4>
+
+          <div><img class="image" src="images/profile.png" style="width:25%;">
+            <p>
+              Learning Tamil online for diaspora kids
+              through Tamil Crypto, we have produced a powerful approach to learning Tamil online for free using
+              simple learning
+              techniques.
+
+              In many countries, where Tamil is not the first language, schools, and parents can utilize Tamil games
+              online and
+              puzzles to help children learn the language.
+
+              It is a fun, creative, and new way of teaching and learning rather than the typical books and rote
+              memory method.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
   </div>
   <script>
     function openNav() {
