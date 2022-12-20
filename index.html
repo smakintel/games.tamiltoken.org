@@ -34,107 +34,87 @@
 
     .sidenav {
       height: 100%;
-      width: 0px;
+      width: 160px;
       position: fixed;
       z-index: 1;
       top: 0;
       left: 0;
-      background-color: #FFD4B2;
+      background-color: rgba(148, 187, 233, 1);
       overflow-x: hidden;
-      transition: 0.5s;
-      padding-top: 60px;
-      text-align: left;
-
+      padding-top: 20px;
     }
 
     .sidenav a {
-      padding: 10px 10px 10px 32px;
+      padding: 6px 8px 6px 16px;
       text-decoration: none;
       font-size: 25px;
       color: #818181;
       display: block;
-      transition: 0.3s;
-      align-items: center;
-      color: #DBD0C0;
     }
 
-    .sidenav a {
-      color: #f1f1f1;
 
-    }
+    .nav-item {
+      text-align: center;
+      font-style: normal;
+      font-weight: bold;
+      font-size: larger;
+      text-decoration: none;
 
-    .sidenav .closebtn {
-      position: absolute;
-      top: 0;
-      right: 25px;
-      font-size: 36px;
-      margin-left: 50px;
-    }
-
-    #main {
-      transition: margin-left .25s margin-top .25s;
-      padding: 0px;
-    }
-
-    @media screen and (max-height: 450px) {
-      .sidenav {
-        padding-top: 15px;
-
-      }
-
-      .sidenav a {
-        font-size: 18px;
-      }
     }
 
     body {
 
-      background: linear-gradient(rgb(113, 113, 252), 10%, rgb(255, 235, 238));
-
-      background-color: white;
-
+      background: rgb(238, 174, 202);
+      background: linear-gradient(85deg, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
     }
 
-    @media only screen and (max-width: 600px) {
-      body {
-        background-color: rgba(108, 157, 150, 0.53);
-      }
-    }
+
+
 
     #header {
       text-align: center;
       font-size: 1.5em;
       top: 20px;
-      left: 140px;
-      border-width: 3px;
-      border-style: solid;
-      border-color: #d4c2cbdd;
-      border-radius: 10px;
-      background-color: #e8d4e3df;
-      padding: 10px 10px;
-      margin-left: 150px;
+      left: 250px;
+      font-weight: bolder;
+      text-decoration: underline;
+
     }
 
     .button {
       margin-top: 15px;
-      margin-right: 15px;
+      margin-right: 5px;
     }
 
     p {
+
       font-size: medium;
       font-style: normal;
       text-transform: capitalize;
       text-align: center;
       font-weight: bolder;
-      text-shadow: 4px 4px 5px gray;
-      margin-top: 20px;
+      text-shadow: 4px 4px 5px rgb(141, 138, 138);
+      margin-top: 100px;
+      margin-left: 200px;
+      margin-right: 200px;
     }
 
     .image {
-      clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+      clip-path: polygon(45% 0%, 98% 22%, 88% 100%, 12% 100%, 0% 32%);
       display: block;
       margin-left: auto;
       margin-right: auto;
+      box-shadow: inset;
+
+      background: #336;
+      width: 18em;
+      height: 20em;
+
+      position: relative;
+      top: 3em;
+      z-index: 0;
+
+
     }
   </style>
 </head>
@@ -149,87 +129,91 @@
         </button>
       </div>
 
-      <div class="col-md-0  col-lg-0 col-sm-0 text-right">
-        <div id="mySidenav" class="sidenav">
-          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-          <a href="javascript:void(0)"></a><span style="margin-right: 25px;"></span><button type="button"
-            class="btn text-dark mt-4 md-4 btn-small btnNavigation " data-pagename="Animal"><i
-              class="fa fa-paw px-2"></i>மிருகங்கள்</button></span>
-          <a href="javascript:void(0)"></a><span style="margin-right: 25px;"></span><button type="button"
-            class="btn text-dark  mt-4 md-4 btn-small btnNavigation" data-pagename="Vehicles"><i
-              class="fa fa-motorcycle px-2"></i>வாகனங்கள்</button>
-          <a href="javascript:void(0)"></a><span style="margin-right: 25px;"></span><button type="button"
-            class="btn text-dark  mt-4 md-4 btn-small btnNavigation" data-pagename="Relation"><i
-              class="fa fa-users px-2"></i>உறவுகள்</button>
-          <a href="javascript:void(0)"></a><span style="margin-right: 25px;"></span><button type="button"
-            class="btn text-dark  mt-4 md-4 btn-small btnNavigation" data-pagename="Thirukkural"><i
-              class="fa fa-book px-2"></i>திருக்குறள்</button>
-          <a href="javascript:void(0)"></a><span style="margin-right: 25px;"></span><button type="button"
-            class="btn text-dark  mt-4 md-4  btn-small btnNavigation" data-pagename="Fruits"><i
-              class="fa-solid fa-apple-whole px-2"></i>பழங்கள்</button>
-          <a href="javascript:void(0)"></a><span style="margin-right: 25px;"></span><button type="button"
-            class="btn text-dark mt-4 md-4  btn-small btnNavigation" data-pagename="Vegetables"><i
-              class="fa-solid fa-carrot px-2"></i>காய்கறிகள்</button>
+      <div class="sidenav">
+        <nav class="sidebar">
+          <ul class="nav flex-column">
+            <a href="index.html"><button type="button" class="btn text-dark mt-4 md-4 btn-small"><i
+                  class="fa-solid fa-house px-2"></i>
+                <li class="nav-item">முகப்புப்பக்கம்</li>
+              </button></a>
+            <a href="javascript:void(0)"></a><button type="button"
+              class="btn text-dark mt-4 md-4 btn-small  btnNavigation " data-pagename="Animal"><i
+                class="fa fa-paw px-2"></i>
+              <li class="nav-item">மிருகங்கள்</li>
+            </button>
+            <a href="javascript:void(0)"></a> <button type="button"
+              class="btn text-dark  mt-4 md-4 btn-small  btnNavigation" data-pagename="Vehicles"><i
+                class="fa fa-motorcycle px-2"></i>
+              <li class="nav-item">வாகனங்கள்</li>
+            </button>
+            <a href="javascript:void(0)"></a><button type="button"
+              class="btn text-dark  mt-4 md-4 btn-small  btnNavigation" data-pagename="Relation"><i
+                class="fa fa-users px-2"></i>
+              <li class="nav-item">உறவுகள்</li>
+            </button>
+            <a href="javascript:void(0)"></a><button type="button"
+              class="btn text-dark  mt-4 md-4 btn-small  btnNavigation" data-pagename="Thirukkural"><i
+                class="fa fa-book px-2"></i>
+              <li class="nav-item">திருக்குறள்</li>
+            </button>
+            <a href="javascript:void(0)"></a><button type="button"
+              class="btn text-dark  mt-4 md-4  btn-small  btnNavigation" data-pagename="Fruits"><i
+                class="fa-solid fa-apple-whole px-2"></i>
+              <li class="nav-item">பழங்கள்</li>
+            </button>
+            <a href="javascript:void(0)"></a> <button type="button"
+              class="btn text-dark mt-4 md-4  btn-small  btnNavigation" data-pagename="Vegetables"><i
+                class="fa-solid fa-carrot px-2"></i>
+              <li class="nav-item">காய்கறிகள்</li>
+            </button>
+            <a href="javascript:void(0)"></a><button type="button"
+              class="btn text-dark  mt-4 md-4 btn-small btnNavigation" data-pagename="Numbers">
+              <i class="fa fa-sort-numeric-asc px-2"></i>
+              <li class="nav-item">
+                இலக்கங்கள்</li>
+            </button>
+
+
+      </div>
+
+
+
+
+
+
+
+
+      <div class="col-15" id="divContent">
+        <h1 id="header">
+          அற்புதமான விளையாட்டுகள் மற்றும் சொல்லகராதி கற்றல் மூலம் தமிழ் மொழியை கற்றல்
+        </h1>
+
+        <div><img class="image" src="images/profile.png" style="width:25%;">
+          <p>
+            தமிழ் கிரிப்டோ மூலம் புலம்பெயர் குழந்தைகளுக்காக ஆன்லைனில் தமிழ் கற்றல், எளிய கற்றல் நுட்பங்களைப் பயன்படுத்தி
+            இலவசமாக
+            ஆன்லைனில் தமிழ் கற்பதற்கான சக்திவாய்ந்த அணுகுமுறையை நாங்கள் உருவாக்கியுள்ளோம். தமிழ் முதல் மொழியாக இல்லாத பல
+            நாடுகளில்,
+            பள்ளிகள் மற்றும் பெற்றோர்கள் ஆன்லைனில் தமிழ் விளையாட்டுகள் மற்றும் புதிர்களைப் பயன்படுத்தி குழந்தைகள்
+            மொழியைக் கற்க
+            உதவலாம்.வழக்கமான புத்தகங்கள் மற்றும்
+            நினைவாற்றல் முறையைக் காட்டிலும், இது ஒரு வேடிக்கையான, ஆக்கப்பூர்வமான மற்றும் புதிய வழி கற்பித்தல் .
+          </p>
 
         </div>
 
-        <a href="javascript:void(0)"></a><span style="margin-right: 25px;"></span><button type="button"
-          class="btn text-dark  mt-4 md-4 btn-small btnNavigation" data-pagename="Numbers">
-          <i class="fa fa-sort-numeric-asc px-2"></i>
-          இலக்கங்கள்</button>
-      </div>
-
-    </div>
-
-    <div class="col-md-12 col-sm-12 col-lg-12 text-left">
-
-      <div id="main">
-        <span style="font-size:15px;cursor:pointer;" onclick="openNav()">&#9776; Menu</span>
-
-        <div class="col-10" id="divContent">
-          <h4 id="header">
-            Learning the Tamil Language Through Interactive Games and vocabulary learning
-          </h4>
-
-          <div><img class="image" src="images/profile.png" style="width:25%;">
-            <p>
-              Learning Tamil online for diaspora kids
-              through Tamil Crypto, we have produced a powerful approach to learning Tamil online for free using
-              simple learning
-              techniques.
-
-              In many countries, where Tamil is not the first language, schools, and parents can utilize Tamil games
-              online and
-              puzzles to help children learn the language.
-
-              It is a fun, creative, and new way of teaching and learning rather than the typical books and rote
-              memory method.
-            </p>
-
-          </div>
-        </div>
       </div>
     </div>
 
-  </div>
-  </div>
-  <script>
-    function openNav() {
-      document.getElementById("mySidenav").style.width = "200px";
-      document.getElementById("main").style.marginLeft = "200px";
-    }
 
-    function closeNav() {
-      document.getElementById("mySidenav").style.width = "0";
-      document.getElementById("main").style.marginLeft = "0";
-    }  
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="custom.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="custom.js"></script>
 </body>
 
 </html>
