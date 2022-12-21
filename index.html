@@ -34,7 +34,7 @@
 
     .sidenav {
       height: 100%;
-      width: 160px;
+      width: 235px;
       position: fixed;
       z-index: 1;
       top: 0;
@@ -75,9 +75,10 @@
       text-align: center;
       font-size: 1.5em;
       top: 20px;
-      left: 250px;
+      left: 100px;
       font-weight: bolder;
       text-decoration: underline;
+     
 
     }
 
@@ -95,12 +96,12 @@
       font-weight: bolder;
       text-shadow: 4px 4px 5px rgb(141, 138, 138);
       margin-top: 100px;
-      margin-left: 200px;
+      margin-left: 250px;
       margin-right: 200px;
     }
 
     .image {
-      clip-path: polygon(45% 0%, 98% 22%, 88% 100%, 12% 100%, 0% 32%);
+      clip-path: polygon(48% .5%, 100% 28.5%, 88% 100%, 12% 100%, 0% 32%);
       display: block;
       margin-left: auto;
       margin-right: auto;
@@ -116,6 +117,8 @@
 
 
     }
+
+ 
   </style>
 </head>
 
@@ -131,48 +134,56 @@
 
       <div class="sidenav">
         <nav class="sidebar">
-          <ul class="nav flex-column">
-            <a href="index.html"><button type="button" class="btn text-dark mt-4 md-4 btn-small"><i
-                  class="fa-solid fa-house px-2"></i>
-                <li class="nav-item">முகப்புப்பக்கம்</li>
+          <ul class="nav flex-column ">
+            <a href="index.html"><button type="button" class="btn text-dark mt-4 md-4 btn-small "><i
+                  class="fa-solid fa-house d-flex justify-content-start px-4 pt-5">
+                  <li class=" nav-item px-2">முகப்புப்பக்கம்</li>
+                </i>
               </button></a>
             <a href="javascript:void(0)"></a><button type="button"
-              class="btn text-dark mt-4 md-4 btn-small  btnNavigation " data-pagename="Animal"><i
-                class="fa fa-paw px-2"></i>
-              <li class="nav-item">மிருகங்கள்</li>
+              class="btn text-dark mt-4 md-4 btn-small  btnNavigation d-flex justify-content-center" data-pagename="Animal"><i
+                class="fa fa-paw d-flex justify-content-start py-3">
+                <li class="nav-item px-2 ">மிருகங்கள்</li>
+              </i>
             </button>
             <a href="javascript:void(0)"></a> <button type="button"
-              class="btn text-dark  mt-4 md-4 btn-small  btnNavigation" data-pagename="Vehicles"><i
-                class="fa fa-motorcycle px-2"></i>
-              <li class="nav-item">வாகனங்கள்</li>
+              class="btn text-dark  mt-4 md-4 btn-small  btnNavigation d-flex justify-content-center" data-pagename="Vehicles"><i
+                class="fa fa-motorcycle d-flex justify-content-start py-3">
+                <li class="nav-item px-2">வாகனங்கள்</li>
+              </i>
             </button>
             <a href="javascript:void(0)"></a><button type="button"
-              class="btn text-dark  mt-4 md-4 btn-small  btnNavigation" data-pagename="Relation"><i
-                class="fa fa-users px-2"></i>
-              <li class="nav-item">உறவுகள்</li>
+              class="btn text-dark  mt-4 md-4 btn-small  btnNavigation d-flex justify-content-center" data-pagename="Relation"><i
+                class="fa fa-users d-flex justify-content-start py-3">
+                <li class="nav-item px-2">உறவுகள்</li>
+              </i>
             </button>
             <a href="javascript:void(0)"></a><button type="button"
-              class="btn text-dark  mt-4 md-4 btn-small  btnNavigation" data-pagename="Thirukkural"><i
-                class="fa fa-book px-2"></i>
-              <li class="nav-item">திருக்குறள்</li>
+              class="btn text-dark  mt-4 md-4 btn-small  btnNavigation d-flex justify-content-center" data-pagename="Thirukkural"><i
+                class="fa fa-book d-flex justify-content-start  py-3">
+                <li class="nav-item px-2">திருக்குறள்</li>
+              </i>
             </button>
             <a href="javascript:void(0)"></a><button type="button"
-              class="btn text-dark  mt-4 md-4  btn-small  btnNavigation" data-pagename="Fruits"><i
-                class="fa-solid fa-apple-whole px-2"></i>
-              <li class="nav-item">பழங்கள்</li>
+              class="btn text-dark  mt-4 md-4  btn-small  btnNavigation d-flex justify-content-center" data-pagename="Fruits"><i
+                class="fa-solid fa-apple-whole d-flex justify-content-start py-3">
+                <li class="nav-item px-2">பழங்கள்</li>
+              </i>
             </button>
             <a href="javascript:void(0)"></a> <button type="button"
-              class="btn text-dark mt-4 md-4  btn-small  btnNavigation" data-pagename="Vegetables"><i
-                class="fa-solid fa-carrot px-2"></i>
-              <li class="nav-item">காய்கறிகள்</li>
+              class="btn text-dark mt-4 md-4  btn-small  btnNavigation d-flex justify-content-center" data-pagename="Vegetables"><i
+                class="fa-solid fa-carrot d-flex justify-content-start py-3">
+                <li class="nav-item px-2">காய்கறிகள்</li>
+              </i>
             </button>
             <a href="javascript:void(0)"></a><button type="button"
-              class="btn text-dark  mt-4 md-4 btn-small btnNavigation" data-pagename="Numbers">
-              <i class="fa fa-sort-numeric-asc px-2"></i>
-              <li class="nav-item">
-                இலக்கங்கள்</li>
+              class="btn text-dark  mt-4 md-4 btn-small btnNavigation d-flex justify-content-center" data-pagename="Numbers">
+              <i class="fa fa-sort-numeric-asc d-flex justify-content-start  py-3">
+                <li class="nav-item px-2">
+                  இலக்கங்கள்</li>
+              </i>
             </button>
-
+          </ul>
 
       </div>
 
