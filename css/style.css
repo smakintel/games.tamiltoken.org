@@ -21,17 +21,37 @@ h4 {
     -moz-user-select: none;
     -webkit-user-select: none;
     user-select: none;
+    padding-top: 0ch;
 }
 
 /* item1*/
 .cardSlots {
+
     margin: 20px auto 0 auto;
     background: #ddf;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+        height: 100vh;
+     
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .cardPile {
     margin: 0 auto;
-    background: #ffd;
+    background: rgb(114, 40, 114);
 
 
 }
@@ -48,6 +68,7 @@ h4 {
     -moz-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
     -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
     box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+    
 }
 
 .cardSlots div,
@@ -98,11 +119,28 @@ h4 {
 .cardSlots1 {
     margin: 20px auto 0 auto;
     background: #ddf;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+        height: 100vh;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .cardPile1 {
     margin: 0 auto;
-    background: #ffd;
+    background: rgb(114, 40, 114);
 }
 
 .cardSlots1,
@@ -167,11 +205,28 @@ h4 {
 .cardSlots2 {
     margin: 20px auto 0 auto;
     background: #ddf;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+        height: 100vh;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .cardPile2 {
     margin: 0 auto;
-    background: #ffd;
+    background: rgb(114, 40, 114);
 }
 
 .cardSlots2,
@@ -236,11 +291,28 @@ h4 {
 .cardSlots3 {
     margin: 20px auto 0 auto;
     background: #ddf;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+        height: 100vh;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .cardPile3 {
     margin: 0 auto;
-    background: #ffd;
+    background: rgb(114, 40, 114);
 }
 
 .cardSlots3,
@@ -305,11 +377,28 @@ h4 {
 .cardSlots4 {
     margin: 20px auto 0 auto;
     background: #ddf;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+        height: 100vh;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .cardPile4 {
     margin: 0 auto;
-    background: #ffd;
+    background: rgb(114, 40, 114);
 }
 
 .cardSlots4,
@@ -374,11 +463,28 @@ h4 {
 .cardSlots5 {
     margin: 20px auto 0 auto;
     background: #ddf;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+        height: 100vh;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .cardPile5 {
     margin: 0 auto;
-    background: #ffd;
+    background: rgb(114, 40, 114);
 }
 
 .cardSlots5,
@@ -443,11 +549,28 @@ h4 {
 .cardSlots6 {
     margin: 20px auto 0 auto;
     background: #ddf;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+        height: 100vh;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .cardPile6 {
     margin: 0 auto;
-    background: #ffd;
+    background: rgb(114, 40, 114);
 }
 
 .cardSlots6,
@@ -513,11 +636,28 @@ h4 {
 .cardSlots7 {
     margin: 20px auto 0 auto;
     background: #ddf;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+        height: 100vh;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .cardPile7 {
     margin: 0 auto;
-    background: #ffd;
+    background: rgb(114, 40, 114);
 }
 
 .cardSlots7,
@@ -584,11 +724,28 @@ h4 {
 .cardSlots8 {
     margin: 20px auto 0 auto;
     background: #ddf;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+        height: 100vh;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .cardPile8 {
     margin: 0 auto;
-    background: #ffd;
+    background: rgb(114, 40, 114);
 }
 
 .cardSlots8,
@@ -653,11 +810,28 @@ h4 {
 .cardSlots9 {
     margin: 20px auto 0 auto;
     background: #ddf;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+        height: 100vh;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .cardPile9 {
     margin: 0 auto;
-    background: #ffd;
+    background: rgb(114, 40, 114);
 }
 
 .cardSlots9,
@@ -722,12 +896,29 @@ h4 {
 .cardSlots10 {
     margin: 20px auto 0 auto;
     background: #ddf;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+        height: 100vh;
 
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .cardPile10 {
     margin: 0 auto;
-    background: #ffd;
+    background: rgb(114, 40, 114);
 }
 
 .cardSlots10,
@@ -793,11 +984,28 @@ h4 {
 .cardSlots11 {
     margin: 20px auto 0 auto;
     background: #ddf;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+        height: 100vh;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .cardPile11 {
     margin: 0 auto;
-    background: #ffd;
+    background: rgb(114, 40, 114);
 }
 
 .cardSlots11,
@@ -863,11 +1071,28 @@ h4 {
 .cardSlots12 {
     margin: 20px auto 0 auto;
     background: #ddf;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+        height: 100vh;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .cardPile12 {
     margin: 0 auto;
-    background: #ffd;
+    background: rgb(114, 40, 114);
 }
 
 .cardSlots12,
@@ -933,11 +1158,28 @@ h4 {
 .cardSlots13 {
     margin: 20px auto 0 auto;
     background: #ddf;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+        height: 100vh;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .cardPile13 {
     margin: 0 auto;
-    background: #ffd;
+    background: rgb(114, 40, 114);
 }
 
 .cardSlots13,
@@ -1004,11 +1246,28 @@ h4 {
 .cardSlots14 {
     margin: 20px auto 0 auto;
     background: #ddf;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+        height: 100vh;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .cardPile14 {
     margin: 0 auto;
-    background: #ffd;
+    background: rgb(114, 40, 114);
 }
 
 .cardSlots14,
@@ -1074,11 +1333,29 @@ h4 {
 .cardSlots15 {
     margin: 20px auto 0 auto;
     background: #ddf;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
 }
+   
+@keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+    }     height: 100vh;
+
 
 .cardPile15 {
     margin: 0 auto;
-    background: #ffd;
+    background: rgb(114, 40, 114);
 }
 
 .cardSlots15,
@@ -1144,11 +1421,28 @@ h4 {
 .cardSlots16 {
     margin: 20px auto 0 auto;
     background: #ddf;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+        height: 100vh;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .cardPile16 {
     margin: 0 auto;
-    background: #ffd;
+    background: rgb(114, 40, 114);
 }
 
 .cardSlots16,
@@ -1214,11 +1508,28 @@ h4 {
 .cardSlots17 {
     margin: 20px auto 0 auto;
     background: #ddf;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+        height: 100vh;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .cardPile17 {
     margin: 0 auto;
-    background: #ffd;
+    background: rgb(114, 40, 114);
 }
 
 .cardSlots17,
@@ -1284,11 +1595,28 @@ h4 {
 .cardSlots18 {
     margin: 20px auto 0 auto;
     background: #ddf;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+        height: 100vh;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .cardPile18 {
     margin: 0 auto;
-    background: #ffd;
+    background: rgb(114, 40, 114);
 }
 
 .cardSlots18,
@@ -1354,11 +1682,28 @@ h4 {
 .cardSlots19 {
     margin: 20px auto 0 auto;
     background: #ddf;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+        height: 100vh;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .cardPile19 {
     margin: 0 auto;
-    background: #ffd;
+    background: rgb(114, 40, 114);
 }
 
 .cardSlots19,
@@ -1440,11 +1785,27 @@ h4 {
 #cardSlots20 {
     margin: 20px auto 0 auto;
     background: #ddf;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+        height: 100vh;
 }
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
 
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
 #cardPile20 {
     margin: 0 auto;
-    background: #ffd;
+    background: rgb(114, 40, 114);
 }
 
 #cardSlots20,
