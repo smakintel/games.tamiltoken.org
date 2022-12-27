@@ -1888,35 +1888,35 @@ height: 100vh;
 }
 
 #card1.correct {
-    background: red;
+    background: violet;
 }
 
 #card2.correct {
-    background: brown;
+    background: indigo;
 }
 
 #card3.correct {
-    background: orange;
-}
-
-#card4.correct {
-    background: yellow;
-}
-
-#card5.correct {
-    background: green;
-}
-
-#card6.correct {
-    background: cyan;
-}
-
-#card7.correct {
     background: blue;
 }
 
+#card4.correct {
+    background: green;
+}
+
+#card5.correct {
+    background:yellow;
+}
+
+#card6.correct {
+    background: orange;
+}
+
+#card7.correct {
+    background: red;
+}
+
 #card8.correct {
-    background: indigo;
+    background: brown;
 }
 
 #card9.correct {
@@ -1924,5 +1924,5 @@ height: 100vh;
 }
 
 #card10.correct {
-    background: violet;
+    background:gold;
 }
